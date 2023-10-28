@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class Stack {
 
-  private List<Entry> entry = new ArrayList<>(); // Use to store all the entry.
+  private List<Entry> entries = new ArrayList<>(); // Use to store all the entry.
   private int size = 0; // Use as index of the array.
 
 
@@ -24,7 +24,7 @@ public class Stack {
    */
   public void push(Entry entry) {
 
-    this.entry.add(entry); // Add element at the top of stack.
+    this.entries.add(entry); // Add element at the top of stack.
     this.size++; // Now size has beee increase.
 
   }
@@ -52,7 +52,7 @@ public class Stack {
     if (size == 0) { // Base case(Exception if stack is empty).
       throw new EmptyStack("Stack is Empty");
     } else {
-      return entry.get(size - 1);
+      return entries.get(size - 1);
     }
   }
 
@@ -69,8 +69,8 @@ public class Stack {
       throw new EmptyStack("Stack is Empty");
     } else {
 
-      Entry tmp = entry.get(size - 1); // It is use to store the element temporarily.
-      entry.remove(size - 1); // Remove element at the top stak.
+      Entry tmp = entries.get(size - 1); // It is use to store the element temporarily.
+      entries.remove(size - 1); // Remove element at the top stak.
       size--; // decrease size - 1.
       return tmp;
     }
