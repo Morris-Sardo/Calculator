@@ -9,11 +9,12 @@ package application;
  *
  */
 public class Entry {
-
-  private String string; // Use to store string.
+  
+  //Try test...
+  private String str; // Use to store string.
   private float number; // Use to store float number.
   private Type type; // Use to store the type.
-  private Symbol symbol; // Use to store the symbol.
+  private Symbol other; // Use to store the symbol.
 
   /**
    * Constructor use for maching string with data type String.
@@ -21,34 +22,34 @@ public class Entry {
    * @param string is use to inizialize the input from the user.
    */
   public Entry(String string) {
-    this.string = string; // Initialization field string.
+    this.str = string; // Initialization field string.
     this.type = Type.STRING; // Initialization field type.
   }
 
   /**
-   * Constructor use for maching float number with data type symbol.
+   * Constructor use for maching float number with data type float.
    * 
-   * @param number is use to inzialize float input from user.
+   * @param value is use to inzialize float input from user.
    */
-  public Entry(float number) {
-    this.number = number; // Inzializition field float number.
+  public Entry(float value) {
+    this.number = value; // Inzializition field float number.
     this.type = Type.FLOAT;
   }
 
   /**
    * Constructor use for maching matematical operator with data type symbol.
    * 
-   * @param symbol is variable use to inizialise a variable synbol.
+   * @param which is variable use to inizialise a variable synmbol.
    */
-  public Entry(Symbol symbol) {
-    this.symbol = symbol; // Initialization field mathematicla symbol.
+  public Entry(Symbol which) {
+    this.other = which; // Initialization field mathematicla symbol.
     this.type = Type.SYMBOL;
   }
 
   /**
    * This method use to obtain a string needed by other class.
    * 
-   * @return string is value inserted by the user.
+   * @return str is value inserted by the user.
    * @throws BadType ensures that method return only a string.
    */
   public String getString() throws BadType {
@@ -56,7 +57,7 @@ public class Entry {
       throw new BadType("It is not a string");
     } else {
 
-      return string;
+      return str;
     }
   }
 
@@ -78,7 +79,7 @@ public class Entry {
   /**
    * This method use ot abtain mathematical symbol by other class.
    * 
-   * @return mathematicla symbol insert by the user.
+   * @return mathematical symbol insert by the user.
    * @throws BadType ensure that method return only mathematicla symbol.
    */
   public Symbol getSymbol() throws BadType {
@@ -86,7 +87,7 @@ public class Entry {
       throw new BadType("the symbol is wrong");
     } else {
 
-      return symbol;
+      return other;
     }
   }
 
@@ -113,9 +114,9 @@ public class Entry {
     if (type == Type.FLOAT) { // Base case.
       result = 31 * result + Float.hashCode(number); // integer calculated from float number.
     } else if (type == Type.STRING) { // Base case.
-      result = 31 * result + string.hashCode(); // Integer calculated from float number.
+      result = 31 * result + str.hashCode(); // Integer calculated from float number.
     } else if (type == Type.SYMBOL) { // Base case.
-      result = 31 * result + symbol.hashCode(); // integer calculated from float number.
+      result = 31 * result + other.hashCode(); // integer calculated from float number.
     }
     return result; // return integer.
 
