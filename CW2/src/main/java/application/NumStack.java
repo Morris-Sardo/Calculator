@@ -11,7 +11,7 @@ package application;
 public class NumStack {
 
   private Stack numStack; // feild use to call all capability of the Stack class.
-
+  private Entry entry;
 
   /**
    * Yhis constructor use to initialize the object stack.
@@ -27,7 +27,7 @@ public class NumStack {
    */
 
   public void push(float number) {
-    Entry entry = new Entry(number);
+    entry = new Entry(number);
     numStack.push(entry);
 
   }
