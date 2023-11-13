@@ -57,11 +57,12 @@ class NumStackTest {
 
   // test 3 check it if the exception throw the right text exception.
   @Test
-  void topThrowsEmptyExceptionWhenEmpty() {
+  void topThrowsEmptyExceptionWhenEmpty() throws EmptyStack {
     
     float randFloat = testValue.nextFloat() * (float) 100.0;
     numStack.push(randFloat);
     assertDoesNotThrow(() -> numStack.top());
+    numStack.pop();
     EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.top());
     assertEquals("Stack is Empty", e.getMessage());
 
