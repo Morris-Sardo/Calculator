@@ -53,10 +53,17 @@ public class OpStack {
     return opStack.size();
   }
 
+  /**
+   * This method return a symbol value using calling pop method from Stack classs.
+   * 
+   * @return Entry symbol value.
+   * @throws EmptyStack exception if try retrieve symbol with empty stack.
+   */
+
   public Entry pop() throws EmptyStack {
-   
+
     return opStack.pop();
-    
+
   }
 
 }

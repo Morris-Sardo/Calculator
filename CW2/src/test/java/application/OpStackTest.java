@@ -2,7 +2,9 @@ package application;
 
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,11 +19,15 @@ import org.junit.jupiter.api.Test;
 class OpStackTest {
 
   private OpStack opStack;
+  private Entry entry;
+  private Symbol symbol;
   
   //Inizialize all the objext into its body At all methods.
   @BeforeEach
   void setUp() {
     opStack = new OpStack();
+   
+
   }
 
   // test 1 test if constructor exist. to do so i will inizialize obj opstack.
@@ -42,9 +48,9 @@ class OpStackTest {
   @Test
   void PushSymboltest() throws BadType, EmptyStack {
   
-    Symbol symbol = Symbol.DIVISION;
+    symbol = Symbol.DIVISION;
     opStack.push(symbol);
-    Entry entry = opStack.top();
+    entry = opStack.top();
     assertEquals(symbol, entry.getSymbol());
 
     Symbol symbol1 = Symbol.INVALID; // obj crerated to do test 3.
@@ -60,17 +66,32 @@ class OpStackTest {
   // test 4 testing pop method.
   //create pop method.
   //Add all exception's declaration.
+  //I have to fixed the method pop into the stack class as it was throwing the exception 
+  //when the stack had 1 itme instead then zero.
   
   @Test
   void PopSymbolTest() throws EmptyStack, BadType {
-    
+    //opStack = new OpStack();
     Symbol symbol = Symbol.DIVISION;
     opStack.push(symbol);
-    Entry entry = opStack.top();
+    entry = opStack.top();
     assertEquals(1 , opStack.size()); // confirm the the element has been add into the stack.
     opStack.pop();
     assertEquals(0, opStack.size());
     
+  }
+  
+  @Test
+  // test 5 throw EmptyStack exception if pop() 
+ void popThrowsEmptyExceptionWhenStackIsEmptytest() {
+   
+    symbol = Symbol.LEFT_BRACKET;
+    //entry = new Entry(symbol);
+    opStack.push(symbol);
+    assertDoesNotThrow(() -> opStack.top());
+    BadType e = assertThrows(BadType.class, () -> opStack.pop().getString());
+    assertEquals("It is not a string", e.getMessage());
+
   }
 
 
