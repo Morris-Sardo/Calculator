@@ -75,24 +75,40 @@ class OpStackTest {
     Symbol symbol = Symbol.DIVISION;
     opStack.push(symbol);
     entry = opStack.top();
-    assertEquals(1 , opStack.size()); // confirm the the element has been add into the stack.
+    assertEquals(1 , opStack.size()); //confirm the the element has been add into the stack.
     opStack.pop();
-    assertEquals(0, opStack.size());
+    assertEquals(0, opStack.size()); //confirm the pop stack work proerly.
     
   }
   
   @Test
   // test 5 throw EmptyStack exception if pop() 
- void popThrowsEmptyExceptionWhenStackIsEmptytest() {
+  //This method before test that exception is not throws if a symbol when item is right.
+  //then i added statement the cinfirm the the exception is been throw whe is not right.
+ void popThrowsBadTypeExceptiontest() {
    
     symbol = Symbol.LEFT_BRACKET;
-    //entry = new Entry(symbol);
     opStack.push(symbol);
     assertDoesNotThrow(() -> opStack.top());
     BadType e = assertThrows(BadType.class, () -> opStack.pop().getString());
     assertEquals("It is not a string", e.getMessage());
 
   }
+  
+  @Test
+  // test 6 throw EmptyStack exception if pop() 
+  // this test it will throws an exception when the itme insert is not the right one.
+ void popThrowsEmptyStackExceptiontest() throws EmptyStack {
+   
+    symbol = Symbol.LEFT_BRACKET;
+    opStack.push(symbol);
+    assertDoesNotThrow(() -> opStack.top());
+    opStack.pop();
+    EmptyStack e = assertThrows(EmptyStack.class, () -> opStack.pop());
+    assertEquals("Stack is Empty", e.getMessage());
+
+  }
+  
 
 
 }
