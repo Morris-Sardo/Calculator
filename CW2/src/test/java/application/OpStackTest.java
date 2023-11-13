@@ -17,7 +17,8 @@ import org.junit.jupiter.api.Test;
 class OpStackTest {
 
   private OpStack opStack;
-
+  
+  //Inizialize all the objext into its body At all methods.
   @BeforeEach
   void setUp() {
     opStack = new OpStack();
@@ -56,9 +57,21 @@ class OpStackTest {
 
   }
 
-  // test 4 testing pop method/
+  // test 4 testing pop method.
+  //create pop method.
+  //Add all exception's declaration.
+  
   @Test
-  void PopSymbolTest() {}
+  void PopSymbolTest() throws EmptyStack, BadType {
+    
+    Symbol symbol = Symbol.DIVISION;
+    opStack.push(symbol);
+    Entry entry = opStack.top();
+    assertEquals(1 , opStack.size()); // confirm the the element has been add into the stack.
+    opStack.pop();
+    assertEquals(0, opStack.size());
+    
+  }
 
 
 }

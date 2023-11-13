@@ -53,4 +53,10 @@ public class OpStack {
     return opStack.size();
   }
 
+  public Entry pop() throws EmptyStack {
+   
+    return opStack.pop();
+    
+  }
+
 }
