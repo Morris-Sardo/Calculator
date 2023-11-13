@@ -47,7 +47,9 @@ class OpStackTest {
   // test method as well).
   @Test
   void PushSymboltest() throws BadType, EmptyStack {
-  
+    
+    
+    //inproving making it generic.
     symbol = Symbol.DIVISION;
     opStack.push(symbol);
     entry = opStack.top();
@@ -87,6 +89,7 @@ class OpStackTest {
   //then i added statement the cinfirm the the exception is been throw whe is not right.
  void popThrowsBadTypeExceptiontest() {
    
+    //improvit makig all the test random
     symbol = Symbol.LEFT_BRACKET;
     opStack.push(symbol);
     assertDoesNotThrow(() -> opStack.top());
@@ -99,7 +102,9 @@ class OpStackTest {
   // test 6 throw EmptyStack exception if pop() 
   // this test it will throws an exception when the itme insert is not the right one.
  void popThrowsEmptyStackExceptiontest() throws EmptyStack {
-   
+    
+    
+    //try maki it generic.
     symbol = Symbol.LEFT_BRACKET;
     opStack.push(symbol);
     assertDoesNotThrow(() -> opStack.top());

@@ -1,6 +1,7 @@
 package application;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -57,7 +58,10 @@ class NumStackTest {
   // test 3 check it if the exception throw the right text exception.
   @Test
   void topThrowsEmptyExceptionWhenEmpty() {
-
+    
+    float randFloat = testValue.nextFloat() * (float) 100.0;
+    numStack.push(randFloat);
+    assertDoesNotThrow(() -> numStack.top());
     EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.top());
     assertEquals("Stack is Empty", e.getMessage());
 
@@ -87,6 +91,8 @@ class NumStackTest {
 
 
   }
+  
+  
 
 
 }
