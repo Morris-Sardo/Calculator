@@ -3,10 +3,12 @@ package application;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+//import java.util.Random;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
+import java.util.Random;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -21,11 +23,13 @@ class OpStackTest {
   private OpStack opStack;
   private Entry entry;
   private Symbol symbol;
+  private Random value;
   
   //Inizialize all the objext into its body At all methods.
   @BeforeEach
   void setUp() {
     opStack = new OpStack();
+    value = new Random();
    
 
   }
@@ -50,8 +54,13 @@ class OpStackTest {
     
     
     //inproving making it generic.
-    symbol = Symbol.DIVISION;
-    opStack.push(symbol);
+    //int index = value.nextInt(6);
+    Symbol arr[] = {Symbol.LEFT_BRACKET, Symbol.DIVISION, Symbol.MINUS, Symbol.PLUS, Symbol.RIGHT_BRACKET,
+        Symbol.TIME}; 
+    
+    int index = value.nextInt(arr.length - 1);
+    //symbol = Symbol.DIVISION;
+    opStack.push(arr[index]);
     entry = opStack.top();
     assertEquals(symbol, entry.getSymbol());
 
@@ -73,7 +82,7 @@ class OpStackTest {
   
   @Test
   void PopSymbolTest() throws EmptyStack, BadType {
-    //opStack = new OpStack();
+    
     Symbol symbol = Symbol.DIVISION;
     opStack.push(symbol);
     entry = opStack.top();
