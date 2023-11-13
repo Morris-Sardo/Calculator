@@ -27,9 +27,10 @@ class StrStackTest {
   //plus the size wwill be useful to as index when I will verify that 
   //the entry just pushed is has the top of the stack. I will build top()
   //for the purpose as well.
+  //
   
   @Test
-  void puhStringtest() {
+  void puhStringtest() throws BadType {
     
     value = new Random();
     String arr[] = {"+","?","/","*","!","ciao",""};
