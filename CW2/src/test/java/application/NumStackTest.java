@@ -44,7 +44,6 @@ class NumStackTest {
   // Create object stack such that the method push in NumStak class will call push method
   // into Stack class.
   // I had to add BadType exception as I am using Entry class.
-  //
   @Test
   void Pushtest() throws EmptyStack, BadType {
 

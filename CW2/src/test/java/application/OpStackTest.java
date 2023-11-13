@@ -47,13 +47,11 @@ class OpStackTest {
   // To do so i had to add push and top method in the OpStack class.
   // I had to add trhows BadRype(about opStack.push(symbol)) and EmptyStack(about opStack.top()).
   // All those this exception has been inherited from the methods of Stack class.
-  // test 3 the index of the stack is releted to the last push( this est can confirm prt of the size
-  // test method as well).
+  // test 3 the index of the stack is releted to the last push( this test can confirm that the size
+  // work prorerly).
   @Test
   void PushSymboltest() throws BadType, EmptyStack {
 
-
-    // inproving making it generic.
     // array used to compare symbol.
     Symbol arr[] = {Symbol.LEFT_BRACKET, Symbol.DIVISION, Symbol.MINUS, Symbol.PLUS,
         Symbol.RIGHT_BRACKET, Symbol.TIME};
@@ -71,9 +69,9 @@ class OpStackTest {
     // the statement compare say if the two symbol are equal use assertEquals() otherwise
     // assertNotEqual().
     if (arr1[index1].equals(entry.getSymbol()))
-      assertEquals(arr1[index1].toString(), entry.getSymbol());
+      assertEquals(arr1[index1].toString(), entry.getSymbol().toString());
     else
-      assertNotEquals(arr1[index1].toString(), entry.getSymbol());
+      assertNotEquals(arr1[index1].toString(), entry.getSymbol().toString());
 
 
 
