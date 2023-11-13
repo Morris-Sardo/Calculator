@@ -1,6 +1,6 @@
 package application;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -29,9 +29,10 @@ class NumStackTest {
     testValue = new Random();
   }
 
-  //
+  //test 1 test contructor. This test a fake test because it will return not null as java it always create a defaoult constructor. 
   @Test
   void NumStackConstructortest() {
+
     assertNotNull(numStack);
   }
 
@@ -86,6 +87,6 @@ class NumStackTest {
 
 
   }
-  
+
 
 }
