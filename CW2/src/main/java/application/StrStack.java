@@ -34,6 +34,16 @@ public class StrStack {
 
 
   }
+//  /**
+//   * This method retrive top element of the top of the stack.
+//   * @return
+//   * @throws EmptyStack  
+//   */
+//  
+//  public Entry top() throws EmptyStack {
+//
+//    return numStack.top();
+//  }
   
   
 

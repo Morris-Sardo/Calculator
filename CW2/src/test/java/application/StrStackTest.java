@@ -1,7 +1,8 @@
 package application;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import java.util.Random;
 import org.junit.jupiter.api.Test;
 
@@ -35,11 +36,14 @@ class StrStackTest {
     value = new Random();
     String arr[] = {"+","?","/","*","!","ciao",""};
     int index = value.nextInt(arr.length - 1);  
-    Entry entry = new Entry(arr[0]);
+    Entry entry = new Entry(arr[index]);
     numStack.push(entry);
     
-   assertEquals(entry.getString(),arr[index]);
-  
+    String retriveString = numStack.top().getString();
+    
+    assertEquals(entry.getString(),retriveString);
+   
+    //assertNotEquals(entry.getString(),arr[index]);
     
   }
     
