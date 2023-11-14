@@ -18,7 +18,7 @@ public class StrStack {
    */
   public StrStack() {
 
-    this.numStack = new Stack();
+    this.numStack = new Stack(); // It use to call all methods required in the Stack class.
 
   }
 
@@ -36,7 +36,7 @@ public class StrStack {
   }
 
   /**
-   * This method retrive top element of the top of the stack.
+   * This method retrive the element on the top of the stack.
    * 
    * @return entry in the top of the stack.
    * @throws EmptyStack throws exception if entry type is not a string.
@@ -45,6 +45,15 @@ public class StrStack {
   public Entry top() throws EmptyStack {
 
     return numStack.top();
+  }
+
+  /**
+   * The meaning of thi method is retreave the size of the stack.
+   * @return the size of the stack at the actual time.
+   */
+  public int size() {
+
+    return numStack.size();
   }
 
 
