@@ -29,11 +29,13 @@ public class StrStack {
    */
 
   public void push(Entry entry) {
-
+    
     numStack.push(entry);
 
 
   }
+  
+  
 
 
 
