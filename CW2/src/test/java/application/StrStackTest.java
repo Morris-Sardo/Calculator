@@ -28,10 +28,10 @@ class StrStackTest {
   //plus the size wwill be useful to as index when I will verify that 
   //the entry just pushed is has the top of the stack. I will build top()
   //for the purpose as well.
-  //
+  //After create top() method TTD was failing as the throw exception were unhadled.
   
   @Test
-  void puhStringtest() throws BadType {
+  void puhStringtest() throws BadType, EmptyStack {
     
     value = new Random();
     String arr[] = {"+","?","/","*","!","ciao",""};
@@ -42,8 +42,8 @@ class StrStackTest {
     String retriveString = numStack.top().getString();
     
     assertEquals(entry.getString(),retriveString);
-   
-    //assertNotEquals(entry.getString(),arr[index]);
+    
+    assertEquals(1,numStack.size());
     
   }
     

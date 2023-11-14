@@ -29,23 +29,23 @@ public class StrStack {
    */
 
   public void push(Entry entry) {
-    
+
     numStack.push(entry);
 
 
   }
-//  /**
-//   * This method retrive top element of the top of the stack.
-//   * @return
-//   * @throws EmptyStack  
-//   */
-//  
-//  public Entry top() throws EmptyStack {
-//
-//    return numStack.top();
-//  }
-  
-  
+
+  /**
+   * This method retrive top element of the top of the stack.
+   * 
+   * @return entry in the top of the stack.
+   * @throws EmptyStack throws exception if entry type is not a string.
+   */
+
+  public Entry top() throws EmptyStack {
+
+    return numStack.top();
+  }
 
 
 
