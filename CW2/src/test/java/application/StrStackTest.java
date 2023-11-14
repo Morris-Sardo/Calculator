@@ -36,7 +36,7 @@ class StrStackTest {
     value = new Random();
     String arr[] = {"+","?","/","*","!","ciao",""};
     int index = value.nextInt(arr.length - 1);  
-    Entry entry = new Entry(arr[index]);
+    entry = new Entry(arr[index]);
     numStack.push(entry);
     
     String retriveString = numStack.top().getString();
@@ -47,6 +47,31 @@ class StrStackTest {
     
   }
   
+  //test 3 create size method.
+  //The method has been created during test2.
+  //test 4 I have create a loop to confirm the the size increase properly.
+  //test 5 I Have create another loop to confirm the size decree are proprerly.
+  //To do so I must implement pop method.
+  @Test
+  void SizeMethodIncreaseProperlytest() {
+    
+    
+    String arr[] = {"+","?","/","*","!","ciao",""};
+    for(int i = 0 ; i < arr.length ; i ++) {
+      
+     entry = new Entry(arr[i]); 
+     numStack.push(entry);
+    }
+    
+    assertEquals(numStack.size(),(arr.length));
   
+    for(int i = arr.length - 1; i >= 0 ; i--) {
+      assertEquals(numStack.size(),(arr.length));
+      entry = new Entry(arr[i]);
+      numStack.pop();
+      
+    }
     
   }
+}
+
