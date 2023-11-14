@@ -9,9 +9,9 @@ package application;
  */
 public class StrStack {
 
-  private Stack numStack; //use to store entry string.
-  private Entry entry;    //use to convert string string to Entry one.
-  private String string;  // varible use as to enntry string.
+  private Stack numStack; // use to store entry string.
+  private Entry entry; // use to convert string string to Entry one.
+  private String string; // varible use as to enntry string.
 
   /**
    * This conctructor inizialize Srtack.
@@ -21,12 +21,16 @@ public class StrStack {
     this.numStack = new Stack();
 
   }
+
   /**
    * This method get entry as parameter and store it into ste stack.
+   * 
    * @param entry is a string.
    */
-  
+
   public void push(Entry entry) {
+
+    numStack.push(entry);
 
 
   }

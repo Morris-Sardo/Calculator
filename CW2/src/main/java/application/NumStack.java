@@ -10,7 +10,7 @@ package application;
 
 public class NumStack {
 
-  private Stack numStack; // feild use to call all capability of the Stack class.
+  private Stack numStack; //  use to call to store numbres into stack.
   private Entry entry;
 
   /**
