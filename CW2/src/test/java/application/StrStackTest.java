@@ -38,11 +38,9 @@ class StrStackTest {
     Entry entry = new Entry(arr[0]);
     numStack.push(entry);
     
-    assertEquals(entry.getString(),arr[0]);
+   assertEquals(entry.getString(),arr[index]);
+  
     
-    
-    
-
   }
-
-}
+    
+  }
