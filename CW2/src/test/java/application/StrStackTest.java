@@ -2,7 +2,7 @@ package application;
 
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+//import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import java.util.Random;
 import org.junit.jupiter.api.Test;
 
@@ -53,7 +53,7 @@ class StrStackTest {
   //test 5 I Have create another loop to confirm the size decree are proprerly.
   //To do so I must implement pop method.
   @Test
-  void SizeMethodIncreaseProperlytest() {
+  void SizeMethodIncreaseProperlytest() throws EmptyStack {
     
     
     String arr[] = {"+","?","/","*","!","ciao",""};
@@ -64,14 +64,14 @@ class StrStackTest {
     }
     
     assertEquals(numStack.size(),(arr.length));
-  
-    for(int i = arr.length - 1; i >= 0 ; i--) {
-      assertEquals(numStack.size(),(arr.length));
+    
+    int counter = arr.length;
+    for(int i = counter - 1; i >= 0 ; i--) {
+      assertEquals(numStack.size() , i + 1);
       entry = new Entry(arr[i]);
       numStack.pop();
       
     }
-    
   }
 }
 

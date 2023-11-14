@@ -46,6 +46,17 @@ public class StrStack {
 
     return numStack.top();
   }
+  
+  /**
+   * @throws EmptyStack 
+   * 
+   */
+  public void pop() throws EmptyStack {
+   
+    numStack.pop();
+    
+    
+  }
 
   /**
    * The meaning of thi method is retreave the size of the stack.
@@ -55,6 +66,7 @@ public class StrStack {
 
     return numStack.size();
   }
+
 
 
 
