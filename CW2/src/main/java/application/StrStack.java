@@ -46,27 +46,28 @@ public class StrStack {
 
     return numStack.top();
   }
-  
+
   /**
-   * @throws EmptyStack 
+   * This method retrieve the element of the trop of the stack.
    * 
+   * @throws EmptyStack will throw an exception every time you pop but stack is empty.
    */
   public void pop() throws EmptyStack {
-   
+
     numStack.pop();
-    
-    
+
+
   }
 
   /**
    * The meaning of thi method is retreave the size of the stack.
+   * 
    * @return the size of the stack at the actual time.
    */
   public int size() {
 
     return numStack.size();
   }
-
 
 
 
