@@ -2,6 +2,7 @@ package application;
 
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.Random;
 import org.junit.jupiter.api.Test;
 
@@ -74,15 +75,26 @@ class StrStackTest {
   }
   
   
-  //test 4 pop() method.
-  //Test fail but prove prove that the top throw exception if call 
-  //top method when stack is empty.
+  //test 6 top() method.
+  //To pass the test i add option throw axception.
   @Test
-  void topWhenStackIsEmptytest() throws EmptyStack {
+  void topThrowExceptionWhenStackIsEmptytest() throws EmptyStack {
     
-    entry  = new Entry("Cioa");
+    
+    EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.top());
+    assertEquals("Stack is Empty", e.getMessage());
+
+    
+    
+  }
+  
+  //test 7 top() verified the top element is the last push int.
+  @Test
+  void topTheLastIsTheActuallyTopOnetest() throws BadType, EmptyStack {
+    
+    entry = new Entry("Ciao");
     numStack.push(entry);
-    numStack.top();
+    assertEquals(entry.getString(),numStack.top().getString());
     
   }
 }
