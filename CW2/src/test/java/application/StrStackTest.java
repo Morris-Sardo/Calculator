@@ -31,7 +31,7 @@ class StrStackTest {
   // After create top() method TTD was failing as the throw exception were unhadled.
 
   @Test
-  void puhStringtest() throws BadType, EmptyStack {
+  void PuhStringtest() throws BadType, EmptyStack {
 
     value = new Random();
     String arr[] = {"+", "?", "/", "*", "!", "ciao", ""};
@@ -78,7 +78,7 @@ class StrStackTest {
   //test 6 top() method.
   //To pass the test i add option throw axception.
   @Test
-  void topThrowExceptionWhenStackIsEmptytest() throws EmptyStack {
+  void TopThrowExceptionWhenStackIsEmptytest() throws EmptyStack {
     
     
     EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.top());
@@ -90,12 +90,25 @@ class StrStackTest {
   
   //test 7 top() verified the top element is the last push int.
   @Test
-  void topTheLastIsTheActuallyTopOnetest() throws BadType, EmptyStack {
+  void TopTheLastIsTheActuallyTopOnetest() throws BadType, EmptyStack {
     
     entry = new Entry("Ciao");
     numStack.push(entry);
     assertEquals(entry.getString(),numStack.top().getString());
     
   }
+  
+  //test 8 pop()
+  @Test
+  void PopThrowExceptiontest() {
+    
+    entry = new Entry("Ciao");
+    numStack.push(entry);
+    
+    
+    EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.pop());
+    assertEquals("Stack is Empty", e.getMessage());
+  }
+  
 }
 
