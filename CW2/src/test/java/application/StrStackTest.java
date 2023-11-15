@@ -1,6 +1,7 @@
 package application;
 
 import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.Random;
@@ -99,13 +100,16 @@ class StrStackTest {
   }
   
   //test 8 pop()
+  //this test when the exception is throws if the stack is empty.
+  
   @Test
-  void PopThrowExceptiontest() {
+  void PopThrowExceptiontest() throws EmptyStack {
     
     entry = new Entry("Ciao");
     numStack.push(entry);
     
-    
+    assertDoesNotThrow(() -> numStack.pop());
+   
     EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.pop());
     assertEquals("Stack is Empty", e.getMessage());
   }
