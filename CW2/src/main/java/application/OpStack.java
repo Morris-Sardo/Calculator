@@ -61,7 +61,8 @@ public class OpStack {
    */
 
   public Entry pop() throws EmptyStack {
-
+    
+    
     return opStack.pop();
 
   }

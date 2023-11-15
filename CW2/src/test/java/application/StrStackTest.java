@@ -75,10 +75,13 @@ class StrStackTest {
   
   
   //test 4 pop() method.
-
+  //Test fail but prove prove that the top throw exception if call 
+  //top method when stack is empty.
   @Test
   void topWhenStackIsEmptytest() throws EmptyStack {
     
+    entry  = new Entry("Cioa");
+    numStack.push(entry);
     numStack.top();
     
   }
