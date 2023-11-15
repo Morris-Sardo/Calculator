@@ -1,10 +1,6 @@
 package application;
 
-<<<<<<< HEAD
-public class NumStack {
-  
-  
-=======
+
 /**
  * This class implement stack using only Entry number. The class in each method it call
  * 
@@ -67,6 +63,6 @@ public class NumStack {
   public Entry pop() throws EmptyStack {
     return numStack.pop();
   }
->>>>>>> feature-implementEntry
+
 
 }

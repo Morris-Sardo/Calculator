@@ -1,11 +1,8 @@
 package application;
 
-<<<<<<< HEAD
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
-/**
- * This class has been create to test.
-=======
+
+
+
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,25 +23,7 @@ import org.junit.jupiter.api.Test;
  *
  */
 class NumStackTest {
-<<<<<<< HEAD
   
-  private NumStack numStack;
-
-  //test 1 create class.
-  @Test
-  void createClasstest() {
-    NumStack numStack = new NumStack();
-    
-  }
-  
-  //test 2 
-  @Test
-  void () {
-    
-  }
-=======
-
-
   private NumStack numStack;
   Random testValue;
 
@@ -115,9 +94,6 @@ class NumStackTest {
 
 
   }
-  
-  
 
->>>>>>> feature-implementEntry
 
 }
