@@ -11,7 +11,7 @@ package application;
 
 public class NumStack {
 
-  private Stack numStack; //  use to call to store numbres into stack.
+  private Stack numStack; // use to call to store numbres into stack.
   private Entry entry;
 
   /**
