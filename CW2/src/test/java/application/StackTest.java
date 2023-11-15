@@ -84,13 +84,14 @@ class StackTest {
 
   @Test
   // test 5 throw EmptyStack exception if pop() retreave an entry when stack is empty.
-  // if if(size == 0 or size == 1) will throws EmptyStack exception.
+  // if if(size == 0) will throws EmptyStack exception.
   // modified test 4 adding EmptyStack exception statement c.
   void popThrowsEmptyExceptionWhenStackIsEmptytest() {
     EmptyStack e = assertThrows(EmptyStack.class, () -> stack.pop());
     assertEquals("Stack is Empty", e.getMessage());
 
   }
+ 
 
 
   @Test

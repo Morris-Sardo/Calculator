@@ -65,7 +65,7 @@ public class Stack {
    * @throws EmptyStack accure if stack has not enough element.
    */
   public Entry pop() throws EmptyStack {
-    if (size == 0 || size == 1) { // Base case(Exception if stack less then 1 element).
+    if (size == 0) { // Base case(Exception if stack less then 1 element).
       throw new EmptyStack("Stack is Empty");
     } else {
 
