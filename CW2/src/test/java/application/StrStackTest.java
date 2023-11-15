@@ -72,5 +72,15 @@ class StrStackTest {
 
     }
   }
+  
+  
+  //test 4 pop() method.
+
+  @Test
+  void topWhenStackIsEmptytest() throws EmptyStack {
+    
+    numStack.top();
+    
+  }
 }
 
