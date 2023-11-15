@@ -13,8 +13,12 @@ Bug fixed after eliminate size == 1.
 -I have only ccomplited push() and size() task.
 
 15/11/2023
--Adding test on top() method just to be sure that the method one has not any bugs.
--Adding test on pop() method just to be sure that the method one has not any bugs. 
+-STACK
+    -Adding test on top() method just to be sure that the method one has not any bugs.
+    -Adding test on pop() method just to be sure that the method one has not any bugs. 
+    -Fixed spelling errors.
+    -Get ready to merge into main branch.
+    -MISSING TO CREATE CANDIDATE RELEASE BRANCH(I WANT DEVELOP THE GUI. I WILL COME BACK LEATER).-
 
 
 
