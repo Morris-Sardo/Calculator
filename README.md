@@ -34,6 +34,15 @@ Bug fixed after eliminate size == 1.
     -Fixed spelling errors.
     -Get ready to merge into main branch.
     -MISSING TO CREATE CANDIDATE RELEASE BRANCH(I WANT DEVELOP THE GUI. I WILL COME BACK LEATER).-
+    -Fixed first merging conflit.
+
+-GUI
+    -create feature-GUI branch.
+    -Working on GUI interface and testing it.
+    -merge back in main.
+    -Create a candidate release branch[Release-1].
+    -Make some more test.
+    -Update README file.
 
 
 
