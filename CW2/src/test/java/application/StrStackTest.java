@@ -108,9 +108,9 @@ class StrStackTest {
     entry = new Entry("Ciao");
     numStack.push(entry);
     
-    assertDoesNotThrow(() -> numStack.pop());
+    assertDoesNotThrow(() -> numStack.pop()); //Exception is not throws..
    
-    EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.pop());
+    EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.pop());  // the extception is throws
     assertEquals("Stack is Empty", e.getMessage());
   }
   
