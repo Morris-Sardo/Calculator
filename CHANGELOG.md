@@ -1,0 +1,1 @@
+The meaning of this file is recording all the fixed bugs.
