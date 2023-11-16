@@ -1,11 +1,5 @@
 package application;
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> release-1
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,20 +15,11 @@ import org.junit.jupiter.api.Test;
  * implemented into Stack class. In other world the the meaning is to implement numStack class as it
  * is a Stack class wiith the only capability to get only float number entry.
  * 
-<<<<<<< HEAD
-=======
->>>>>>> feature-implementEntry
->>>>>>> release-1
  * @author papap
  *
  */
 class NumStackTest {
-<<<<<<< HEAD
-
-
-=======
   
->>>>>>> release-1
   private NumStack numStack;
   Random testValue;
 
@@ -58,10 +43,7 @@ class NumStackTest {
   // Create object stack such that the method push in NumStak class will call push method
   // into Stack class.
   // I had to add BadType exception as I am using Entry class.
-<<<<<<< HEAD
-  //
-=======
->>>>>>> release-1
+  
   @Test
   void Pushtest() throws EmptyStack, BadType {
 
@@ -109,11 +91,5 @@ class NumStackTest {
 
 
   }
-<<<<<<< HEAD
-  
-  
-=======
->>>>>>> release-1
-
 
 }
