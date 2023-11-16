@@ -1,0 +1,1 @@
+The purpose of this file is to keep track of all the fixed bug.
