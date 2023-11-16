@@ -35,7 +35,22 @@ Bug fixed after eliminate size == 1.
     -Get ready to merge into main branch.
     -MISSING TO CREATE CANDIDATE RELEASE BRANCH(I WANT DEVELOP THE GUI. I WILL COME BACK LEATER).-
 
+16/11/2023
+RELEASE-1
+    -Create candidate relaease-1 branch.
+    -Create CHANGEBLOG.md file reserved by bug fixed.
+    -Used cherry-pick for merging commit from candidate release-1 branch to fauter-fixVarName branch anf tagged. After decide to merging  all branch. create my first tag.
+    -Fixed couple of merge conflict.
 
+17/11/2023
+
+CREATE NOTES.md
+
+RELELASE-1
+    -Create some moere test and and  close tag it.
+
+FEATURE-GUI.
+    -Create new GUI. Upload Feaute-gui testing little bit. merging commit.
 
 
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
