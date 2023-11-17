@@ -37,6 +37,7 @@ Bug fixed after eliminate size == 1.
     -Fixed first merging conflit.
 
 -GUI
+    I DID NOT DO THIS YET.
     -create feature-GUI branch.
     -Working on GUI interface and testing it.
     -merge back in main.
@@ -44,6 +45,11 @@ Bug fixed after eliminate size == 1.
     -Make some more test.
     -Update README file.
 
+-FEATURE-CALCULATOR
+    -Create feaute-CALCULATOR.
+    -Update README.md file iwith my journey.
+    -Create StandarCalculator class.
+    -Create RevPolishCalc class.
 
 
 
