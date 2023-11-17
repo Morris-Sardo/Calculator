@@ -20,9 +20,9 @@ public class StandardCalc {
   }
   
  
-//  public String evaluate(String expression) {
-//    
-//    return "1+2-1=4";
-//  }
-//  
-//}
+  public String evaluate(String expression) {
+    
+    return "1+2-1=4";
+  }
+  
+}
