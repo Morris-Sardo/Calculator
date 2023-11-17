@@ -24,7 +24,7 @@ public class StandardCalc {
   * @return
   */
   public float evaluate(String expression) {
-   gg 
+   
     return Float.parseFloat(expression);
   }
   
