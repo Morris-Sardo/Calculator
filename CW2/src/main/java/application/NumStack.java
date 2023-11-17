@@ -2,20 +2,20 @@ package application;
 
 
 /**
- * This class implement stack using only Entry number. The class in each method it call
- * 
- * 
+ * This class create a stack using Enty number. The functionality of the methods are to call the
+ * methods of Stack class.
+ *
  * @author papap
  *
  */
 
 public class NumStack {
 
-  private Stack numStack; //  use to call to store numbres into stack.
-  private Entry entry;
+  private Stack numStack; // use to call to store numbres into stack.
+  private Entry entry; // use to store esch entry num type.
 
   /**
-   * Yhis constructor use to initialize the object stack.
+   * This constructor use to initialize the object stack.
    */
   public NumStack() {
     this.numStack = new Stack();

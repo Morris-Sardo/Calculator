@@ -2,7 +2,6 @@ package application;
 
 
 
-
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,16 +13,15 @@ import org.junit.jupiter.api.Test;
 
 /**
  * The meaning of this class is create methods in numStack class and all the methodos in the
- * NumStack class all its method will work using the the mothod of the Stack class. allexception
+ * NumStack class all its method will work using the the mothod of the Stack class and all exception
  * implemented into Stack class. In other world the the meaning is to implement numStack class as it
  * is a Stack class wiith the only capability to get only float number entry.
  * 
->>>>>>> feature-implementEntry
  * @author papap
  *
  */
 class NumStackTest {
-  
+
   private NumStack numStack;
   Random testValue;
 
@@ -33,7 +31,8 @@ class NumStackTest {
     testValue = new Random();
   }
 
-  //test 1 test contructor. This test a fake test because it will return not null as java it always create a defaoult constructor. 
+  // test 1 test contructor. This test a fake test because it will return not null as java it always
+  // create a defaoult constructor.
   @Test
   void NumStackConstructortest() {
 
@@ -60,7 +59,7 @@ class NumStackTest {
   // test 3 check it if the exception throw the right text exception.
   @Test
   void topThrowsEmptyExceptionWhenEmpty() throws EmptyStack {
-    
+
     float randFloat = testValue.nextFloat() * (float) 100.0;
     numStack.push(randFloat);
     assertDoesNotThrow(() -> numStack.top());
