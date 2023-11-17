@@ -11,7 +11,7 @@ import java.util.Random;
 import org.junit.jupiter.api.Test;
 
 /**
- * The meaning of this class is test that the the functionality of the method if the class iherit
+ * The meaning of this class is test that the the functionality of the method if the class inherit
  * the functionality of the Stacks class method.
  * 
  * @author papap
