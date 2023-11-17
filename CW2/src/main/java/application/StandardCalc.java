@@ -15,14 +15,17 @@ public class StandardCalc {
    * 
    */
   public StandardCalc() {
-    
-   
+    this.expression = expression;
   }
   
- 
-  public String evaluate(String expression) {
-    
-    return "1+2-1=4";
+ /**
+  *
+  * @param expression
+  * @return
+  */
+  public float evaluate(String expression) {
+   gg 
+    return Float.parseFloat(expression);
   }
   
 }

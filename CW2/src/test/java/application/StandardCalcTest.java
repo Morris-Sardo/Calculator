@@ -14,18 +14,29 @@ import org.junit.jupiter.api.Test;
  *
  */
 class StandardCalcTest {
-    
+   
    //StandardCalc calculation = new StandardCalc();
 
   // test 1 fake test.
   // I made up that evluate method retrun a string expression.  
   @Test
-  void StandardCalculatoreConstructtest() {
+  void EvaluateMethodString() {
     
-    String expression = "1+2-1=4";
+    String expression = "1234";
     StandardCalc calculation = new StandardCalc();
-    String testString = calculation.evaluate(expression);
-    assertEquals(expression,testString.toString());
+    assertEquals(Float.parseFloat(expression),calculation.evaluate(expression));
+  }
+ 
+  //test 2 return convert the expression in intger.
+  //change the return itype in float one.
+  //test 1 Update Casted espression to be float number.
+  @Test
+  void EvaluateMethodsConvertiToFloat() {
+    
+    String expression = "1234";
+    StandardCalc calculation = new StandardCalc();
+    
+    assertEquals(1234f,calculation.evaluate(expression));
   }
 
 
