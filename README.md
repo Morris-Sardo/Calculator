@@ -27,6 +27,7 @@ Bug fixed after eliminate size == 1.
 -Implementing push() , pop(), top() and size() methods in StrStac class. All method i try make them more general using random entry.
 -I have only ccomplited push() and size() task.
 
+
 15/11/2023
 -STACK
     -Adding test on top() method just to be sure that the method one has not any bugs.
@@ -47,11 +48,17 @@ Bug fixed after eliminate size == 1.
 
 -FEATURE-CALCULATOR
     -Create feaute-CALCULATOR.
-    -Update README.md file iwith my journey.
+    -Update README.md file with my journey.
     -Create StandarCalculator class.
     -Create RevPolishCalc class.
 
 
+18/11/2023
+    -Started Implementation StandardCalc class. During implenentation found bug in NumbStack, OpStack and StrStack. The bugs was the   method in these classes had Entry type. 
+    -Bug fixed and refactor done. Now NumStack, OpStack and StrStack they can work with StandardCalc class. 
+
+19/11/2023
+    -Carry on with StandsrdCalsc class.
 
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 

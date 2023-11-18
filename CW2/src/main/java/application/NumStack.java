@@ -12,10 +12,10 @@ package application;
 public class NumStack {
 
   private Stack numStack; // use to call to store numbres into stack.
-  private Entry entry;
+  private Entry entry; // it to add numver in Stack.
 
   /**
-   * Yhis constructor use to initialize the object stack.
+   * This constructor use to initialize the object stack.
    */
   public NumStack() {
     this.numStack = new Stack();
@@ -38,10 +38,13 @@ public class NumStack {
    * 
    * @return element at the top of the stack.
    * @throws EmptyStack is exception throw everytime you try retreave a number with empty stack.
+   * @throws BadType exception has been throws if entry is not the right one.
    */
-  public Entry top() throws EmptyStack {
 
-    return numStack.top();
+  public float top() throws EmptyStack, BadType {
+
+
+    return numStack.top().getFloat();
   }
 
   /**
@@ -59,9 +62,12 @@ public class NumStack {
    * 
    * @return obtain and return element on the stack.
    * @throws EmptyStack throw exception if element is in the first r second porsiozion
+   * @throws BadType exception has been throws if entry is not the right one.
    */
-  public Entry pop() throws EmptyStack {
-    return numStack.pop();
+
+  public float pop() throws EmptyStack, BadType {
+
+    return numStack.pop().getFloat();
   }
 
 

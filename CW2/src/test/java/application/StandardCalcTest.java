@@ -1,7 +1,8 @@
 package application;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+//import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 
 // import static org.junit.jupiter.api.Assertions;
 
@@ -14,14 +15,12 @@ import org.junit.jupiter.api.Test;
  *
  */
 class StandardCalcTest {
-   
-   //StandardCalc calculation = new StandardCalc();
-
+  
   // test 1 fake test.
   // I made up that evluate method retrun a string expression.  
   @Test
   void EvaluateMethodString() {
-    
+   
     String expression = "1234";
     StandardCalc calculation = new StandardCalc();
     assertEquals(Float.parseFloat(expression),calculation.evaluate(expression));
@@ -34,9 +33,23 @@ class StandardCalcTest {
   void EvaluateMethodsConvertiToFloat() {
     
     String expression = "1234";
+    
     StandardCalc calculation = new StandardCalc();
     
     assertEquals(1234f,calculation.evaluate(expression));
+  }
+  
+  //Fix tihs stest. and think how to fix entry problem.
+  @Test
+  void EvaluateMethodAddexpressionIntoStacktest(){
+    
+    StrStack expression = new StrStack();
+    String input = "1+2";
+    
+    expression.push(input);    
+    StandardCalc calculation = new StandardCalc();
+    
+    //assertEquals(1234f,calculation.evaluate(input));
   }
 
 
