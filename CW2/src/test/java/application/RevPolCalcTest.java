@@ -10,11 +10,20 @@ import org.junit.jupiter.api.Test;
 class RevPolCalcTest {
 
   
-  //test 1 test if class exist.
+  //test 1 if class exist.
   @Test
   void RevPolClacClasstest() {
     
     RevPolCalc polCal = new RevPolCalc();
+    
+  }
+  
+  //test 2 if constructor evaluate espression and store result.s
+  @Test
+  void constructorEvaluateExpressiontest() {
+    
+    RevPolCalc polCal = new RevPolCalc("34+");
+    assertEquals(7.0,polCal.getResult());
     
   }
 
