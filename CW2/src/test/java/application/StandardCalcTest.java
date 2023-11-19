@@ -40,17 +40,17 @@ class StandardCalcTest {
   }
   
   //Fix tihs stest. and think how to fix entry problem.
-  @Test
-  void EvaluateMethodAddexpressionIntoStacktest(){
-    
-    StrStack expression = new StrStack();
-    String input = "1+2";
-    
-    expression.push(input);    
-    StandardCalc calculation = new StandardCalc();
-    
-    //assertEquals(1234f,calculation.evaluate(input));
-  }
+//  @Test
+//  void EvaluateMethodAddexpressionIntoStacktest(){
+//    
+//    StrStack expression = new StrStack();
+//    String input = "1+2";
+//    
+//    expression.push(input);    
+//    StandardCalc calculation = new StandardCalc();
+//    
+//    assertEquals(1234f,calculation.evaluate(input));
+//  }
 
 
 
