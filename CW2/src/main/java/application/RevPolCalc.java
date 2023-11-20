@@ -52,7 +52,11 @@ public class RevPolCalc {
               break;
 
             case "/":
-              number.push(firstOperand / secondOperand);
+              if (secondOperand == 0) {
+                throw new InvalidExpression("Division by zero");
+              } else {
+                number.push(firstOperand / secondOperand);
+              }
               break;
             default:
               throw new InvalidExpression("Invalid expression");

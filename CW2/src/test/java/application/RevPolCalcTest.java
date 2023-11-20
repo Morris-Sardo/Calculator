@@ -15,31 +15,32 @@ import org.junit.jupiter.api.Test;
  *
  */
 class RevPolCalcTest {
-  
+
   Random number = new Random();
   private RevPolCalc polCal;
   private String firstOp;
   private String secondOp;
   private int index;
   private int index2;
-  
+  private float result;
+
   @BeforeEach
   void setup() {
     polCal = new RevPolCalc();
-    String[] arr = {"0","1","2","3","40","33","345","22","-1","-2","-3","2"};
+    String[] arr = {"0", "1", "2", "3", "40", "33", "345", "22", "-1", "-2", "-3", "2"};
     index = number.nextInt(arr.length);
     index2 = number.nextInt(arr.length);
     firstOp = arr[index];
     secondOp = arr[index2];
-    
-    
+
+
   }
 
   // test 1 if class exist.
-  //change test such that the object does not get any argument
+  // change test such that the object does not get any argument
   @Test
   void RevPolClacClasstest() {
-    
+
     polCal = new RevPolCalc();
 
   }
@@ -49,10 +50,10 @@ class RevPolCalcTest {
   // Modified test 1( added agrguement).
   // test 3 add return different value.
   // added throw exception in test 1.
-  
-  //Update method. deleted the parameter into the obj and deleted the getResult() method.
-  //this update i the methods are free from BadType and EmptyStack exception.
-  //this motdification has been done at all test.
+
+  // Update method. deleted the parameter into the obj and deleted the getResult() method.
+  // this update i the methods are free from BadType and EmptyStack exception.
+  // this motdification has been done at all test.
 
   @Test
   void EvalutateExpressionAdditiontest() throws InvalidExpression {
@@ -60,19 +61,19 @@ class RevPolCalcTest {
     assertEquals(7.0, polCal.evaluate("3 4 +"));
     assertNotEquals(7.2, polCal.evaluate("3 4 +"));
 
-   
+
     assertEquals(15.0, polCal.evaluate("5 1 2 + 4 + + 3 + "));
 
   }
 
   // test 4 test subtraction operation.
   // Added case "-" is switch statement.
-  // test 5 create random entries. Generalize the the method. 
-  
+  // test 5 create random entries. Generalize the the method.
+
   //
   @Test
-  void EvalutateExpressionSubtractiontest() throws InvalidExpression  {
-   
+  void EvalutateExpressionSubtractiontest() throws InvalidExpression {
+
     assertEquals(1.0, polCal.evaluate("4 3 -"));
     assertNotEquals(7.2, polCal.evaluate("4 3 -"));
 
@@ -82,37 +83,34 @@ class RevPolCalcTest {
 
   // test 6 test motiplication operation.
   // test added case"*" in switch statement.
-  
+
   @Test
   void EvalutateExpressionMotilplicatiThrowsExceptiontest() throws InvalidExpression {
-      
-    float result = Float.parseFloat(firstOp) * Float.parseFloat(secondOp); 
-      assertEquals(result, polCal.evaluate(firstOp+" "+secondOp+" "+"*"));
- 
+
+    float result = Float.parseFloat(firstOp) * Float.parseFloat(secondOp);
+    assertEquals(result, polCal.evaluate(firstOp + " " + secondOp + " " + "*"));
+
 
   }
-  
-  //test 7 test division.
-  //added case"/" in switch state.
-  // 
+
+  // test 7 test division.
+  // added case"/" in switch state.
+  // added if statement in case"/" to handle the InvalidExpression.
+  // the exception iss throw is secondOp == 0.
   @Test
   void EvalutateExpressionDivisiontest() throws InvalidExpression {
 
-    float result = Float.parseFloat(firstOp) / Float.parseFloat(secondOp); 
-      assertEquals(result, polCal.evaluate(firstOp+" "+secondOp+" "+"/"));
- 
+
+
+    if (Float.parseFloat(secondOp) == 0)
+      assertThrows(InvalidExpression.class,
+          () -> polCal.evaluate(firstOp + " " + secondOp + " " + "/"));
+    else {
+      result = Float.parseFloat(firstOp) / Float.parseFloat(secondOp);
+      assertEquals(result, polCal.evaluate(firstOp + " " + secondOp + " " + "/"));
+    }
 
   }
-  
-  //test 8 test throw exception if division by 0 number. 
-  @Test
-  void throwInvalidExpressiontst () throws InvalidExpression  {
-
-   assertThrows(InvalidExpression.class, () -> polCal.evaluate("4 0 /")); 
-
-  }
-
-  
-  
 }
+
 
