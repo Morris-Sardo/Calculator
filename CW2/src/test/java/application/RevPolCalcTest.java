@@ -115,7 +115,15 @@ class RevPolCalcTest {
       result = Float.parseFloat(firstOp) / Float.parseFloat(secondOp);
       assertEquals(result, (polCal.evaluate(firstOp + " " + secondOp + " " + "/")));
     }
-
+    
+  }
+  
+  //test 8 test excess of operand.
+  @Test
+  void evaluateExpressionWithExcessOperandtest() {
+   
+    assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 2 3 +"));
+    
   }
 }
 
