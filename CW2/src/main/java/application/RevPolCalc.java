@@ -44,6 +44,9 @@ public class RevPolCalc {
           case "-":
             number.push(firstOperand - secondOperand);
             break;
+          case "*":
+            number.push(firstOperand * secondOperand);
+            break;
         }
       }
     }

@@ -56,12 +56,12 @@ class RevPolCalcTest {
   }  
   
   //test 6 test motiplication operation.
- 
   @Test
   void EvalutateExpressionMotilplicationtest() throws EmptyStack, BadType {
     
     polCal = new RevPolCalc("4 3 *");
     assertEquals(12.0,polCal.getResult());
+    
     
  
   
