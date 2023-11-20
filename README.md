@@ -62,9 +62,10 @@ Bug fixed after eliminate size == 1.
     -Decived to implement RevPolCalc class.
 20/112023
     -RevPolClac class as been written form the beginning as
-    wrong design. 
+     wrong design. 
+    -Fixed smell code in top() and pop() method NumStack class. Added try{} catch{} to handle this kind of  exception. 
 
-    
+
 
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 
