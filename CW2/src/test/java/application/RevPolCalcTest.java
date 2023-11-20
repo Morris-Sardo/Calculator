@@ -40,8 +40,8 @@ class RevPolCalcTest {
     
   }
   
-  //test 4 test subtraction operation. 
-  //
+  //test 4 test subtraction operation.
+  //test 5 added complex calculation.
   @Test
   void EvalutateExpressionSubtractiontest() throws EmptyStack, BadType {
     
@@ -49,8 +49,11 @@ class RevPolCalcTest {
     assertEquals(1.0,polCal.getResult());
     assertNotEquals(7.2, polCal.getResult());
     
-
+    polCal = new RevPolCalc("5 1 2 - - ");
+    assertEquals(6.0,polCal.getResult());
     
+  }  
+
+  
   }
 
-}
