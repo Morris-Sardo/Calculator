@@ -56,6 +56,7 @@ class RevPolCalcTest {
   }  
   
   //test 6 test motiplication operation.
+  //test 7 test moltiplication between positive and negative number.
   @Test
   void EvalutateExpressionMotilplicationtest() throws EmptyStack, BadType {
     
@@ -63,7 +64,10 @@ class RevPolCalcTest {
     assertEquals(12.0,polCal.getResult());
     
     
- 
+    polCal = new RevPolCalc("-4 3 *");
+    assertEquals(12.0,polCal.getResult());
+    
+    
   
   }
 }
