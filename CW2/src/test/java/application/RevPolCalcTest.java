@@ -65,7 +65,7 @@ class RevPolCalcTest {
     
     
     polCal = new RevPolCalc("-4 3 *");
-    assertEquals(12.0,polCal.getResult());
+    assertEquals(-12.0,polCal.getResult());
     
     
   
