@@ -1,5 +1,7 @@
 package application;
 
+import java.text.DecimalFormat;
+
 /**
  * This class accepts a string expression and it return the result of the calculation.
  * 
@@ -11,6 +13,7 @@ public class RevPolCalc {
   // private float result; //store the result of equasion.
   private NumStack number; // Used to to store the operand after converted in float.
 
+  private static final DecimalFormat defact = new DecimalFormat("0.00");
   // addded
   // modofication of constructor. The cosnstructor wont take anymore the expression
   public RevPolCalc() {
@@ -64,7 +67,9 @@ public class RevPolCalc {
           }
         }
       }
-      return number.pop();
+      
+      float result = number.pop();
+      return Math.round(result);
     } catch (Exception e) {
       throw new InvalidExpression("Invalid expression");
     }

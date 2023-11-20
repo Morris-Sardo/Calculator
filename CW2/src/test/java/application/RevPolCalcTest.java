@@ -1,6 +1,6 @@
 package application;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+//import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -54,12 +54,14 @@ class RevPolCalcTest {
   // Update method. deleted the parameter into the obj and deleted the getResult() method.
   // this update i the methods are free from BadType and EmptyStack exception.
   // this motdification has been done at all test.
+  
+  //modify test such it accept float string.
 
   @Test
   void EvalutateExpressionAdditiontest() throws InvalidExpression {
 
-    assertEquals(7.0, polCal.evaluate("3 4 +"));
-    assertNotEquals(7.2, polCal.evaluate("3 4 +"));
+    assertEquals(7.4, polCal.evaluate("3.3 4.1 +"));
+    //assertNotEquals(7, polCal.evaluate("3 4 +"));
 
 
     assertEquals(15.0, polCal.evaluate("5 1 2 + 4 + + 3 + "));
