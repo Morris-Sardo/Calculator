@@ -1,6 +1,7 @@
 package application;
 
-import java.text.DecimalFormat;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * This class accepts a string expression and it return the result of the calculation.
@@ -13,7 +14,6 @@ public class RevPolCalc {
   // private float result; //store the result of equasion.
   private NumStack number; // Used to to store the operand after converted in float.
 
-  private static final DecimalFormat defact = new DecimalFormat("0.00");
   // addded
   // modofication of constructor. The cosnstructor wont take anymore the expression
   public RevPolCalc() {
@@ -38,8 +38,11 @@ public class RevPolCalc {
       number = new NumStack();
       for (String token : tokens) {
         if (token.matches("-?\\d+(\\.\\d+)?")) { // regex match integers and floating-point numbers
+   
           number.push(Float.parseFloat(token));
+          //number.push(Float.parseFloat(truncNumber));
         } else {
+
           float secondOperand = number.pop(); // pop the second operand first.
           float firstOperand = number.pop(); // pop first one.
 
@@ -67,9 +70,9 @@ public class RevPolCalc {
           }
         }
       }
+
       
-      float result = number.pop();
-      return Math.round(result);
+      return number.pop();
     } catch (Exception e) {
       throw new InvalidExpression("Invalid expression");
     }

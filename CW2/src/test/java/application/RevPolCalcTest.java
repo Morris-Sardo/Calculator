@@ -59,12 +59,13 @@ class RevPolCalcTest {
 
   @Test
   void EvalutateExpressionAdditiontest() throws InvalidExpression {
+    
+    
+    float result = Float.parseFloat(firstOp) + Float.parseFloat(secondOp);
+    assertEquals(result, polCal.evaluate(firstOp + " " + secondOp + " " + "+"));
 
-    assertEquals(7.4, polCal.evaluate("3.3 4.1 +"));
-    //assertNotEquals(7, polCal.evaluate("3 4 +"));
 
-
-    assertEquals(15.0, polCal.evaluate("5 1 2 + 4 + + 3 + "));
+    assertEquals(15f, polCal.evaluate("5 1 2 + 4 + + 3 + "));
 
   }
 
@@ -75,11 +76,14 @@ class RevPolCalcTest {
   //
   @Test
   void EvalutateExpressionSubtractiontest() throws InvalidExpression {
+    
+    float result = Float.parseFloat(firstOp) - Float.parseFloat(secondOp);
+    assertEquals(result, polCal.evaluate(firstOp + " " + secondOp + " " + "-"));
+    
+    assertEquals(1f, polCal.evaluate("4 3 -"));
+    assertNotEquals(7.2f, polCal.evaluate("4 3 -"));
 
-    assertEquals(1.0, polCal.evaluate("4 3 -"));
-    assertNotEquals(7.2, polCal.evaluate("4 3 -"));
-
-    assertEquals(6.0, polCal.evaluate("5 1 2 - - "));
+    assertEquals(6f, polCal.evaluate("5 1 2 - - "));
 
   }
 
@@ -109,7 +113,7 @@ class RevPolCalcTest {
           () -> polCal.evaluate(firstOp + " " + secondOp + " " + "/"));
     else {
       result = Float.parseFloat(firstOp) / Float.parseFloat(secondOp);
-      assertEquals(result, polCal.evaluate(firstOp + " " + secondOp + " " + "/"));
+      assertEquals(result, (polCal.evaluate(firstOp + " " + secondOp + " " + "/")));
     }
 
   }
