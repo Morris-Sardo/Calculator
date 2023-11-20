@@ -42,6 +42,7 @@ class RevPolCalcTest {
   
   //test 4 test subtraction operation.
   //test 5 added complex calculation.
+  //Added case minuns is switch statement.
   @Test
   void EvalutateExpressionSubtractiontest() throws EmptyStack, BadType {
     
@@ -53,7 +54,17 @@ class RevPolCalcTest {
     assertEquals(6.0,polCal.getResult());
     
   }  
-
+  
+  //test 6 test motiplication operation.
+ 
+  @Test
+  void EvalutateExpressionMotilplicationtest() throws EmptyStack, BadType {
+    
+    polCal = new RevPolCalc("4 3 *");
+    assertEquals(12.0,polCal.getResult());
+    
+ 
   
   }
+}
 
