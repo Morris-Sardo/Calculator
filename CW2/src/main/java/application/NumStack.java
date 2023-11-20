@@ -41,10 +41,14 @@ public class NumStack {
    * @throws BadType exception has been throws if entry is not the right one.
    */
 
-  public float top() throws EmptyStack, BadType {
+  public float top() throws EmptyStack {
 
-
-    return numStack.top().getFloat();
+    try {
+      return numStack.top().getFloat();
+    } catch (BadType e) {
+      e.printStackTrace();
+      return -1;
+    }
   }
 
   /**
@@ -57,17 +61,21 @@ public class NumStack {
     return numStack.size();
   }
 
+
   /**
-   * This method retun the element on the top of stack calling the pop method int.
+   * This method is use to return the element on the top stakc and decrease it of one.
    * 
-   * @return obtain and return element on the stack.
-   * @throws EmptyStack throw exception if element is in the first r second porsiozion
-   * @throws BadType exception has been throws if entry is not the right one.
+   * @return element of the top of stack.
+   * @throws EmptyStack exception threw if try retreave alement with empty stack.
    */
+  public float pop() throws EmptyStack {
+    try {
+      return numStack.pop().getFloat();
+    } catch (BadType e) {
+      e.printStackTrace();
+      return -1;
+    }
 
-  public float pop() throws EmptyStack, BadType {
-
-    return numStack.pop().getFloat();
   }
 
 
