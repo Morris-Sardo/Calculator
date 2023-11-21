@@ -72,8 +72,6 @@ class RevPolCalcTest {
   // test 4 test subtraction operation.
   // Added case "-" is switch statement.
   // test 5 create random entries. Generalize the the method.
-
-  //
   @Test
   void EvalutateExpressionSubtractiontest() throws InvalidExpression, EmptyStack {
     
@@ -132,6 +130,15 @@ class RevPolCalcTest {
   @Test
   void evaluateExpressionWithInsuffiOperandstest() {
       assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 2 3 +"));
+  }
+  
+  
+  //test 10.
+  //This test straight passed.
+  //This test has been created to test edge cases.
+  @Test 
+  void evaluateWithInsufficientOperands() {
+    assertThrows(InvalidExpression.class, () -> polCal.evaluate("+"));
   }
 }
   
