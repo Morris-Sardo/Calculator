@@ -60,12 +60,14 @@ Bug fixed after eliminate size == 1.
 19/11/2023
     -Carry on with StandsrdCalsc class.
     -Decived to implement RevPolCalc class.
-20/112023
-    -RevPolClac class as been written form the beginning as
+
+20/11/2023
+    -RevPolCalc class as been written form the beginning as
      wrong design. 
     -Fixed smell code in top() and pop() method NumStack class. Added try{} catch{} to handle this kind of  exception. 
 
-
+21/11/2023
+    -Finish all required test in RevPolCalc.
 
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 
