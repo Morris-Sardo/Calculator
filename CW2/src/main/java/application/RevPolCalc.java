@@ -1,7 +1,6 @@
 package application;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+
 
 /**
  * This class accepts a string expression and it return the result of the calculation.
@@ -37,15 +36,17 @@ public class RevPolCalc {
 
       number = new NumStack();
       for (String token : tokens) {
-        if (token.matches("-?\\d+(\\.\\d+)?")) { // regex match integers and floating-point numbers
-   
-          number.push(Float.parseFloat(token));
-          //number.push(Float.parseFloat(truncNumber));
-        } else {
+        if (token.matches("-?\\d+(\\.\\d+)?")) { // accept integers and floating-point numbers.
 
+
+          number.push(Float.parseFloat(token));
+
+        } else {
           float secondOperand = number.pop(); // pop the second operand first.
           float firstOperand = number.pop(); // pop first one.
 
+
+          // evaluate different operations.
           switch (token) {
             case "+":
               number.push(firstOperand + secondOperand);
@@ -58,7 +59,7 @@ public class RevPolCalc {
               break;
 
             case "/":
-              if (secondOperand == 0) {
+              if (secondOperand == 0) { // base case if devide by zero.
                 throw new InvalidExpression("Division by zero");
               } else {
                 number.push(firstOperand / secondOperand);
@@ -71,9 +72,13 @@ public class RevPolCalc {
         }
       }
 
-      
+      if (number.size() != 1) { //base case if the enad couptation stack if different then zero.
+        throw new InvalidExpression("Insufficient operators");
+      }
+
+
       return number.pop();
-    } catch (Exception e) {
+    } catch (Exception e) { //use to hadle emptystack exception.
       throw new InvalidExpression("Invalid expression");
     }
   }

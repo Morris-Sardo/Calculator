@@ -58,7 +58,7 @@ class RevPolCalcTest {
   //modify test such it accept float string.
 
   @Test
-  void EvalutateExpressionAdditiontest() throws InvalidExpression {
+  void EvalutateExpressionAdditiontest() throws InvalidExpression, EmptyStack {
     
     
     float result = Float.parseFloat(firstOp) + Float.parseFloat(secondOp);
@@ -75,7 +75,7 @@ class RevPolCalcTest {
 
   //
   @Test
-  void EvalutateExpressionSubtractiontest() throws InvalidExpression {
+  void EvalutateExpressionSubtractiontest() throws InvalidExpression, EmptyStack {
     
     float result = Float.parseFloat(firstOp) - Float.parseFloat(secondOp);
     assertEquals(result, polCal.evaluate(firstOp + " " + secondOp + " " + "-"));
@@ -91,7 +91,7 @@ class RevPolCalcTest {
   // test added case"*" in switch statement.
 
   @Test
-  void EvalutateExpressionMotilplicatiThrowsExceptiontest() throws InvalidExpression {
+  void EvalutateExpressionMotilplicatiThrowsExceptiontest() throws InvalidExpression, EmptyStack {
 
     float result = Float.parseFloat(firstOp) * Float.parseFloat(secondOp);
     assertEquals(result, polCal.evaluate(firstOp + " " + secondOp + " " + "*"));
@@ -104,7 +104,7 @@ class RevPolCalcTest {
   // added if statement in case"/" to handle the InvalidExpression.
   // the exception iss throw is secondOp == 0.
   @Test
-  void EvalutateExpressionDivisiontest() throws InvalidExpression {
+  void EvalutateExpressionDivisiontest() throws InvalidExpression, EmptyStack {
 
 
 
@@ -119,12 +119,22 @@ class RevPolCalcTest {
   }
   
   //test 8 test excess of operand.
+  //Modified code such the it handles empty stack exception.
+ 
   @Test
-  void evaluateExpressionWithExcessOperandtest() {
-   
-    assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 2 3 +"));
-    
+  void evaluateExpressionWithInsufficientOperandstest() {
+      assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 +"));
+  }
+  
+  //test 9 
+  //Added statement If(number.size() != 1). the statement say that if in the and o
+  //of computation NumStack is more the 1 than means there are not enough operands.
+  @Test
+  void evaluateExpressionWithInsuffiOperandstest() {
+      assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 2 3 +"));
   }
 }
+  
+
 
 
