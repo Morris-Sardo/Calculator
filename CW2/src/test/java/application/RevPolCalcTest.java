@@ -1,6 +1,5 @@
 package application;
 
-//import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -9,7 +8,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * This class ...
+ * The meaning of this class is testing all possible operations allowed by the calculator and to
+ * test the various possible faults.
  * 
  * @author papap
  *
@@ -54,13 +54,10 @@ class RevPolCalcTest {
   // Update method. deleted the parameter into the obj and deleted the getResult() method.
   // this update i the methods are free from BadType and EmptyStack exception.
   // this motdification has been done at all test.
-  
-  //modify test such it accept float string.
-
   @Test
-  void EvalutateExpressionAdditiontest() throws InvalidExpression, EmptyStack {
-    
-    
+  void EvalutateExpressionAdditiontest() throws InvalidExpression{
+
+
     float result = Float.parseFloat(firstOp) + Float.parseFloat(secondOp);
     assertEquals(result, polCal.evaluate(firstOp + " " + secondOp + " " + "+"));
 
@@ -73,11 +70,11 @@ class RevPolCalcTest {
   // Added case "-" is switch statement.
   // test 5 create random entries. Generalize the the method.
   @Test
-  void EvalutateExpressionSubtractiontest() throws InvalidExpression, EmptyStack {
-    
+  void EvalutateExpressionSubtractiontest() throws InvalidExpression {
+
     float result = Float.parseFloat(firstOp) - Float.parseFloat(secondOp);
     assertEquals(result, polCal.evaluate(firstOp + " " + secondOp + " " + "-"));
-    
+
     assertEquals(1f, polCal.evaluate("4 3 -"));
     assertNotEquals(7.2f, polCal.evaluate("4 3 -"));
 
@@ -87,9 +84,8 @@ class RevPolCalcTest {
 
   // test 6 test motiplication operation.
   // test added case"*" in switch statement.
-
   @Test
-  void EvalutateExpressionMotilplicatiThrowsExceptiontest() throws InvalidExpression, EmptyStack {
+  void EvalutateExpressionMotilplicatiThrowsExceptiontest() throws InvalidExpression {
 
     float result = Float.parseFloat(firstOp) * Float.parseFloat(secondOp);
     assertEquals(result, polCal.evaluate(firstOp + " " + secondOp + " " + "*"));
@@ -102,7 +98,7 @@ class RevPolCalcTest {
   // added if statement in case"/" to handle the InvalidExpression.
   // the exception iss throw is secondOp == 0.
   @Test
-  void EvalutateExpressionDivisiontest() throws InvalidExpression, EmptyStack {
+  void EvalutateExpressionDivisiontest() throws InvalidExpression {
 
 
 
@@ -113,35 +109,41 @@ class RevPolCalcTest {
       result = Float.parseFloat(firstOp) / Float.parseFloat(secondOp);
       assertEquals(result, (polCal.evaluate(firstOp + " " + secondOp + " " + "/")));
     }
-    
+
   }
-  
-  //test 8 test excess of operand.
-  //Modified code such the it handles empty stack exception.
- 
+
+  // test 8 test excess of operand.
+  // Modified code such the it handles empty stack exception.
+  //Modifid test 2,3,4,5,6,7. Delete EmptyStack exception declaration. 
   @Test
   void evaluateExpressionWithInsufficientOperandstest() {
-      assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 +"));
+    assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 +"));
   }
-  
-  //test 9 
-  //Added statement If(number.size() != 1). the statement say that if in the and o
-  //of computation NumStack is more the 1 than means there are not enough operands.
+
+  // test 9
+  // Added statement If(number.size() != 1). the statement say that if in the and o
+  // of computation NumStack is more the 1 than means there are not enough operands.
   @Test
   void evaluateExpressionWithInsuffiOperandstest() {
-      assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 2 3 +"));
+    assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 2 3 +"));
   }
-  
-  
-  //test 10.
-  //This test straight passed.
-  //This test has been created to test edge cases.
-  @Test 
+
+
+  // test 10.
+  // This test straight passed.
+  // This test has been created to test edge cases.
+  @Test
   void evaluateWithInsufficientOperands() {
     assertThrows(InvalidExpression.class, () -> polCal.evaluate("+"));
   }
-}
-  
 
+  // test 11
+  // This test straight passed.
+  // This test has been crreate to test if an a value is not right.
+  @Test
+  void evaouateWithInvalidToken() {
+    assertThrows(InvalidExpression.class, () -> polCal.evaluate("2 4 5 &"));
+  }
+}
 
 

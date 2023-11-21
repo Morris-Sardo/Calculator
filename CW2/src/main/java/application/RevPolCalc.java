@@ -34,7 +34,7 @@ public class RevPolCalc {
     try {
       String[] tokens = expression.split("\\s+"); // string splited between white space.
 
-      number = new NumStack();
+
       for (String token : tokens) {
         if (token.matches("-?\\d+(\\.\\d+)?")) { // accept integers and floating-point numbers.
 
@@ -72,13 +72,13 @@ public class RevPolCalc {
         }
       }
 
-      if (number.size() != 1) { //base case if the enad couptation stack if different then zero.
+      if (number.size() != 1) { // base case if the enad couptation stack if different then zero.
         throw new InvalidExpression("Insufficient operators");
       }
 
 
       return number.pop();
-    } catch (Exception e) { //use to hadle emptystack exception.
+    } catch (Exception e) { // use to hadle emptystack exception.
       throw new InvalidExpression("Invalid expression");
     }
   }
