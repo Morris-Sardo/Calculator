@@ -62,5 +62,13 @@ FEATURE-GUI.
     -Create new GUI. Upload Feaute-gui testing little bit. merging commit.
 
 
+21/11/2023 
+    -Merge feature-GUI into main.
+    -Create relese-2.
+        -create CHANGELOG file.
+        -tag it
+        
+
+
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 
