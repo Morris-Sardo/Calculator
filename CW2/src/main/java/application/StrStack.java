@@ -1,8 +1,8 @@
 package application;
 
 /**
- * The meaning of this class is add or retrive String form stack. All the method will call the
- * method of the stack to work.
+ * This class create a stack using Enty number. The functionality of the methods are to call the
+ * methods of Stack class.
  * 
  * @author papap
  *
@@ -10,8 +10,6 @@ package application;
 public class StrStack {
 
   private Stack numStack; // use to store entry string.
-  private Entry entry; // use to convert string string to Entry one.
-  private String string; // varible use as to enntry string.
 
   /**
    * This conctructor inizialize Srtack.

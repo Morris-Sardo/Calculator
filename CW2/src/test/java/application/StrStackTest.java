@@ -7,11 +7,18 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.Random;
 import org.junit.jupiter.api.Test;
 
+/**
+ * The meaning of this class is test that the the functionality of the method if the class inherit
+ * the functionality of the Stacks class method.
+ * 
+ * @author papap
+ *
+ */
 class StrStackTest {
 
   private StrStack numStack;
   private Entry entry;
-  private Random value;
+  private Random value; // it use to strore random number.
 
 
   // tes 1 create StrStack class.
@@ -74,45 +81,45 @@ class StrStackTest {
 
     }
   }
-  
-  
-  //test 6 top() method.
-  //To pass the test i add option throw axception.
+
+
+  // test 6 top() method.
+  // To pass the test i add option throw axception.
   @Test
   void TopThrowExceptionWhenStackIsEmptytest() throws EmptyStack {
-    
-    
+
+
     EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.top());
     assertEquals("Stack is Empty", e.getMessage());
 
-    
-    
+
+
   }
-  
-  //test 7 top() verified the top element is the last push int.
+
+  // test 7 top() verified the top element is the last push int.
   @Test
   void TopTheLastIsTheActuallyTopOnetest() throws BadType, EmptyStack {
-    
+
     entry = new Entry("Ciao");
     numStack.push(entry);
-    assertEquals(entry.getString(),numStack.top().getString());
-    
+    assertEquals(entry.getString(), numStack.top().getString());
+
   }
-  
-  //test 8 pop()
-  //this test when the exception is throws if the stack is empty.
-  
+
+  // test 8 pop()
+  // this test when the exception is throws if the stack is empty.
+
   @Test
   void PopThrowExceptiontest() throws EmptyStack {
-    
+
     entry = new Entry("Ciao");
     numStack.push(entry);
-    
-    assertDoesNotThrow(() -> numStack.pop()); //Exception is not throws..
-   
-    EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.pop());  // the extception is throws
+
+    assertDoesNotThrow(() -> numStack.pop()); // Exception is not throws..
+
+    EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.pop()); // the extception is throws
     assertEquals("Stack is Empty", e.getMessage());
   }
-  
+
 }
 

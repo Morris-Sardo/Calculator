@@ -10,7 +10,7 @@ package application;
 public class OpStack {
 
   private Stack opStack; // This is been use to inherit the functionality of Stack class
-  private Entry entry; // This s used to get the symbol.
+  private Entry entry; // This to use to obtain a a symbol as entry symbol.
 
   /**
    * This constructor inizialize a stack obj such that all the method int it,they can be called.
@@ -61,8 +61,8 @@ public class OpStack {
    */
 
   public Entry pop() throws EmptyStack {
-    
-    
+
+
     return opStack.pop();
 
   }
