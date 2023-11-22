@@ -12,7 +12,7 @@ public class StandardCalc {
 
   public float evaluate(String string) {
    
-    return 5f;
+    return number.pop();
   }
   
   
