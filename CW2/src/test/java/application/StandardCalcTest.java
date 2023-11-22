@@ -27,6 +27,14 @@ class StandardCalcTest {
     assertEquals(5, calc.evaluate("2 + 3"));
   }
   
+  //test 2
+  //evalute long enxpression.
+  @Test
+  void LongAdditionTest() throws InvalidExpression {
+    
+    assertEquals(20,calc.evaluate("2 + 3 + 4 + 5 + 6"));
+  }
+  
   
 
 
