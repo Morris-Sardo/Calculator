@@ -7,19 +7,30 @@ package application;
  *
  */
 public class StandardCalc {
-  
-  
 
-  public float evaluate(String string) {
-   
-    return number.pop();
-  }
-  
-  
+  RevPolCalc rpCalc;
 
+  public StandardCalc() {
 
+    this.rpCalc = new RevPolCalc();
   }
 
+  /**
+   * 
+   * @param expression
+   * @return
+   * @throws InvalidExpression
+   */
+  public float evaluate(String expression) throws InvalidExpression {
 
+    String[] token = expression.split(" ");
+
+
+    return rpCalc.evaluate(token[0] + " " + token[2] + " " + token[1]);
+  }
+
+
+
+}
 
 
