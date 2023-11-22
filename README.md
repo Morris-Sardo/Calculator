@@ -69,5 +69,8 @@ Bug fixed after eliminate size == 1.
 21/11/2023
     -Finish all required test in RevPolCalc.
 
+22/11/2023
+    -Start to implement StadardCalc class. 
+
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 
