@@ -1,15 +1,9 @@
 package application;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-/**
- * This class will implement standard calculation
- * 
- * @author papap
- *
- */
 class StandardCalcTest {
   
   private StandardCalc calc;
@@ -25,10 +19,12 @@ class StandardCalcTest {
   
   //test 1
   //Test addiction.
-  
+  //create evaluate Method thre return 5.0.
   @Test
-  void AdditionTest() {
-    asserEquals(5, calc.evaluate("2 + 4"));
+  void AdditionTest() throws InvalidExpression {
+    
+    
+    assertEquals(5, calc.evaluate("2 + 3"));
   }
  
 
