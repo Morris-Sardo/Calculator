@@ -60,11 +60,14 @@ class SandardCalcTest {
   
   
   //test 4
-  //mismatch parentheses.
+  //mismatch operand.
   @Test
-  void MismatchParenthesestest() {
+  void MismatchOperandtest() {
     
-    assertDoesNotThrow(() -> calc.evaluate("2 + + 3"));
+    assertDoesNotThrow(() -> calc.evaluate("2 + 3"));
+    assertThrows(InvalidExpression.class, () -> calc.evaluate("2 + + 3"));
+    assertDoesNotThrow(() -> calc.evaluate("2 * 3 4"));
+    
   }
 }
 
