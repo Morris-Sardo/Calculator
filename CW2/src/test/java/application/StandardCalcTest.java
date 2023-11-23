@@ -1,7 +1,8 @@
 package application;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 
@@ -51,11 +52,19 @@ class SandardCalcTest {
   //create contrutor use to inizialise RevPolCalc's object.
   //Test 1 and test 2 now are failed as evaluate type is not String anymore.
   
-//  @Test
-//  void StandCalcCompatibleWithRevPolCalctest() throws InvalidExpression {
-//    
-//    assertEquals(5f,calc.evaluate("3 + 2"));
-//  }
+  @Test
+  void StandCalcCompatibleWithRevPolCalctest() throws InvalidExpression {
+    
+    assertEquals(5f,calc.evaluate("3 + 2"));
+  }
   
+  
+  //test 4
+  //mismatch parentheses.
+  @Test
+  void MismatchParenthesestest() {
+    
+    assertDoesNotThrow(() -> calc.evaluate("2 + + 3"));
+  }
 }
 

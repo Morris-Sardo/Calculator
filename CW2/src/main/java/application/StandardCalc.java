@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class StandardCalc {
   
-  private RevPolCalc rpCalc;
+  private RevPolCalc rpCalc; //used to calculater expression
   
   public StandardCalc() {
     
