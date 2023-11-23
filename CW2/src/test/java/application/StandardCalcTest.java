@@ -71,5 +71,16 @@ class SandardCalcTest {
     
     
   }
+  
+  //test 5
+  //mismatch parenteses.
+  @Test
+  void MismatchParenthesestest() {
+    
+    assertThrows(InvalidExpression.class, () -> calc.evaluate("4 / 2"));
+    assertDoesNotThrow(() -> calc.evaluate("( ( ( (2 / 4 * 4 ) + 3 ) - 6"));
+    assertThrows(InvalidExpression.class, () -> calc.evaluate("( ( ( (2 / 4 * 4 ) + 3 ) - 6))"));
+    assertDoesNotThrow(() -> calc.evaluate(") ) ( (2 / 4 * 4 ) + 3 ) - 6"));
+  }
 }
 
