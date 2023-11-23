@@ -61,12 +61,14 @@ class SandardCalcTest {
   
   //test 4
   //mismatch operand.
+  //this test testing it the oprand are less then suppose to many.
   @Test
   void MismatchOperandtest() {
     
     assertDoesNotThrow(() -> calc.evaluate("2 + 3"));
     assertThrows(InvalidExpression.class, () -> calc.evaluate("2 + + 3"));
-    assertDoesNotThrow(() -> calc.evaluate("2 * 3 4"));
+    assertThrows(InvalidExpression.class, () -> calc.evaluate("2 * 3 4"));
+    
     
   }
 }
