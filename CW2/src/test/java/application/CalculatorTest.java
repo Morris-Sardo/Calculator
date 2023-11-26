@@ -18,7 +18,7 @@ class CalculatorTest {
   //Added implement to RevPolClass.
   //Modified change evaluate method in Calculator class. It won't take anymore argument boolean.
   @Test
-  void evaluateReversePolishExpressiontest() {
+  void evaluateReversePolishExpressiontest() throws InvalidExpression {
     
     String expression = "3 2 +";
     assertEquals(5f,calculator.evaluate(expression));

@@ -8,7 +8,7 @@ package application;
  * @author papap
  *
  */
-public class RevPolCalc {
+public class RevPolCalc implements Calculator {
 
   // private float result; //store the result of equasion.
   private NumStack number; // Used to to store the operand after converted in float.
