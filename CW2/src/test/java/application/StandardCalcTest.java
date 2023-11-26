@@ -55,7 +55,8 @@ class SandardCalcTest {
   @Test
   void StandCalcCompatibleWithRevPolCalctest() throws InvalidExpression {
     
-    assertEquals(5f,calc.evaluate("3 + 2"));
+    assertEquals(5.4f,calc.evaluate("3.2 + 2.2"));
+    assertEquals(7f,calc.evaluate("5 + 2"));
   }
   
   
