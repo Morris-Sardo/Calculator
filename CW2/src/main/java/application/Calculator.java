@@ -17,5 +17,6 @@ public interface Calculator {
    * @return the calculated value
    * @throws InvalidExpression when the expression cannot be evaluated
    */
-  public float evaluate(String expression, Boolean infix) throws InvalidExpression;
+  public float evaluate(String expression) throws InvalidExpression;
+  
 }

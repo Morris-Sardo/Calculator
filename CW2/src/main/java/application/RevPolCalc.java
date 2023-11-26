@@ -28,6 +28,7 @@ public class RevPolCalc {
    * @throws EmptyStack exception is threw if try evaluate an expression with empty stack.
    * @throws BadType exception is threw is type is not right.
    */
+  @Override
   public float evaluate(String expression) throws InvalidExpression {
 
 
