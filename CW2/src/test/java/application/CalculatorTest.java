@@ -72,11 +72,17 @@ class CalculatorTest {
   void InvalidOperatortest() {
     
     String expression = "33 + 3 & 22 ";
-    assertDoesNotThrow(()-> calculator.evaluate(expression));
+    assertThrows(InvalidExpression.class,()->calculator.evaluate(expression));
+    String expression1 = "33 - 4 + 8";
+    assertDoesNotThrow(()-> calculator.evaluate(expression1));
     
-    String expression1 = "33 4 + ?";
-    assertDoesNotThrow(()-> calculator.evaluate(expression));
-    //assertThrows(InvalidExpression.class,()->calculator.evaluate(expression1));
+    
+    String expression2 = "33 4 + ?";
+    assertThrows(InvalidExpression.class,()->calculator.evaluate(expression2));
+    String expression3 = "33 4 3 + *";
+    assertDoesNotThrow(()-> calculator.evaluate(expression3));
+    
+   
     
     
   }
