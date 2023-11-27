@@ -69,12 +69,15 @@ class SandardCalcTest {
     assertDoesNotThrow(() -> calc.evaluate("2 + 3"));
     assertThrows(InvalidExpression.class, () -> calc.evaluate("2 + + 3"));
     assertThrows(InvalidExpression.class, () -> calc.evaluate("2 * 3 4"));
+    //Exception e = assertThrows(InvalidExpression.class, () -> calc.evaluate("2 * 3 4"));
+    //e.getMessage()
     
     
   }
   
   //test 5
   //mismatch parenteses.
+  //Update the test such that it will verify the message the exception.
   @Test
   void MismatchParenthesestest() {
     
@@ -82,7 +85,8 @@ class SandardCalcTest {
     assertThrows(InvalidExpression.class, () -> calc.evaluate("( ( ( (2 / 4 * 4 ) + 3 ) - 6"));
     assertDoesNotThrow(() -> calc.evaluate("( ( ( ( 2 / 4 * 4 ) + 3 ) - 6 ) )"));
     assertThrows(InvalidExpression.class, () -> calc.evaluate(") ) ( (2 / 4 * 4 ) + 3 ) - 6"));
-    
+    Exception e = assertThrows(InvalidExpression.class, () -> calc.evaluate("( 2 * 3 4"));
+    assertEquals("Mismatched parentheses",e.getMessage());
     
   }
   
