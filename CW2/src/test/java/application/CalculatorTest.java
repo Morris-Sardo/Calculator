@@ -43,10 +43,11 @@ class CalculatorTest {
   @Test
   void UnMatchedParentheseStandardCalcstest() {
     
-    String expression = "( 3 + 2";
-    //assertDoesNotThrow(() -> calculator.evaluate(expression));
+    String expression = "( 3 + 2 )";
+    assertDoesNotThrow(() -> calculator.evaluate(expression));
+    String expression1 = "(33 + 3";
    
-    assertThrows(InvalidExpression.class, ()-> calculator.evaluate(expression));
+    assertThrows(InvalidExpression.class, ()-> calculator.evaluate(expression1));
    
   }
   
@@ -55,12 +56,14 @@ class CalculatorTest {
   @Test
   void InsufficientOperandRevPishCalc() {
     
-    String expression = "33 + -";
-   // assertDoesNotThrow(()-> calculator.evaluate(expression));
-    assertThrows(InvalidExpression.class,()->calculator.evaluate(expression));
+    String expression = "33 3 +";
+    assertDoesNotThrow(()-> calculator.evaluate(expression));
+    String expression1 = "33 + -";
+    assertThrows(InvalidExpression.class,()->calculator.evaluate(expression1));
+    
     
   }
-  
+ 
   
   
   
