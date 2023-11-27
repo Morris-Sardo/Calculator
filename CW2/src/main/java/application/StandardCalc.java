@@ -24,6 +24,7 @@ public class StandardCalc implements Calculator {
    * 
    * @param expr is equasion to evaluate.
    * @return the value of espression after evaluated.
+   * @throws InvalidExpression if the expression is not right format.
    */
   @Override
   public float evaluate(String expr) throws InvalidExpression {

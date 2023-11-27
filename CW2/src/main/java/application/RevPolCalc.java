@@ -25,8 +25,7 @@ public class RevPolCalc implements Calculator {
    * 
    * @param expression is equasion to evaluate.
    * @return the valuer of espression after evaluated.
-   * @throws EmptyStack exception is threw if try evaluate an expression with empty stack.
-   * @throws BadType exception is threw is type is not right.
+   * @throws InvalidExpression if the expression is not right format.
    */
   @Override
   public float evaluate(String expression) throws InvalidExpression {
