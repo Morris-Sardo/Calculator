@@ -73,17 +73,17 @@ Bug fixed after eliminate size == 1.
     -Start to implement StadardCalc class. 
 
 23/11/2023
-    -Finish StandardClac class. Passed all test. I have not use Opstack as UML requider.
+    -Finish StandardClac class. Passed all test. I have not use Opstack as UML required.
 
 26/11/2023
     -Started with implementation of Calculator class.
-    -Change evalaute method in  Calculator interaface class.
+    -Change evalaute method in Calculator interaface class.
     -Changed UML diagram. 
 
 27/11/2023
     -Crete CalcModelTest.
     -Fixed but in StandrdClac class. added statement that handle tan expression typed in reverse polish.
-    -Fixed all bugs in Calculation test class after modification in StandardCalc.
+    -Fixed all bugs in Calculaton test class after modification in StandardCalc.
     
 
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
