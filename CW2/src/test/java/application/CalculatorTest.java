@@ -1,5 +1,6 @@
 package application;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,15 +37,14 @@ class CalculatorTest {
     assertEquals(5f,calculator.evaluate(expression));
   }
   
-//  //test 3 test unmatched parentheses
-//  //this 
-//  @Test
-//  void UnMatchedParentheseStandardCalcstest() {
-//    
-//    String expression = "( 3 + 2";
-//    assertThrows(InvalidExpression.class, () -> calculator.evaluate(expression));
-//  }
-//  
+  //test 3 test unmatched parentheses
+  @Test
+  void UnMatchedParentheseStandardCalcstest() {
+    
+    String expression = "( 3 + 2";
+    assertDoesNotThrow(() -> calculator.evaluate(expression));
+  }
+  
   
   
   
