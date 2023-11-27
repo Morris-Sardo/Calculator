@@ -75,5 +75,10 @@ Bug fixed after eliminate size == 1.
 23/11/2023
     -Finish StandardClac class. Passed all test. I have not use Opstack as UML requider.
 
+26/11/2023
+    -Started with implementation of Calculator class.
+    -Change evalaute method in  Calculator interaface class.
+    -Changed UML diagram. 
+
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 
