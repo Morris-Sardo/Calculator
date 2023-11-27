@@ -19,17 +19,14 @@ class CalcModelTest {
  }
   //test 1. this test implement standards calculation.
   //the test will test also the exception.
+ //create field in Calculator, create Constructor and fixed return value to 5.
   @Test
   void evaluateRevPolitest() throws InvalidExpression {
    
     String expression = "3 + 2"; 
     assertEquals(5f,calcMod.evaluate(expression,true));
     
-    
-
-    
-    
-    
+ 
   }
 
 }
