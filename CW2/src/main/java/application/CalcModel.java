@@ -1,7 +1,7 @@
 package application;
 
 /**
- * Evaluates an expression - the evaluation can be Standard (infix) or reverse polish.
+ * Evaluates an expression - the evaluation can be Standard or reverse polish.
  */
 public class CalcModel {
 
@@ -10,7 +10,7 @@ public class CalcModel {
 
 
   /**
-   * Constructor..
+   * Constructor initializa Reverce polish and standard one.
    */
   public CalcModel() {
     this.revPol = new RevPolCalc();

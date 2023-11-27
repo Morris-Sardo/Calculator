@@ -23,9 +23,7 @@ public class StandardCalc implements Calculator {
    * This method get equation is input and return the result of it.
    * 
    * @param expr is equasion to evaluate.
-   * @return the valuer of espression after evaluated.
-   * @throws EmptyStack exception is threw if try evaluate an expression with empty stack.
-   * @throws BadType exception is threw is type is not right.
+   * @return the value of espression after evaluated.
    */
   @Override
   public float evaluate(String expr) throws InvalidExpression {

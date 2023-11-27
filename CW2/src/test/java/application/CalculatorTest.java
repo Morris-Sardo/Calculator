@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * The meaning of this class is test that StandardClac and RevPolishCalc class cna impleemtn the
+ * The meaning of this class is test that StandardClac and RevPolishCalc class.
  * Calculator one.
  * 
  * @author papap
