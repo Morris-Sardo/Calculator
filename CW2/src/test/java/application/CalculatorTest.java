@@ -37,12 +37,26 @@ class CalculatorTest {
     assertEquals(5f,calculator.evaluate(expression));
   }
   
-  //test 3 test unmatched parentheses
+  //test 3 test unmatched parentheses.
+  //this test was a fake test.
+  //the meaning of it was proves the Calculator class hereditary all capability of the StandardCalc class.  
   @Test
   void UnMatchedParentheseStandardCalcstest() {
     
     String expression = "( 3 + 2";
-    assertDoesNotThrow(() -> calculator.evaluate(expression));
+    //assertDoesNotThrow(() -> calculator.evaluate(expression));
+   
+    assertThrows(InvalidExpression.class, ()-> calculator.evaluate(expression));
+   
+  }
+  
+  //test 4
+  //this is another fake test. test Calculator class throw exception that RevPolCalc class should be.
+  @Test
+  void InsufficientOperandRevPishCalc() {
+    
+    String expression = "33 + -";
+    assertDoesNotThrow(()-> calculator.evaluate(expression));
   }
   
   
