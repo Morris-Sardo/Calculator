@@ -12,16 +12,27 @@ import java.util.List;
  *
  */
 public class Stack {
-
+  
+  
   private List<Entry> entries = new ArrayList<>(); // Use to store all the entry.
+  //private List<Entry> entries;
   private int size = 0; // Use as index of the array.
 
-
+  
+  //  public Stack() {
+  //    
+  //  }
+  //  
+  //  public Stack(List<Entry> entries) {
+  //    this.entries = new ArrayList<>();
+  //  }
+  
   /**
    * This method add alement on the top of the stack.
    * 
    * @param entry can be float, Integero or mathematical symbol.
    */
+  
   public void push(Entry entry) {
 
     this.entries.add(entry); // Add element at the top of stack.

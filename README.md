@@ -27,6 +27,7 @@ Bug fixed after eliminate size == 1.
 -Implementing push() , pop(), top() and size() methods in StrStac class. All method i try make them more general using random entry.
 -I have only ccomplited push() and size() task.
 
+
 15/11/2023
 -STACK
     -Adding test on top() method just to be sure that the method one has not any bugs.
@@ -37,6 +38,7 @@ Bug fixed after eliminate size == 1.
     -Fixed first merging conflit.
 
 -GUI
+    I DID NOT DO THIS YET.
     -create feature-GUI branch.
     -Working on GUI interface and testing it.
     -merge back in main.
@@ -50,6 +52,11 @@ RELEASE-1
     -Create CHANGEBLOG.md file reserved by bug fixed.
     -Used cherry-pick for merging commit from candidate release-1 branch to fauter-fixVarName branch anf tagged. After decide to merging  all branch. create my first tag.
     -Fixed couple of merge conflict.
+-FEATURE-CALCULATOR
+    -Create feaute-CALCULATOR.
+    -Update README.md file with my journey.
+    -Create StandarCalculator class.
+    -Create RevPolishCalc class.
 
 17/11/2023
 
@@ -69,6 +76,38 @@ FEATURE-GUI.
         -tag it
         
 
+18/11/2023
+    -Started Implementation StandardCalc class. During implenentation found bug in NumbStack, OpStack and StrStack. The bugs was the   method in these classes had Entry type. 
+    -Bug fixed and refactor done. Now NumStack, OpStack and StrStack they can work with StandardCalc class. 
+
+19/11/2023
+    -Carry on with StandsrdCalsc class.
+    -Decived to implement RevPolCalc class.
+
+20/11/2023
+    -RevPolCalc class as been written form the beginning as
+     wrong design. 
+    -Fixed smell code in top() and pop() method NumStack class. Added try{} catch{} to handle this kind of  exception. 
+
+21/11/2023
+    -Finish all required test in RevPolCalc.
+
+22/11/2023
+    -Start to implement StadardCalc class. 
+
+23/11/2023
+    -Finish StandardClac class. Passed all test. I have not use Opstack as UML required.
+
+26/11/2023
+    -Started with implementation of Calculator class.
+    -Change evalaute method in Calculator interaface class.
+    -Changed UML diagram. 
+
+27/11/2023
+    -Crete CalcModelTest.
+    -Fixed but in StandrdClac class. added statement that handle tan expression typed in reverse polish.
+    -Fixed all bugs in Calculaton test class after modification in StandardCalc.
+    
 
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 

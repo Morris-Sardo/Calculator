@@ -12,7 +12,9 @@ package application;
 public class NumStack {
 
   private Stack numStack; // use to call to store numbres into stack.
-  private Entry entry; // use to store esch entry num type.
+
+  private Entry entry; // it to add numver in Stack.
+
 
   /**
    * This constructor use to initialize the object stack.
@@ -38,10 +40,17 @@ public class NumStack {
    * 
    * @return element at the top of the stack.
    * @throws EmptyStack is exception throw everytime you try retreave a number with empty stack.
+   * @throws BadType exception has been throws if entry is not the right one.
    */
-  public Entry top() throws EmptyStack {
 
-    return numStack.top();
+  public float top() throws EmptyStack {
+
+    try {
+      return numStack.top().getFloat();
+    } catch (BadType e) {
+      e.printStackTrace();
+      return -1;
+    }
   }
 
   /**
@@ -54,14 +63,21 @@ public class NumStack {
     return numStack.size();
   }
 
+
   /**
-   * This method retun the element on the top of stack calling the pop method int.
+   * This method is use to return the element on the top stakc and decrease it of one.
    * 
-   * @return obtain and return element on the stack.
-   * @throws EmptyStack throw exception if element is in the first r second porsiozion
+   * @return element of the top of stack.
+   * @throws EmptyStack exception threw if try retreave alement with empty stack.
    */
-  public Entry pop() throws EmptyStack {
-    return numStack.pop();
+  public float pop() throws EmptyStack {
+    try {
+      return numStack.pop().getFloat();
+    } catch (BadType e) {
+      e.printStackTrace();
+      return -1;
+    }
+
   }
 
 

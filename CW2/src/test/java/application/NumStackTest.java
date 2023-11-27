@@ -46,19 +46,20 @@ class NumStackTest {
   // Create object stack such that the method push in NumStak class will call push method
   // into Stack class.
   // I had to add BadType exception as I am using Entry class.
+  // Refactor. Eliminated Entry object which retreave top entry on the stack. Test pass.
   @Test
   void Pushtest() throws EmptyStack, BadType {
 
     float randFloat = testValue.nextFloat() * (float) 100.0;
     numStack.push(randFloat);
-    Entry entry = numStack.top();
-    assertEquals(randFloat, entry.getFloat());
+    assertEquals(randFloat, numStack.top());
 
   }
 
   // test 3 check it if the exception throw the right text exception.
+  // Refactor. Added BadType Exception. Test pass.
   @Test
-  void topThrowsEmptyExceptionWhenEmpty() throws EmptyStack {
+  void topThrowsEmptyExceptionWhenEmpty() throws EmptyStack, BadType {
 
     float randFloat = testValue.nextFloat() * (float) 100.0;
     numStack.push(randFloat);
@@ -77,6 +78,7 @@ class NumStackTest {
   // pop method in numStack retreave the functionality of the pop method in Stack class.
   // Finally i ad to add Badtype exception as popEntryt i have use getFloat() that has BadTyoe as
   // exception.
+  // Refactor. Eliminated Entry object used to retrieve the using pop method.
   @Test
   void Poptest() throws EmptyStack, BadType {
 
@@ -88,8 +90,7 @@ class NumStackTest {
     numStack.push(randFloat1);
     assertNotEquals(1, numStack.size());
 
-    Entry popEntry = numStack.pop();
-    assertEquals(randFloat1, popEntry.getFloat());
+    assertEquals(randFloat1, numStack.pop());
 
 
   }

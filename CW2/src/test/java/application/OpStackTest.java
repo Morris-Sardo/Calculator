@@ -20,7 +20,6 @@ import org.junit.jupiter.api.Test;
 class OpStackTest {
 
   private OpStack opStack;
-  private Entry entry;
   private Symbol symbol;
   private Random value;
 
@@ -48,8 +47,9 @@ class OpStackTest {
   // All those this exception has been inherited from the methods of Stack class.
   // test 3 the index of the stack is releted to the last push( this test can confirm that the size
   // work prorerly).
+
   @Test
-  void PushSymboltest() throws BadType, EmptyStack {
+  void PushSymboltest() throws BadType, EmptyStack { // refactor.
 
     // array used to compare symbol.
     Symbol arr[] = {Symbol.LEFT_BRACKET, Symbol.DIVISION, Symbol.MINUS, Symbol.PLUS,
@@ -63,14 +63,15 @@ class OpStackTest {
     int index1 = value.nextInt(arr1.length - 1); // random index.
 
     opStack.push(arr[index]); // push symbol into the the stack.
-    entry = opStack.top(); // retrive symbol at the top of the stack.
+    // entry = opStack.top(); // retrive symbol at the top of the stack.
 
     // the statement compare say if the two symbol are equal use assertEquals() otherwise
     // assertNotEqual().
-    if (arr1[index1].equals(entry.getSymbol()))
-      assertEquals(arr1[index1].toString(), entry.getSymbol().toString());
+    if (arr1[index1].equals(opStack.top()))
+      // assertEquals(arr1[index1].toString(), opStack.top()); //modification.
+      assertEquals(arr1[index1], opStack.top());
     else
-      assertNotEquals(arr1[index1].toString(), entry.getSymbol().toString());
+      assertNotEquals(arr1[index1], opStack.top()); // modification.
 
 
 
@@ -89,38 +90,47 @@ class OpStackTest {
   // Add all exception's declaration.
   // I have to fixed the method pop into the stack class as it was throwing the exception
   // when the stack had 1 itme instead then zero.
+  // refactor. change top from entry type to symbol.
+
 
   @Test
-  void PopSymbolTest() throws EmptyStack, BadType {
+  void PopSymbolTest() throws EmptyStack, BadType { // refactor. change top from entry type to
+                                                    // symbol.
 
     Symbol symbol = Symbol.DIVISION;
     opStack.push(symbol);
-    entry = opStack.top();
+    // entry = opStack.top();
     assertEquals(1, opStack.size()); // confirm the the element has been add into the stack.
     opStack.pop();
     assertEquals(0, opStack.size()); // confirm the pop stack work proerly.
 
   }
 
-  @Test
+  // @Test
+  // Get rid off of this test.
   // test 5 throw EmptyStack exception if pop()
   // This method before test that exception is not throws if a symbol when item is right.
-  // then i added statement the cinfirm the the exception is been throw whe is not right.
-  void popThrowsBadTypeExceptiontest() {
-
-    // improvit makig all the test random
-    symbol = Symbol.LEFT_BRACKET;
-    opStack.push(symbol);
-    assertDoesNotThrow(() -> opStack.top());
-    BadType e = assertThrows(BadType.class, () -> opStack.pop().getString());
-    assertEquals("It is not a string", e.getMessage());
-
-  }
+  // then i added statement the confirm the the exception is been throw whe is not right.
+  // Refactor. Changed From entry to symbol.
+  // void popThrowsBadTypeExceptiontest() { //refactor
+  //
+  // // improvit makig all the test random
+  // symbol = Symbol.LEFT_BRACKET;
+  // opStack.push(symbol);
+  // assertDoesNotThrow(() -> opStack.top());
+  // opStack.push(symbol);
+  //
+  // //opStack.push("ciao");
+  //// BadType e = assertThrows(BadType.class, () -> opStack.toString()); //modification.
+  //// assertEquals("It is not a string", e.getMessage());
+  //
+  // }
 
   @Test
   // test 6 throw EmptyStack exception if pop()
   // this test it will throws an exception when the itme insert is not the right one.
-  void popThrowsEmptyStackExceptiontest() throws EmptyStack {
+  // Refactor. add BadType exception.
+  void popThrowsEmptyStackExceptiontest() throws EmptyStack, BadType {
 
 
     // try maki it generic.
