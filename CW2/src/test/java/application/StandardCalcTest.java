@@ -89,8 +89,20 @@ class SandardCalcTest {
     assertDoesNotThrow(() -> calc.evaluate("( ( ( ( 2 / 4 * 4 ) + 3 ) - 6 ) )"));
     assertThrows(InvalidExpression.class, () -> calc.evaluate(") ) ( (2 / 4 * 4 ) + 3 ) - 6"));
     Exception e = assertThrows(InvalidExpression.class, () -> calc.evaluate("( 2 * 3 4"));
-    assertEquals("Mismatched parentheses", e.getMessage());
+    assertEquals("Invalid Expression", e.getMessage());
 
+  }
+  
+  //test 6.
+  //added test to handle if expression typed was in reverse polish.
+  //to do so I had I added boolean vairable whitch change if state every time that loop find 
+  //two consicutive numbers.
+  //I update also test 5 about the retunr message.
+  //I had to modify test in CalculatorTest class.
+  @Test
+  void Revtest() {
+    
+    assertThrows(InvalidExpression.class, () -> calc.evaluate("2 3 +"));
   }
 
 

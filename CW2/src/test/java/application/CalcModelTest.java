@@ -17,8 +17,7 @@ class CalcModelTest {
    void seUp() {
    calcMod = new CalcModel();
  }
-  //test 1. this test implement standards calculation.
-  //the test will test also the exception.
+  //test 1. This test implement standards calculation.
  //create field in Calculator, create Constructor and fixed return value to 5.
   @Test
   void evaluateRevPolitest() throws InvalidExpression {
@@ -28,5 +27,14 @@ class CalcModelTest {
     
  
   }
-
+  
+  //test 2. This test implement Rev polish calculation. 
+  //
+  @Test 
+  void evaluateStandardCalctest() throws InvalidExpression {
+    
+    String expression = "6 2 -";
+    assertEquals(4f,calcMod.evaluate(expression, false));
+    
+  }
 }
