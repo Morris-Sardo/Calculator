@@ -63,6 +63,24 @@ class CalculatorTest {
     
     
   }
+  
+  //test 5.
+  //Evalute a expression with an invalid opererator.
+  //the test will considerate cthe case of both classes( RevPolCalc and StandardCalc class).
+
+  @Test
+  void InvalidOperatortest() {
+    
+    String expression = "33 + 3 & 22 ";
+    assertDoesNotThrow(()-> calculator.evaluate(expression));
+    
+    String expression1 = "33 4 + ?";
+    assertDoesNotThrow(()-> calculator.evaluate(expression));
+    //assertThrows(InvalidExpression.class,()->calculator.evaluate(expression1));
+    
+    
+  }
+  
  
   
   
