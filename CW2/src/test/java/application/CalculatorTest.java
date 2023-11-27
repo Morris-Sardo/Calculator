@@ -56,7 +56,9 @@ class CalculatorTest {
   void InsufficientOperandRevPishCalc() {
     
     String expression = "33 + -";
-    assertDoesNotThrow(()-> calculator.evaluate(expression));
+   // assertDoesNotThrow(()-> calculator.evaluate(expression));
+    assertThrows(InvalidExpression.class,()->calculator.evaluate(expression));
+    
   }
   
   
