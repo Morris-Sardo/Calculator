@@ -4,19 +4,13 @@ package application;
  * A calculator capable of decoding a String as an arithmetic expression and evaluating the answer.
  */
 public interface Calculator {
-
   /**
-   * Does an actual calculation to evaluate a given expression. The calculation depends on the value
-   * of the infix parameter which can be True to indicate that an INFOX expression with brackets is
-   * to be evaluated, like standard arithmetic. If the infix parameter is FALSE then the calculator
-   * treats the expression as a reverse polish expression and does the calculation. In either case a
-   * badly formed expression is notified to the caller by throwing an exception.
+   * This method get a string expression en evalute it or reverse polish or in Standard one.
    * 
-   * @param expression the question to be answered
-   * @param infix how to evaluate the question: true means infix, false means reverse polish
-   * @return the calculated value
-   * @throws InvalidExpression when the expression cannot be evaluated
+   * @param expression to evaluate.
+   * @return the result of the evaluated espcrssion.
+   * @throws InvalidExpression every then expresssion type is not correct.
    */
   public float evaluate(String expression) throws InvalidExpression;
-  
+
 }

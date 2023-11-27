@@ -55,7 +55,7 @@ class RevPolCalcTest {
   // this update i the methods are free from BadType and EmptyStack exception.
   // this motdification has been done at all test.
   @Test
-  void EvalutateExpressionAdditiontest() throws InvalidExpression{
+  void EvalutateExpressionAdditiontest() throws InvalidExpression {
 
 
     float result = Float.parseFloat(firstOp) + Float.parseFloat(secondOp);
@@ -102,18 +102,17 @@ class RevPolCalcTest {
 
 
 
-      assertThrows(InvalidExpression.class,
-          () -> polCal.evaluate(firstOp + " 0 " + "/"));
-   
-      result = Float.parseFloat(firstOp) / Float.parseFloat(secondOp);
-      assertEquals(result, (polCal.evaluate(firstOp + " " + secondOp + " " + "/")));
-  
+    assertThrows(InvalidExpression.class, () -> polCal.evaluate(firstOp + " 0 " + "/"));
+
+    result = Float.parseFloat(firstOp) / Float.parseFloat(secondOp);
+    assertEquals(result, (polCal.evaluate(firstOp + " " + secondOp + " " + "/")));
+
 
   }
 
   // test 8 test excess of operand.
   // Modified code such the it handles empty stack exception.
-  //Modifid test 2,3,4,5,6,7. Delete EmptyStack exception declaration. 
+  // Modifid test 2,3,4,5,6,7. Delete EmptyStack exception declaration.
   @Test
   void evaluateExpressionWithInsufficientOperandstest() {
     assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 +"));
@@ -143,6 +142,8 @@ class RevPolCalcTest {
   void evaouateWithInvalidToken() {
     assertThrows(InvalidExpression.class, () -> polCal.evaluate("2 4 5 &"));
   }
+
+
 }
 
 
