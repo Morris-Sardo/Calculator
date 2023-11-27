@@ -80,5 +80,11 @@ Bug fixed after eliminate size == 1.
     -Change evalaute method in  Calculator interaface class.
     -Changed UML diagram. 
 
+27/11/2023
+    -Crete CalcModelTest.
+    -Fixed but in StandrdClac class. added statement that handle tan expression typed in reverse polish.
+    -Fixed all bugs in Calculation test class after modification in StandardCalc.
+    
+
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 
