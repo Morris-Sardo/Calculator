@@ -11,7 +11,7 @@ import java.util.Map;
  * @author papap
  *
  */
-public class StandardCalc {
+public class StandardCalc{
   
   private RevPolCalc rpCalc; //used to calculater expression
   
@@ -22,6 +22,7 @@ public class StandardCalc {
   
   
   //THIS IS NOT THE FINAL VERSION OF THE CLASS.
+  //@Override
   public float evaluate(String expr) throws InvalidExpression {
     
       //keep track od priority between all operator.

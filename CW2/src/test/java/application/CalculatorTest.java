@@ -1,6 +1,7 @@
 package application;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,6 +13,7 @@ class CalculatorTest {
   void setUp() {
     //calculator = new StandardCalc();
     calculator = new RevPolCalc();
+    calculator = new StandardCalc();
   }
   
   //test 1 evaluate RevPol.
@@ -24,14 +26,26 @@ class CalculatorTest {
     assertEquals(5f,calculator.evaluate(expression));
   }
   
-////test 2 evaluate StandardClac.
-//  //Added implement to StandardardCalc class.
+  
+  //test 2 evaluate StandardClac.
+  //Added implement to StandardardCalc class.
+  @Test
+  void evaluateStandardCalcExpressiontest() throws InvalidExpression {
+    
+    String expression = "3 + 2";
+    assertEquals(5f,calculator.evaluate(expression));
+  }
+  
+//  //test 3 test unmatched parentheses
+//  //this 
 //  @Test
-//  void evaluateRevewrsePolishExpressiontest() throws InvalidExpression {
+//  void UnMatchedParentheseStandardCalcstest() {
 //    
-//    String expression = "3 2 +";
-//    assertEquals(5f,calculator.evaluate(expression));
+//    String expression = "( 3 + 2";
+//    assertThrows(InvalidExpression.class, () -> calculator.evaluate(expression));
 //  }
+//  
+  
   
   
   }
