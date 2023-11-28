@@ -1,9 +1,14 @@
 package application;
 
 /**
- * An expression was passed to a method that could not be evaluated.
+ * This class throws exception if en envalid expression has been written..
+ * 
  */
 
 public class InvalidExpression extends Exception {
+
+  public InvalidExpression(String string) {
+    super(string);
+  }
 
 }
