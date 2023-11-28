@@ -106,34 +106,12 @@ class OpStackTest {
 
   }
 
-  // @Test
-  // Get rid off of this test.
-  // test 5 throw EmptyStack exception if pop()
-  // This method before test that exception is not throws if a symbol when item is right.
-  // then i added statement the confirm the the exception is been throw whe is not right.
-  // Refactor. Changed From entry to symbol.
-  // void popThrowsBadTypeExceptiontest() { //refactor
-  //
-  // // improvit makig all the test random
-  // symbol = Symbol.LEFT_BRACKET;
-  // opStack.push(symbol);
-  // assertDoesNotThrow(() -> opStack.top());
-  // opStack.push(symbol);
-  //
-  // //opStack.push("ciao");
-  //// BadType e = assertThrows(BadType.class, () -> opStack.toString()); //modification.
-  //// assertEquals("It is not a string", e.getMessage());
-  //
-  // }
-
   @Test
   // test 6 throw EmptyStack exception if pop()
   // this test it will throws an exception when the itme insert is not the right one.
   // Refactor. add BadType exception.
   void popThrowsEmptyStackExceptiontest() throws EmptyStack, BadType {
 
-
-    // try maki it generic.
     symbol = Symbol.LEFT_BRACKET;
     opStack.push(symbol);
     assertDoesNotThrow(() -> opStack.top());
