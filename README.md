@@ -108,6 +108,9 @@ FEATURE-GUI.
     -Fixed but in StandrdClac class. added statement that handle tan expression typed in reverse polish.
     -Fixed all bugs in Calculaton test class after modification in StandardCalc.
     -Create release-3 branch. testing all classes create so far.
+
+28/11/2023
+    -Fix problem with Eclipse. It suddently does not find anymore all the file. Savae every thing tothe gitlab and and re-clone again.
     
 
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
