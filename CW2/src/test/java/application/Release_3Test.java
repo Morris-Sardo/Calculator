@@ -20,6 +20,7 @@ class Release_3Test {
   private StrStack strStack = new StrStack();
   private RevPolCalc polCalc = new RevPolCalc();
   private StandardCalc standCalc = new StandardCalc();
+  private CalcModel calcMod = new CalcModel();
 
   @Test
   // test 1. Test entry class.
@@ -244,7 +245,7 @@ class Release_3Test {
 
   @Test
   // test 20 test division operation in StandardCalc class.
-  //Update the RevPolClass such the it truncate number to 2 decimal point.
+  // Update the RevPolClass such the it truncate number to 2 decimal point.
   void EvalutateStancdardCalcExpressionDivisiontest() throws InvalidExpression {
 
     assertEquals(1.33f, standCalc.evaluate("4 / 3"));
@@ -252,15 +253,129 @@ class Release_3Test {
   }
 
 
-//  @Test
-//  // test 21 test division operation in StandardCalc class.
-//  void EvalutateStancdardCalcExpressionDivisionByZerotest() throws InvalidExpression {
-//
-//
-//    assertThrows(InvalidExpression.class, () -> standCalc.evaluate("6 / 0"));
-//    assertThrows(InvalidExpression.class, () -> standCalc.evaluate("6 / 0"));
-//    
-//
-//  }
+  @Test
+  // test 21 test division operation in StandardCalc class.
+  void EvalutateStancdardCalcExpressionDivisionByZerotest() throws InvalidExpression {
+
+
+    assertThrows(InvalidExpression.class, () -> standCalc.evaluate("6 / 0"));
+
+
+
+  }
+
+  @Test
+  // test 22 test division operation in StandardCalc class.
+  void EvalutateStancdardCalcExpressionWithWrongOperandOrOperetortest() throws InvalidExpression {
+
+
+    assertThrows(InvalidExpression.class, () -> standCalc.evaluate("(6 / 2.3"));
+    assertThrows(InvalidExpression.class, () -> standCalc.evaluate("(6 0 *"));
+    assertThrows(InvalidExpression.class, () -> standCalc.evaluate("((6 / 7)"));
+    assertThrows(InvalidExpression.class, () -> standCalc.evaluate("(6 / 0)))"));
+
+
+
+  }
+
+  @Test
+  // test 23 test standard calculation in CalcModel class.
+  void evaluateCalcModelClassStandCalctest() throws InvalidExpression {
+
+    String addExpre = "3.33 + 2";
+    assertEquals(5.33f, calcMod.evaluate(addExpre, true));
+
+    String subExpre = "6.3 - 2";
+    assertEquals(4.3f, calcMod.evaluate(subExpre, true));
+
+    String timeExpre = "6.3 * 2 * 3";
+    assertEquals(37.8f, calcMod.evaluate(timeExpre, true));
+
+    String divExpre = "6 / 2.8";
+    assertEquals(2.14f, calcMod.evaluate(divExpre, true));
+
+
+  }
+
+
+
+  @Test
+  // test 24 test reverse polish calculation CalcModel class.
+  void evaluateCalcModelClassRevPolCalctest() throws InvalidExpression {
+
+    String subExpre = "6.33 2 3 - -";
+    assertEquals(7.33f, calcMod.evaluate(subExpre, false));
+
+    String divExpre = "6.3 2 +";
+    assertEquals(8.3f, calcMod.evaluate(divExpre, false));
+
+    String devExpre = "6 2.8 /";
+    assertEquals(2.14f, calcMod.evaluate(devExpre, false));
+
+    String timeExpre = "2.33 11 *";
+    assertEquals(25.63f, calcMod.evaluate(timeExpre, false));
+
+
+
+  }
+
+
+
+  @Test
+  // test 25 test Exception in standard form.
+  void ExceptionCalcModelStandardFormtest() throws InvalidExpression {
+
+    String lessOperator = "6 + 2 - 2.22 43"; // less operator.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(lessOperator, true));
+
+    String NotOper = "3 4 6 6";// no operator.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(NotOper, true));
+
+    String TooManyOper = "6.3 / / / / 2 + / *"; // many operators.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(TooManyOper, true));
+
+    String Parenthesys1 = "((6 * 2.8) * 3"; // Mismatch parentheses.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(Parenthesys1, true));
+
+    String Parenthesys2 = "((6 * )2.8)))) * 3"; // Mismatch parentheses.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(Parenthesys2, true));
+
+    String devByZero = "6 / 0"; // by zero.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(devByZero, true));
+
+    String RevForm = "6 0 /"; // RevForm.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(RevForm, true));
+
+
+
+  }
+
+
+
+  @Test
+  // test 26 test Exception in reverse polish form.
+  void ExceptionReversePolishFormtest() throws InvalidExpression {
+
+    String lessOperator = "6 2 2.3 43 33 4 0.5 + /"; // less operator.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(lessOperator, false));
+
+    String NotOper = "3.99 4"; // no operator.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(NotOper, false));
+
+    String TooManyOper = "6.3 + 2 + / * / / *"; // many operators.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(TooManyOper, false));
+
+    String Parenthesys = "((((((6 * 2.8) * 3"; // Parentheses no accepted.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(Parenthesys, false));
+
+    String devByZero = "6 0 /"; // by zero.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(devByZero, false));
+
+    String StandardForm = "6 0 /"; // StandardFrom.
+    assertThrows(InvalidExpression.class, () -> calcMod.evaluate(StandardForm, false));
+
+  }
+
+
 
 }

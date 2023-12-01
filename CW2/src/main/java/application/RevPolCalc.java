@@ -1,6 +1,6 @@
 package application;
 
-import java.text.DecimalFormat;
+
 
 /**
  * This class accepts a string expression and it return the result of the calculation.
@@ -12,7 +12,6 @@ public class RevPolCalc implements Calculator {
 
   // private float result; //store the result of equation.
   private NumStack number; // Used to to store the operand after converted in float.
-  // private DecimalFormat df = new DecimalFormat();
 
   // Added
   // Modification of constructor. The constructor wont take anymore the expression
@@ -31,7 +30,6 @@ public class RevPolCalc implements Calculator {
   @Override
   public float evaluate(String expression) throws InvalidExpression {
 
-    // df.setMinimumFractionDigits(2);
 
 
     try {
@@ -66,8 +64,7 @@ public class RevPolCalc implements Calculator {
                 throw new InvalidExpression("Division by zero");
               } else {
 
-                // float num = (float) (Math.round((firstOperand / secondOperand) * 100.0) / 100.0);
-                // number.push(num);
+
                 number.push(firstOperand / secondOperand);
               }
               break;

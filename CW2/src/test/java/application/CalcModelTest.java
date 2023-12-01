@@ -7,9 +7,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * The meaning of this class is test all possible input the claculator model can have. the class
- * test hat calculator model class after got expression send the espression to the right handle
- * which type of from of calculation must be used. the calss test aloso all the possible exeption
+ * The meaning of this class is test all possible input the calculator model can have. the class
+ * test hat calculator model class after got expression send the expression to the right handle
+ * which type of from of calculation must be used. the class test also all the possible exception
  * cases.
  * 
  * @author papap
@@ -28,7 +28,7 @@ class CalcModelTest {
 
   // test 1. This test implement standards calculation.
   // create field in Calculator, create Constructor and fixed return value to 5.
-  // Improving test randoming the numbers.
+  // Improving test randomising the numbers.
   // Improved RevPolish class such hat it will return a number with 2 decimal point.
   @Test
   void evaluateStandCaldtest() throws InvalidExpression {
@@ -78,16 +78,16 @@ class CalcModelTest {
     String lessOperator = "6 + 2 - 2.3 43"; // less operator.
     assertThrows(InvalidExpression.class, () -> calcMod.evaluate(lessOperator, true));
 
-    String NotOper = "3 4";// no oprator.
+    String NotOper = "3 4";// no operator.
     assertThrows(InvalidExpression.class, () -> calcMod.evaluate(NotOper, true));
 
     String TooManyOper = "6.3 + 2 + / *"; // many operators.
     assertThrows(InvalidExpression.class, () -> calcMod.evaluate(TooManyOper, true));
 
-    String Parenthesys1 = "((6 * 2.8) * 3"; // mimsmatch parenthesys.
+    String Parenthesys1 = "((6 * 2.8) * 3"; // Mismatch parentheses.
     assertThrows(InvalidExpression.class, () -> calcMod.evaluate(Parenthesys1, true));
 
-    String Parenthesys2 = "((6 * )2.8)))) * 3"; // mimsmatch parenthesys.
+    String Parenthesys2 = "((6 * )2.8)))) * 3"; // Mismatch parentheses.
     assertThrows(InvalidExpression.class, () -> calcMod.evaluate(Parenthesys2, true));
 
     String devByZero = "6 / 0"; // by zero.
@@ -108,13 +108,13 @@ class CalcModelTest {
     String lessOperator = "6 2 2.3 43 + /"; // less operator.
     assertThrows(InvalidExpression.class, () -> calcMod.evaluate(lessOperator, false));
 
-    String NotOper = "3.99 4"; // no oprator.
+    String NotOper = "3.99 4"; // no operator.
     assertThrows(InvalidExpression.class, () -> calcMod.evaluate(NotOper, false));
 
     String TooManyOper = "6.3 + 2 + / * / / *"; // many operators.
     assertThrows(InvalidExpression.class, () -> calcMod.evaluate(TooManyOper, false));
 
-    String Parenthesys = "((6 * 2.8) * 3"; // parenthesys no accepted.
+    String Parenthesys = "((6 * 2.8) * 3"; // Parentheses no accepted.
     assertThrows(InvalidExpression.class, () -> calcMod.evaluate(Parenthesys, false));
 
     String devByZero = "6 0 /"; // by zero.
