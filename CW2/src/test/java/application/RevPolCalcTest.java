@@ -82,7 +82,7 @@ class RevPolCalcTest {
 
   }
 
-  // test 6 test motiplication operation.
+  // test 6 test multiplication operation.
   // test added case"*" in switch statement.
   @Test
   void EvalutateExpressionMotilplicatiThrowsExceptiontest() throws InvalidExpression {

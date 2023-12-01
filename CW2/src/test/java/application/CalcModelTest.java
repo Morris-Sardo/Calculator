@@ -29,6 +29,7 @@ class CalcModelTest {
   // test 1. This test implement standards calculation.
   // create field in Calculator, create Constructor and fixed return value to 5.
   // Improving test randoming the numbers.
+  // Improved RevPolish class such hat it will return a number with 2 decimal point.
   @Test
   void evaluateStandCaldtest() throws InvalidExpression {
 
@@ -42,12 +43,13 @@ class CalcModelTest {
     assertEquals(12.6f, calcMod.evaluate(timeExpre, true));
 
     String divExpre = "6 / 2.8";
-    assertEquals(2.142857f, calcMod.evaluate(divExpre, true));
+    assertEquals(2.14f, calcMod.evaluate(divExpre, true));
 
 
   }
 
   // test 2. This test implement Rev polish calculation.
+  // Improved RevPolish class such hat it will return a number with 2 decimal point.
   @Test
   void evaluateRevPolCalctest() throws InvalidExpression {
 
@@ -58,7 +60,7 @@ class CalcModelTest {
     assertEquals(8.3f, calcMod.evaluate(divExpre, false));
 
     String devExpre = "6 2.8 /";
-    assertEquals(2.142857f, calcMod.evaluate(devExpre, false));
+    assertEquals(2.14f, calcMod.evaluate(devExpre, false));
 
     String timeExpre = "2 11 *";
     assertEquals(22f, calcMod.evaluate(timeExpre, false));

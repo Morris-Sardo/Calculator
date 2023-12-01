@@ -18,6 +18,8 @@ class Release_3Test {
   private Random testValue = new Random();
   private OpStack opStack = new OpStack();
   private StrStack strStack = new StrStack();
+  private RevPolCalc polCalc = new RevPolCalc();
+  private StandardCalc standCalc = new StandardCalc();
 
   @Test
   // test 1. Test entry class.
@@ -154,5 +156,111 @@ class Release_3Test {
 
 
   }
+
+
+  @Test
+  // test 11 test addition operation in reverse polish class.
+  void EvalutateExpressionAdditiontest() throws InvalidExpression {
+
+
+    assertEquals(15f, polCalc.evaluate("5 1 2 4 3 + + + + "));
+
+  }
+
+  @Test
+  // test 12 test subtraction operation in reverse polish class.
+  void EvalutateExpressionSubtractiontest() throws InvalidExpression {
+
+    assertEquals(1f, polCalc.evaluate("4 3 -"));
+
+
+
+  }
+
+  @Test
+  // test 14 test division operation in reverse polish class.
+  void EvalutateExpressionMotiplicationtest() throws InvalidExpression {
+
+    assertEquals(12f, polCalc.evaluate("4 3 *"));
+
+
+
+  }
+
+  @Test
+  // test 14 test division operation in reverse polish class.
+  // modify test after added Math.round() in revPol class.
+  void EvalutateExpressionDivisiontest() throws InvalidExpression {
+
+    assertEquals(0.75f, polCalc.evaluate("3 4 /"));
+
+  }
+
+  @Test
+  // test 15 test division by zero in reverse polish class.
+  void EvalutateExpressionDivisionByZerotest() throws InvalidExpression {
+
+    assertThrows(InvalidExpression.class, () -> polCalc.evaluate("4 0 /"));
+
+  }
+
+  @Test
+  // test 16 test wrong formatting expression reverse polish class.
+  void EvalutateExpressionWrongFormattingtest() throws InvalidExpression {
+
+    assertThrows(InvalidExpression.class, () -> polCalc.evaluate("4  / 3"));
+    assertThrows(InvalidExpression.class, () -> polCalc.evaluate("( 4  3 * )"));
+
+
+  }
+
+  @Test
+  // test 17 test addition operation in StandardCalc class.
+  void EvalutateStancdardCalcExpressionAdditiontest() throws InvalidExpression {
+
+
+    assertEquals(15f, standCalc.evaluate("5 + 1 + 2 + 4 + 3 "));
+
+  }
+
+
+  @Test
+  // test 18 test subtraction operation in StandardCalc class.
+  void EvalutateStancdardCalcExpressionSubtractiontest() throws InvalidExpression {
+
+
+    assertEquals(-1f, standCalc.evaluate("5 - 1 - 2 - 3 "));
+
+  }
+
+  @Test
+  // test 19 test multiplication operation in StandardCalc class.
+  void EvalutateStancdardCalcExpressionMultiplicationtest() throws InvalidExpression {
+
+
+    assertEquals(15f, standCalc.evaluate("5 * 3"));
+
+  }
+
+  @Test
+  // test 20 test division operation in StandardCalc class.
+  //Update the RevPolClass such the it truncate number to 2 decimal point.
+  void EvalutateStancdardCalcExpressionDivisiontest() throws InvalidExpression {
+
+    assertEquals(1.33f, standCalc.evaluate("4 / 3"));
+
+  }
+
+
+//  @Test
+//  // test 21 test division operation in StandardCalc class.
+//  void EvalutateStancdardCalcExpressionDivisionByZerotest() throws InvalidExpression {
+//
+//
+//    assertThrows(InvalidExpression.class, () -> standCalc.evaluate("6 / 0"));
+//    assertThrows(InvalidExpression.class, () -> standCalc.evaluate("6 / 0"));
+//    
+//
+//  }
 
 }
