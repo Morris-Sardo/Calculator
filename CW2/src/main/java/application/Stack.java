@@ -3,8 +3,6 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 /**
  * This class is responsible to add, retrive specific values in specific point of a stack.
  * 
@@ -12,35 +10,31 @@ import java.util.List;
  *
  */
 public class Stack {
-  
-  
+
   private List<Entry> entries = new ArrayList<>(); // Use to store all the entry.
-  //private List<Entry> entries;
+  // private List<Entry> entries;
   private int size = 0; // Use as index of the array.
 
-  
-  //  public Stack() {
-  //    
-  //  }
-  //  
-  //  public Stack(List<Entry> entries) {
-  //    this.entries = new ArrayList<>();
-  //  }
-  
+  // public Stack() {
+  //
+  // }
+  //
+  // public Stack(List<Entry> entries) {
+  // this.entries = new ArrayList<>();
+  // }
+
   /**
    * This method add alement on the top of the stack.
    * 
    * @param entry can be float, Integero or mathematical symbol.
    */
-  
+
   public void push(Entry entry) {
 
     this.entries.add(entry); // Add element at the top of stack.
     this.size++; // Now size has beee increase.
 
   }
-
-
 
   /**
    * This method is responsible to keep track of dimention of the stack.
@@ -50,8 +44,6 @@ public class Stack {
   public int size() {
     return size;
   }
-
-
 
   /**
    * This method return the element top of stack.
@@ -66,8 +58,6 @@ public class Stack {
       return entries.get(size - 1);
     }
   }
-
-
 
   /**
    * This method obtain and remove elemenent at top of stack.
@@ -87,5 +77,3 @@ public class Stack {
     }
   }
 }
-
-

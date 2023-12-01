@@ -5,7 +5,7 @@ import java.util.Random;
 import org.junit.jupiter.api.Test;
 
 /**
- * This class test the sysstem implelented so far.
+ * This class test the system implemented so far.
  * 
  * @author papap
  *
@@ -39,7 +39,7 @@ class Release_3Test {
   }
 
   @Test
-  // test 3. test encrease size in stack class.
+  // test 3. test increase size in stack class.
   void encreaseSizetest() throws BadType {
 
     Entry entry = new Entry("ciao");
@@ -102,7 +102,7 @@ class Release_3Test {
   }
 
   @Test
-  // test 7. test trhow exception when numbStack is empty.
+  // test 7. test throw exception when numbStack is empty.
   void topThrowsEmptyExceptionWhenEmpty() throws EmptyStack, BadType {
 
     float randFloat = testValue.nextFloat() * (float) 100.0;
@@ -127,7 +127,7 @@ class Release_3Test {
   }
 
   @Test
-  // test 9. test puch method in StrStack class.
+  // test 9. test push method in StrStack class.
   void PuhStringtest() throws BadType, EmptyStack {
 
     testValue = new Random();
