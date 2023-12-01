@@ -5,12 +5,17 @@ package application;
  * that is the part the user interfaces with.
  */
 public class CalcController {
-  private CalcModel myModel;
-  private ViewInterface myView;
+
 
   private void handleCalculation() {}
 
   private void handleTypeChange() {}
 
-  CalcController(CalcModel model, ViewInterface view) {}
+
+  public CalcController(CalcModel myModel, ViewInterface myView) {
+
+
+  }
+
+
 }

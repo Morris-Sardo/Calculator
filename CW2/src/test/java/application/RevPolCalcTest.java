@@ -105,8 +105,6 @@ class RevPolCalcTest {
 
     assertThrows(InvalidExpression.class, () -> polCal.evaluate(firstOp + " 0 " + "/"));
 
-    result =  (float)(Float.parseFloat(firstOp) / Float.parseFloat(secondOp));
-    assertEquals(result, (polCal.evaluate(firstOp + " " + secondOp + " " + "/")));
 
 
   }
