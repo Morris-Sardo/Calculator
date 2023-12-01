@@ -6,11 +6,10 @@ package application;
 public class CalcModel {
 
   private Calculator revPol; // use to implement reversePol
-  private Calculator standCalc; // use to implemtent Standard calculation.
-
+  private Calculator standCalc; // use to implement Standard calculation.
 
   /**
-   * Constructor initializa Reverce polish and standard one.
+   * Constructor initialise Reverse polish and standard one.
    */
   public CalcModel() {
     this.revPol = new RevPolCalc();
@@ -22,8 +21,8 @@ public class CalcModel {
    * This method evaluate a Standard form or Reverse Polish form.
    * 
    * @param expression use as user input.
-   * @param infix used to decise whitch kind espreassion evaluate.
-   * @return reult of calcualtion.
+   * @param infix used to decide which kind expression evaluate.
+   * @return result of calculation.
    * @throws InvalidExpression if the expression is not right format.
    */
   public float evaluate(String expression, Boolean infix) throws InvalidExpression {

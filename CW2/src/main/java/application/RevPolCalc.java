@@ -10,11 +10,11 @@ package application;
  */
 public class RevPolCalc implements Calculator {
 
-  // private float result; //store the result of equasion.
+  // private float result; //store the result of equation.
   private NumStack number; // Used to to store the operand after converted in float.
 
-  // addded
-  // modofication of constructor. The cosnstructor wont take anymore the expression
+  // Added
+  // Modification of constructor. The constructor wont take anymore the expression
   public RevPolCalc() {
     this.number = new NumStack();
 
@@ -23,16 +23,17 @@ public class RevPolCalc implements Calculator {
   /**
    * This method get equation is input and return the result of it.
    * 
-   * @param expression is equasion to evaluate.
-   * @return the valuer of espression after evaluated.
+   * @param expression is equation to evaluate.
+   * @return the valuer of expression after evaluated.
    * @throws InvalidExpression if the expression is not right format.
    */
   @Override
   public float evaluate(String expression) throws InvalidExpression {
 
 
+
     try {
-      String[] tokens = expression.split("\\s+"); // string splited between white space.
+      String[] tokens = expression.split("\\s+"); // string splitted between white space.
 
 
       for (String token : tokens) {
@@ -59,9 +60,11 @@ public class RevPolCalc implements Calculator {
               break;
 
             case "/":
-              if (secondOperand == 0) { // base case if devide by zero.
+              if (secondOperand == 0) { // base case if device by zero.
                 throw new InvalidExpression("Division by zero");
               } else {
+
+
                 number.push(firstOperand / secondOperand);
               }
               break;
@@ -72,13 +75,13 @@ public class RevPolCalc implements Calculator {
         }
       }
 
-      if (number.size() != 1) { // base case if the enad couptation stack if different then zero.
+      if (number.size() != 1) { // base case if the end computation stack if different then zero.
         throw new InvalidExpression("Insufficient operators");
       }
 
 
-      return number.pop();
-    } catch (Exception e) { // use to hadle emptystack exception.
+      return (float) (Math.round(number.pop() * 100.0) / 100.0);
+    } catch (Exception e) { // use to handle emptystack exception.
       throw new InvalidExpression("Invalid expression");
     }
   }

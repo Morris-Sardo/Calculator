@@ -39,7 +39,7 @@ class SandardCalcTest {
   }
 
   // test 2
-  // evaluate long esxpression with addition of parentheses.
+  // evaluate long expression with addition of parentheses.
 
   @Test
   void LongAdditionTest() throws InvalidExpression {
@@ -49,10 +49,10 @@ class SandardCalcTest {
 
 
   // test 3
-  // test if epression implemented by StandardCalc is compatible
+  // test if expression implemented by StandardCalc is compatible
   // with RevPolCalss class.
   // Modified evaluate method form string to float.
-  // create contrutor use to inizialise RevPolCalc's object.
+  // create contrutor use to initialise RevPolCalc's object.
   // Test 1 and test 2 now are failed as evaluate type is not String anymore.
 
   @Test
