@@ -97,6 +97,7 @@ class RevPolCalcTest {
   // added case"/" in switch state.
   // added if statement in case"/" to handle the InvalidExpression.
   // the exception is throw is secondOp == 0.
+  // fixed bugs. 
   @Test
   void EvalutateExpressionDivisiontest() throws InvalidExpression {
 
@@ -104,7 +105,7 @@ class RevPolCalcTest {
 
     assertThrows(InvalidExpression.class, () -> polCal.evaluate(firstOp + " 0 " + "/"));
 
-    result = Float.parseFloat(firstOp) / Float.parseFloat(secondOp);
+    result =  (float)(Float.parseFloat(firstOp) / Float.parseFloat(secondOp));
     assertEquals(result, (polCal.evaluate(firstOp + " " + secondOp + " " + "/")));
 
 

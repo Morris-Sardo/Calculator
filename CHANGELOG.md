@@ -13,3 +13,6 @@ fixe but in StandardCalc class. evaluate expression used axcept expression in re
 release-3
     -test 20 in release_3Test class descovered small bug in RevPolishCalc class. Bug was that the number were printed with too many decimal point. Update revPolClass such that truncate number to two decimal point.
     -System test finished. Tested all class implemented. 
+
+After merged release-3 into main found another bug in test 7 in RevPolCalc class. 
+Bug has been fixed. casted resuld as float. 
