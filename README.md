@@ -112,6 +112,9 @@ FEATURE-GUI.
 28/11/2023
     -Fix problem with Eclipse. It suddently does not find anymore all the file. Savae every thing tothe gitlab and and re-clone again.
     
+1/12/2023
+    -Fiexd checkstyle configuratuion problems. Download the eclipse -java-google-style.xml and added into src/main/resorces.
+     -Finishing last  system test into release-3 branch.
 
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 
