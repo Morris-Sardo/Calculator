@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,10 +38,22 @@ public class CalcView extends Application implements ViewInterface {
   // These methods build the Observer/Observable pattern
 
 
-  @Override
+  // @Override
+  // public void addCalculateObserver(Runnable f) {
+  // calcButton.setOnAction(
+  // event ->totalField.setTest( f.run());
+  // }
+
   public void addCalculateObserver(Runnable f) {
     calcButton.setOnAction(event -> f.run());
   }
+
+  // @Override
+  // public void addCalculateObserver(Function<String, Integer> evaluate) {
+  // calcButton.setOnAction(
+  // event -> totalField.setText(evaluate.apply(inputField.getText()).toString()));
+  // inputField.getText();
+  // }
 
   @Override
   public void addTypeObserver(Consumer<OpType> c) {

@@ -6,6 +6,12 @@ package application;
  */
 public class CalcController {
 
+  
+  private ViewInterface view; 
+  
+  public CalcController(ViewInterface view) {
+   
+  }
 
   private void handleCalculation() {}
 
@@ -16,6 +22,8 @@ public class CalcController {
 
 
   }
+
+
 
 
 }
