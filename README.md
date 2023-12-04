@@ -117,7 +117,8 @@ FEATURE-GUI.
      -Finishing last  system test into release-3 branch.
      -test 20 in release_3Test class discovered small bug in RevPolish class. Bug was  the number were truncated. ther output was little impredictable. 
      -System test done. All classes has been tested. System work.
-     
+    -Create feature-VIEW branch. This branch it will implement an expression using a GUI interface.
 
-You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
+     
+     -You may edit it as you like, but please do not remove the default topics or the  project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 
