@@ -49,10 +49,15 @@ class CalcControllerTest {
   //test 3 test that calcController an expression in Standard.
   void CalcControllerInvalidExpressionest() {
     calcContr = new CalcController(model, view);
-    view.setExpression("2 5");
+    view.setExpression("2 * 5");
     calcContr.handleTypeChange(OpType.STANDARD);
     calcContr.handleCalculation();
     assertNotEquals(view.answer, "Invalid Expression");
+    view.setExpression("2 5");
+    calcContr.handleTypeChange(OpType.STANDARD);
+    calcContr.handleCalculation();
+    assertEquals(view.answer, "Invalid Expression");
+    
 
 
 
