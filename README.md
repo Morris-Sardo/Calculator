@@ -119,8 +119,6 @@ FEATURE-GUI.
      -System test done. All classes has been tested. System work.
     -Create feature-VIEW branch. This branch it will implement an expression using a GUI interface.
 
-     
-     -You may edit it as you like, but please do not remove the default topics or the  project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 
 4/12/2023
     -Implemented CalcController class, MockView class.
@@ -131,3 +129,6 @@ FEATURE-GUI.
 Calculator application is an application which is able to implement the calculation in reverse polish or standard notation. It is able to reconise if a expression has been added in a wrong way. The app will return an error message every time that a wrong expression has been added. 
 This application is deliverated with a GUI interface.
 
+
+
+You may edit it as you like, but please do not remove the default topics or the  project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
