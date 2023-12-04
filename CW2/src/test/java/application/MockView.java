@@ -9,11 +9,16 @@ import java.util.function.Consumer;
  */
 public class MockView implements ViewInterface {
 
-  private Runnable calculateMethod;
-  private Consumer<OpType> typeMethod;
-  private String expression;
-  private String answer;
+  public Runnable calculateMethod;
+  public Consumer<OpType> typeMethod;
+  public String expression;
+  public String answer;
 
+ 
+  //added set expression.
+  public void setExpression(String newExpression) {
+    this.expression = newExpression; 
+  }
 
   @Override
   public void addCalculateObserver(Runnable f) {
