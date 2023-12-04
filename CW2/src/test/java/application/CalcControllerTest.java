@@ -1,6 +1,7 @@
 package application;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 // import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 
@@ -38,6 +39,20 @@ class CalcControllerTest {
     calcContr.handleTypeChange(OpType.STANDARD);
     calcContr.handleCalculation();
     assertEquals(Float.parseFloat(view.answer), 10f);
+
+
+
+  }
+  
+  
+  @Test
+  //test 3 test that calcController an expression in Standard.
+  void CalcControllerInvalidExpressionest() {
+    calcContr = new CalcController(model, view);
+    view.setExpression("2 5");
+    calcContr.handleTypeChange(OpType.STANDARD);
+    calcContr.handleCalculation();
+    assertNotEquals(view.answer, "Invalid Expression");
 
 
 
