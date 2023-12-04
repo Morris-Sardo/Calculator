@@ -16,3 +16,6 @@ release-3
 
 After merged release-3 into main found another bug in test 7 in RevPolCalc class. 
 Bug has been fixed. casted resuld as float. 
+
+release-4
+    -system test done. No bugs found.
