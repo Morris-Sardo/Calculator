@@ -5,13 +5,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.Random;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 /**
- * This class test system test for all system.
+ * This class test system test for all system in View and Model development.
+ * 
  * @author papap
  *
  */
 class Release_4Test {
-  
+
   private Random testValue = new Random();
   private StrStack strStack;
   private RevPolCalc polCalc;
@@ -22,7 +24,7 @@ class Release_4Test {
 
   @BeforeEach
   void steUp() {
-    
+
     strStack = new StrStack();
     polCalc = new RevPolCalc();
     view = new MockView();
@@ -54,7 +56,7 @@ class Release_4Test {
     calcCont.handleTypeChange(OpType.REV_POLISH);
     calcCont.handleCalculation();
     assertEquals(Float.parseFloat(view.answer), 11f);
-    
+
     view.setExpression("");
 
   }
@@ -73,16 +75,16 @@ class Release_4Test {
     assertEquals(view.answer, "Invalid expression");
 
   }
-  
+
   @Test
   // test 4 test addition operation in reverse polish class.
   void EvalutateExpressionAdditiontest() throws InvalidExpression {
-    
-    
+
+
     assertEquals(14f, polCalc.evaluate("5 2 4 3 + + + "));
 
   }
-  
+
   @Test
   // test 5. test push method in StrStack class.
   void PuhStringtest() throws BadType, EmptyStack {

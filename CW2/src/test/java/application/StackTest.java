@@ -16,12 +16,12 @@ import org.junit.jupiter.api.Test;
  */
 class StackTest {
 
-  private Stack stack = new Stack(); // is use to inizialise array into Stack class.
+  private Stack stack = new Stack(); // is use to initialise array into Stack class.
 
 
 
   @Test
-  // test 1 encrease size.
+  // test 1 increase size.
   // create push method.
   // create size method.
   // create a List entry.
@@ -71,8 +71,8 @@ class StackTest {
   // create method pop().
   // store the last entry added in tmp variable.
   // remove last entry from the array.
-  // deacrease of of one size.
-  // return value of the tmp varible.
+  // decrease of of one size.
+  // return value of the tmp variable.
   void returnLastElementAddedAndDrecreaseOnetest() throws BadType, EmptyStack {
     Entry entry = new Entry("hi");
     Entry entry1 = new Entry("bye");
@@ -84,7 +84,7 @@ class StackTest {
   }
 
   @Test
-  // test 5 throw EmptyStack exception if pop() retreave an entry when stack is empty.
+  // test 5 throw EmptyStack exception if pop() retrieve an entry when stack is empty.
   // if if(size == 0) will throws EmptyStack exception.
   // modified test 4 adding EmptyStack exception statement c.
   void popThrowsEmptyExceptionWhenStackIsEmptytest() {

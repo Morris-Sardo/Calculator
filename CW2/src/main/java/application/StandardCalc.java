@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Map;
 
 /**
- * This class implement the calculation in form by using Stadard from.
+ * This class implement the calculation in form by using Standard form.
  * 
  * @author papap
  *
@@ -22,8 +22,8 @@ public class StandardCalc implements Calculator {
   /**
    * This method get equation is input and return the result of it.
    * 
-   * @param expr is equasion to evaluate.
-   * @return the value of espression after evaluated.
+   * @param expr is equation to evaluate.
+   * @return the value of expression after evaluated.
    * @throws InvalidExpression if the expression is not right format.
    */
   @Override
@@ -40,11 +40,11 @@ public class StandardCalc implements Calculator {
     Deque<Character> stack = new LinkedList<>();
 
 
-    // loop use to convert the espression form normal to reverse one.
-    // the conversion is been handle by hashmaps that in base of the prioriy assigned to the
+    // loop use to convert the expression form normal to reverse one.
+    // the conversion is been handle by hashmaps that in base of the priority assigned to the
     // operators it decide in collaboration with queue when adding into StringBuilder.
-    // The paranthesis won't be added in thr BuilderString.
-    // Is been throw excetpion if the the parentesis are not matched.
+    // The parenthesis won't be added in the BuilderString.
+    // Is been throw exception if the the parenthesis are not matched.
     String[] tokens = expr.split("\\s+");
     boolean lastWasDigit = false; // Added to track consecutive numbers
 
@@ -52,7 +52,7 @@ public class StandardCalc implements Calculator {
       char c = token.charAt(0);
 
       if (Character.isDigit(c)) {
-        // new statement that handle the expression in revece polish.
+        // new statement that handle the expression in reverse polish.
         if (lastWasDigit) {
           throw new InvalidExpression("Invalid Expression");
         }

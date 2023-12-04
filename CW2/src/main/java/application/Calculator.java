@@ -1,7 +1,12 @@
 package application;
 
+
+
 /**
  * A calculator capable of decoding a String as an arithmetic expression and evaluating the answer.
+ * 
+ * @author papap
+ *
  */
 public interface Calculator {
   /**

@@ -3,6 +3,8 @@ package application;
 import java.util.function.Consumer;
 
 /**
+ * This class was created to implement CalcControllerTest class when CalcControllerTest class needs
+ * to use viewInterface class methods.
  * 
  * @author papap
  *
@@ -14,10 +16,10 @@ public class MockView implements ViewInterface {
   public String expression;
   public String answer;
 
- 
-  //added set expression.
+
+  // added set expression.
   public void setExpression(String newExpression) {
-    this.expression = newExpression; 
+    this.expression = newExpression;
   }
 
   @Override
@@ -41,17 +43,17 @@ public class MockView implements ViewInterface {
 
   @Override
   public void setAnswer(String a) {
-      this.answer =a;
+    this.answer = a;
 
   }
 
   @Override
   public void startView() {
-    
+
 
 
   }
-  
+
 
 
 }

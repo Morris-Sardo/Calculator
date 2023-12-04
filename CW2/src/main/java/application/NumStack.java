@@ -39,7 +39,7 @@ public class NumStack {
    * This method is use to return the element on the top of the stack.
    * 
    * @return element at the top of the stack.
-   * @throws EmptyStack is exception throw everytime you try retrieve a number with empty stack.
+   * @throws EmptyStack is exception throw every time you try retrieve a number with empty stack.
    * @throws BadType exception has been throws if entry is not the right one.
    */
 

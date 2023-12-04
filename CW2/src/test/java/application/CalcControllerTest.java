@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import org.junit.jupiter.api.Test;
 
 /**
- * This class aim test calcController class theat obvsere the input from the Interface aND+ 
+ * This class aim test that the calcController class observe the input from the Interface and Model. 
+ * 
  * @author papap
  *
  */

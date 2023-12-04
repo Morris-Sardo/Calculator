@@ -75,8 +75,8 @@ class NumStackTest {
   // will increase.
   // Next, I have created pop method. To do so i had to add also all the exception(confirming the
   // also
-  // pop method in numStack retreave the functionality of the pop method in Stack class.
-  // Finally i ad to add Badtype exception as popEntryt i have use getFloat() that has BadTyoe as
+  // pop method in numStack retrieve the functionality of the pop method in Stack class.
+  // Finally i ad to add BadType exception as popEntryt i have use getFloat() that has BadTyoe as
   // exception.
   // Refactor. Eliminated Entry object used to retrieve the using pop method.
   @Test

@@ -17,12 +17,12 @@ import org.junit.jupiter.api.Test;
 class StrStackTest {
 
   private StrStack numStack;
-  //private Entry entry;
-  private Random value; // it use to strore random number.
+  // private Entry entry;
+  private Random value; // it use to store random number.
 
 
 
-  // tes 1 create StrStack class.
+  // test 1 create StrStack class.
   @BeforeEach
   void setup() {
     numStack = new StrStack();
@@ -31,18 +31,18 @@ class StrStackTest {
   }
 
   // text 2 pup string into the stack.
-  // To Create metod push(). I have to build:
+  // To Create method push(). I have to build:
   // size() and top().
-  // size() to keep track the index encrease every time add a entry,
-  // plus the size wwill be useful to as index when I will verify that
+  // size() to keep track the index increase every time add a entry,
+  // plus the size will be useful to as index when I will verify that
   // the entry just pushed is has the top of the stack. I will build top()
   // for the purpose as well.
   // After create top() method TTD was failing as the throw exception were unhadled.
   // Fixed bug. change argument from Entry type to String.
-  // Refactor. Added BadType declaration plus and the retrived string form Entry ot String one.
+  // Refactor. Added BadType declaration plus and the retrieve string form Entry to String one.
   // Test pass now.
   @Test
-  void PuhStringtest() throws BadType, EmptyStack {  
+  void PuhStringtest() throws BadType, EmptyStack {
 
     value = new Random();
     String arr[] = {"+", "?", "/", "*", "!", "ciao", ""};
@@ -60,9 +60,9 @@ class StrStackTest {
   // test 3 create size method.
   // The method has been created during test2.
   // test 4 I have create a loop to confirm the the size increase properly.
-  // test 5 I Have create another loop to confirm the size decree are proprerly.
+  // test 5 I Have create another loop to confirm the size decree are properly.
   // To do so I must implement pop method.
-  // Refactor test. Added BadType declaration, the array alement are not converted anymore to Entry.
+  // Refactor test. Added BadType declaration, the array element are not converted anymore to Entry.
   // Test pass.
   @Test
   void SizeMethodIncreaseProperlytest() throws EmptyStack, BadType {
@@ -86,7 +86,7 @@ class StrStackTest {
 
 
   // test 6 top() method.
-  // To pass the test i add option throw axception.
+  // To pass the test i add option throw exception.
   @Test
   void TopThrowExceptionWhenStackIsEmptytest() throws EmptyStack {
 
@@ -99,8 +99,8 @@ class StrStackTest {
   }
 
   // test 7 top() verified the top element is the last push int.
-  //Refactor. from push and entry string into stack now I straight push in as String.
-  //Test pass now.
+  // Refactor. from push and entry string into stack now I straight push in as String.
+  // Test pass now.
   @Test
   void TopTheLastIsTheActuallyTopOnetest() throws BadType, EmptyStack {
 
@@ -111,14 +111,14 @@ class StrStackTest {
 
   // test 8 pop()
   // this test when the exception is throws if the stack is empty.
-  // Refactort the same change as previuos test.
+  // Refactor the same change as previous test.
   // test as well.
   @Test
   void PopThrowExceptiontest() throws EmptyStack {
 
     numStack.push("Ciao");
 
-    assertDoesNotThrow(() -> numStack.pop()); 
+    assertDoesNotThrow(() -> numStack.pop());
 
     EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.pop());
     assertEquals("Stack is Empty", e.getMessage());

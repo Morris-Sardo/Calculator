@@ -23,15 +23,15 @@ class SandardCalcTest {
   // Create created hashmap such that it will keep track of priority of operator.
   // use a BuilderString to save the expression converted in Reverse polish on.
   // I used queue such that the operand i could push and pop of both side(this is good
-  // because if a operand was behind to another one it could puch it into from the another side of
+  // because if a operand was behind to another one it could push it into from the another side of
   // it).
-  // Inside the loop variuos if and else statement with sopme of them with while loop.
-  // In addition the loop check if elelent is operando or operator. If it s a operator check in
+  // Inside the loop various if and else statement with some of them with while loop.
+  // In addition the loop check if element is operand or operator. If it s a operator check in
   // hashmap
-  // which prioprit has(Higher number hegher priority) and add them in the back of number into
+  // which propriety has(Higher number higher priority) and add them in the back of number into
   // BuildString.
-  // If it s parantesis check grup all numbers and operator into it.
-  // Is is been throw an exception if a parentesist is mismatched.
+  // If it s parenthesis check group all numbers and operator into it.
+  // Is is been throw an exception if a parenthesis is mismatched.
   @Test
   void AdditionTest() throws InvalidExpression {
 
@@ -52,7 +52,7 @@ class SandardCalcTest {
   // test if expression implemented by StandardCalc is compatible
   // with RevPolCalss class.
   // Modified evaluate method form string to float.
-  // create contrutor use to initialise RevPolCalc's object.
+  // create constructor use to initialise RevPolCalc's object.
   // Test 1 and test 2 now are failed as evaluate type is not String anymore.
 
   @Test
@@ -65,7 +65,7 @@ class SandardCalcTest {
 
   // test 4
   // mismatch operand.
-  // this test testing it the oprand are less then suppose to many.
+  // this test testing it the operand are less then suppose to many.
   @Test
   void MismatchOperandtest() {
 
@@ -79,7 +79,7 @@ class SandardCalcTest {
   }
 
   // test 5
-  // mismatch parenteses.
+  // mismatch parentheses.
   // Update the test such that it will verify the message the exception.
   @Test
   void MismatchParenthesestest() {
@@ -92,16 +92,16 @@ class SandardCalcTest {
     assertEquals("Invalid Expression", e.getMessage());
 
   }
-  
-  //test 6.
-  //added test to handle if expression typed was in reverse polish.
-  //to do so I had I added boolean vairable whitch change if state every time that loop find 
-  //two consicutive numbers.
-  //I update also test 5 about the retunr message.
-  //I had to modify test in CalculatorTest class.
+
+  // test 6.
+  // added test to handle if expression typed was in reverse polish.
+  // to do so I had I added boolean variable which change if state every time that loop find
+  // two consecutive numbers.
+  // I update also test 5 about the return message.
+  // I had to modify test in CalculatorTest class.
   @Test
   void Revtest() {
-    
+
     assertThrows(InvalidExpression.class, () -> calc.evaluate("2 3 +"));
   }
 

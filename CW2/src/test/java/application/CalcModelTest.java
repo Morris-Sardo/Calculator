@@ -48,7 +48,7 @@ class CalcModelTest {
 
   }
 
-  // test 2. This test implement Rev polish calculation.
+  // test 2. This test implement Reverse polish calculation.
   // Improved RevPolish class such hat it will return a number with 2 decimal point.
   @Test
   void evaluateRevPolCalctest() throws InvalidExpression {
