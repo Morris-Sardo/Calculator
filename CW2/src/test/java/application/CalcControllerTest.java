@@ -2,10 +2,13 @@ package application;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-// import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 
-
+/**
+ * This class aim test calcController class theat obvsere the input from the Interface aND+ 
+ * @author papap
+ *
+ */
 class CalcControllerTest {
 
   CalcController calcContr;
@@ -14,7 +17,7 @@ class CalcControllerTest {
 
 
   @Test
-  // test 1 test that calcController an expression in RevPolish. 
+  // test 1 test that calcController an expression in RevPolish.
   // create MoCkView class and imported all method of ViewINteface class.
   // add set Expression in MockView.
   // Implemented handleCalculation and handleTypeChange such that the Interface can communicate with
@@ -30,9 +33,9 @@ class CalcControllerTest {
 
 
   }
-  
+
   @Test
-  //test 2 test that calcController an expression in Standard.
+  // test 2 test that calcController an expression in Standard.
   void CalcControllerInStandardtest() {
     calcContr = new CalcController(model, view);
     view.setExpression("2 * 5");
@@ -43,10 +46,10 @@ class CalcControllerTest {
 
 
   }
-  
-  
+
+
   @Test
-  //test 3 test that calcController an expression in Standard.
+  // test 3 test that calcController an expression in Standard.
   void CalcControllerInvalidExpressionest() {
     calcContr = new CalcController(model, view);
     view.setExpression("2 * 5");
@@ -57,13 +60,12 @@ class CalcControllerTest {
     calcContr.handleTypeChange(OpType.STANDARD);
     calcContr.handleCalculation();
     assertEquals(view.answer, "Invalid Expression");
-    
 
 
 
   }
-  
-  
+
+
 
 }
 
