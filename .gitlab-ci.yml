@@ -1,0 +1,35 @@
+
+stages:
+  - build
+  - test
+  - validation
+  - package
+
+build-job:
+  stage: build
+  script:
+    - cd CW2
+    - mvn clean compile
+
+test-job:
+  stage: test
+  script:
+    - cd CW2
+    - mvn test
+
+checkstyle-job:
+  stage: validation
+  script:
+    - cd CW2
+    - mvn checkstyle:check
+
+package-job:
+  stage: package
+  script:
+    - cd CW2
+    - mvn package
+  artifacts:
+    when: on_success
+    expire_in: 30 days
+    paths:
+      - "CW2/target/*.jar"
