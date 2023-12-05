@@ -72,6 +72,9 @@ public class StandardCalc implements Calculator {
             throw new InvalidExpression("Invalid Expression");
           }
         } else {
+          
+          //If the character is either lower precedence or the same of the top stack, it keeps add to the string
+          //the character popped by stack and added with space.
           while (!stack.isEmpty()
               && precedence.getOrDefault(stack.peek(), -1) >= precedence.getOrDefault(c, -1)) {
             output.append(stack.pop()).append(' ');
