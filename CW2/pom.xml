@@ -66,6 +66,7 @@
             if developers generally just use "mvn test" prior to pushing changes, 
             checkstyle would not run as verify occurs after the test phase 
         -->
+				
 				<executions>
 					<execution>
 						<id>validate</id>

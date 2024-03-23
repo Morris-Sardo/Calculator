@@ -6,6 +6,9 @@ import java.util.function.Consumer;
 /**
  * Skeleton code for a terminal based calculator that reads an expression from the user and
  * evaluates it and prints out the answer.
+ *
+ * @author papap
+ * @version $Id: $Id
  */
 public class AsciiView implements ViewInterface {
   // The current question that the calculator must solve: entered like ?3*(5+4)
@@ -50,22 +53,27 @@ public class AsciiView implements ViewInterface {
     System.out.println("  Q - to exit");
   }
 
+  /** {@inheritDoc} */
   @Override
   public String getExpression() {
     return "0";
   }
 
+  /** {@inheritDoc} */
   @Override
   public void setAnswer(String answer) {
     System.out.println("Answer is just around the corner");
   }
 
+  /** {@inheritDoc} */
   @Override
   public void addCalculateObserver(Runnable f) {}
 
+  /** {@inheritDoc} */
   @Override
   public void addTypeObserver(Consumer<OpType> c) {}
 
+  /** {@inheritDoc} */
   @Override
   public void startView() {
     menu();

@@ -9,15 +9,15 @@ import java.util.function.Consumer;
 /**
  * Any calculator view must implement these methods to allow the controller and the view to properly
  * work together.
- * 
+ *
  * @author Dave Cohen (d.cohen@rhul.ac.uk)
- * 
- **/
+ * @version $Id: $Id
+ */
 public interface ViewInterface {
 
   /**
    * Add the method that should do the calculation.
-   * 
+   *
    * @param f the runnable object to do the calculation (a method that takes no parameters and
    *        returns no value)
    */
@@ -25,20 +25,23 @@ public interface ViewInterface {
 
   /**
    * Add the method to tell the controller the type of calculation to do.
-   * 
+   *
    * @param c the method to do the calculation takes an OpType argument and returns no value
    */
   void addTypeObserver(Consumer<OpType> c);
 
   /**
    * The controller can call this to find the current expression to be evaluated.
+   *
+   * @return a {@link java.lang.String} object
    */
   String getExpression();
 
   /**
    * The controller should call this to display the evaluated answer to the user.
+   *
+   * @param a a {@link java.lang.String} object
    */
-
   void setAnswer(String a);
 
   /**
