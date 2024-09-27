@@ -3,7 +3,7 @@ package application;
 
 
 /**
- * This class mangage initialization if type plus comparison plus if imput is proper insert.
+ * This class manage initialisation if type plus comparison plus if input is proper insert.
  * 
  * @author papap
  *
@@ -17,32 +17,32 @@ public class Entry {
   private Symbol other; // Use to store the symbol.
 
   /**
-   * Constructor use for maching string with data type String.
+   * Constructor use for matching string with data type String.
    * 
-   * @param string is use to inizialize the input from the user.
+   * @param string is use to initialise the input from the user.
    */
   public Entry(String string) {
-    this.str = string; // Initialization field string.
-    this.type = Type.STRING; // Initialization field type.
+    this.str = string; // Initialisation field string.
+    this.type = Type.STRING; // Initialisation field type.
   }
 
   /**
-   * Constructor use for maching float number with data type float.
+   * Constructor use for matching float number with data type float.
    * 
-   * @param value is use to inzialize float input from user.
+   * @param value is use to initialise float input from user.
    */
   public Entry(float value) {
-    this.number = value; // Inzializition field float number.
+    this.number = value; // Initialisation field float number.
     this.type = Type.FLOAT;
   }
 
   /**
-   * Constructor use for maching matematical operator with data type symbol.
+   * Constructor use for matching mathematical operator with data type symbol.
    * 
-   * @param which is variable use to inizialise a variable synmbol.
+   * @param which is variable use to initialise a variable symbol.
    */
   public Entry(Symbol which) {
-    this.other = which; // Initialization field mathematicla symbol.
+    this.other = which; // Initialisation field mathematical symbol.
     this.type = Type.SYMBOL;
   }
 
@@ -77,10 +77,10 @@ public class Entry {
   }
 
   /**
-   * This method use ot abtain mathematical symbol by other class.
+   * This method use to obtain mathematical symbol by other class.
    * 
    * @return mathematical symbol insert by the user.
-   * @throws BadType ensure that method return only mathematicla symbol.
+   * @throws BadType ensure that method return only mathematical symbol.
    */
   public Symbol getSymbol() throws BadType {
     if (type != Type.SYMBOL) { // Base case.

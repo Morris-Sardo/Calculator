@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <fileset-config file-format-version="1.2.0" simple-config="false" sync-formatter="false">
-  <local-check-config name="maven-checkstyle-plugin validate" location="file:/C:/Users/papap/git-repos/CS2800/CW2/src/main/resources/googlePlus.xml" type="remote" description="maven-checkstyle-plugin configuration validate">
-    <property name="checkstyle.header.file" value="C:\Users\papap\eclipse-workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\Calculator\com.basistech.m2e.code.quality.checkstyleConfigurator\checkstyle-header-validate.txt"/>
+  <local-check-config name="maven-checkstyle-plugin validate" location="file:/C:/Users/papap/git-repos/CS2800_/CW2/src/main/resources/googlePlus.xml" type="remote" description="maven-checkstyle-plugin configuration validate">
+    <property name="checkstyle.header.file" value="C:\Users\papap\Desktop\exrcise\FileEclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\Calculator\com.basistech.m2e.code.quality.checkstyleConfigurator\checkstyle-header-validate.txt"/>
     <property name="checkstyle.cache.file" value="${project_loc}/target/checkstyle-cachefile"/>
+  </local-check-config>
+  <local-check-config name="GooglePlus" location="C:\Users\papap\git-repos\CS2800_\CW2\src\main\resources\googlePlus.xml" type="external" description="">
+    <additional-data name="protect-config-file" value="false"/>
   </local-check-config>
   <fileset name="java-sources-validate" enabled="true" check-config-name="maven-checkstyle-plugin validate" local="true">
     <file-match-pattern match-pattern="^src/main/java/.*\.java" include-pattern="true"/>

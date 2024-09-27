@@ -18,7 +18,7 @@ public enum Type {
   }
 
   @Override
-  public String toString() {        //Keep overrive the string.
+  public String toString() {        //Keep override the string.
     return string;
 
   }

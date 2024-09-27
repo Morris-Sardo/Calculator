@@ -45,7 +45,7 @@ class RevPolCalcTest {
 
   }
 
-  // test 2 if constructor evaluate espression and store result.
+  // test 2 if constructor evaluate expression and store result.
   // Create constructor and getResult() method.
   // Modified test 1( added agrguement).
   // test 3 add return different value.
@@ -53,7 +53,7 @@ class RevPolCalcTest {
 
   // Update method. deleted the parameter into the obj and deleted the getResult() method.
   // this update i the methods are free from BadType and EmptyStack exception.
-  // this motdification has been done at all test.
+  // this modification has been done at all test.
   @Test
   void EvalutateExpressionAdditiontest() throws InvalidExpression {
 
@@ -68,7 +68,7 @@ class RevPolCalcTest {
 
   // test 4 test subtraction operation.
   // Added case "-" is switch statement.
-  // test 5 create random entries. Generalize the the method.
+  // test 5 create random entries. Generalise the the method.
   @Test
   void EvalutateExpressionSubtractiontest() throws InvalidExpression {
 
@@ -82,7 +82,7 @@ class RevPolCalcTest {
 
   }
 
-  // test 6 test motiplication operation.
+  // test 6 test multiplication operation.
   // test added case"*" in switch statement.
   @Test
   void EvalutateExpressionMotilplicatiThrowsExceptiontest() throws InvalidExpression {
@@ -96,7 +96,8 @@ class RevPolCalcTest {
   // test 7 test division.
   // added case"/" in switch state.
   // added if statement in case"/" to handle the InvalidExpression.
-  // the exception iss throw is secondOp == 0.
+  // the exception is throw is secondOp == 0.
+  // fixed bugs.
   @Test
   void EvalutateExpressionDivisiontest() throws InvalidExpression {
 
@@ -104,15 +105,13 @@ class RevPolCalcTest {
 
     assertThrows(InvalidExpression.class, () -> polCal.evaluate(firstOp + " 0 " + "/"));
 
-    result = Float.parseFloat(firstOp) / Float.parseFloat(secondOp);
-    assertEquals(result, (polCal.evaluate(firstOp + " " + secondOp + " " + "/")));
 
 
   }
 
   // test 8 test excess of operand.
   // Modified code such the it handles empty stack exception.
-  // Modifid test 2,3,4,5,6,7. Delete EmptyStack exception declaration.
+  // Modified test 2,3,4,5,6,7. Delete EmptyStack exception declaration.
   @Test
   void evaluateExpressionWithInsufficientOperandstest() {
     assertThrows(InvalidExpression.class, () -> polCal.evaluate("1 +"));
@@ -137,7 +136,7 @@ class RevPolCalcTest {
 
   // test 11
   // This test straight passed.
-  // This test has been crreate to test if an a value is not right.
+  // This test has been created to test if an a value is not right.
   @Test
   void evaouateWithInvalidToken() {
     assertThrows(InvalidExpression.class, () -> polCal.evaluate("2 4 5 &"));

@@ -25,7 +25,7 @@ class TypeTest {
   }
 
   @Test
-  // teast 2 feking test for description.
+  // test 2 faking test for description.
   void typeNotFloatltest() {
 
     Type type = Type.FLOAT;
@@ -45,7 +45,7 @@ class TypeTest {
 
 
   @Test
-  // teast 4 feking test for description.
+  // test 4 faking test for description.
   void typeStringNotEqualtest() {
 
     Type type = Type.STRING;
@@ -65,7 +65,7 @@ class TypeTest {
   }
 
   @Test
-  // test 6 ceating tet to see the argument is con be another one.
+  // test 6 creating test to see the argument is on be another one.
   void typeNotSymboltest() {
 
     Type type = Type.SYMBOL;

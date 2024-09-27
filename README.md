@@ -9,7 +9,7 @@ Infortunally since I have started the coursework too early, I have made many err
 
 13/11/2023
 The works has been so far is:  
-    -Import exist mamven projecdt into eclips.
+    -Import exist maven projecdt into eclips.
     -Create test folder as the project provide to has it was not in.
     -Fix the  package's name variable's name more formal.
     -Tested my prevously code done in coursekwork 1 when placed in provided initial project.(it has been done just  
@@ -107,7 +107,28 @@ FEATURE-GUI.
     -Crete CalcModelTest.
     -Fixed but in StandrdClac class. added statement that handle tan expression typed in reverse polish.
     -Fixed all bugs in Calculaton test class after modification in StandardCalc.
+    -Create release-3 branch. testing all classes create so far.
+
+28/11/2023
+    -Fix problem with Eclipse. It suddently does not find anymore all the file. Savae every thing tothe gitlab and and re-clone again.
     
+1/12/2023
+    -Fiexd checkstyle configuratuion problems. Download the eclipse -java-google-style.xml and added into src/main/resorces.
+     -Finishing last  system test into release-3 branch.
+     -test 20 in release_3Test class discovered small bug in RevPolish class. Bug was  the number were truncated. ther output was little impredictable. 
+     -System test done. All classes has been tested. System work.
+    -Create feature-VIEW branch. This branch it will implement an expression using a GUI interface.
 
-You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 
+4/12/2023
+    -Implemented CalcController class, MockView class.
+    -Merged Feature-VIEW branch back into the main.
+    -Created branch release-4. 
+    -System test done. No bugs found.
+
+Calculator application is an application which is able to implement the calculation in reverse polish or standard notation. It is able to reconise if a expression has been added in a wrong way. The app will return an error message every time that a wrong expression has been added. 
+This application is deliverated with a GUI interface.
+
+
+
+You may edit it as you like, but please do not remove the default topics or the  project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.

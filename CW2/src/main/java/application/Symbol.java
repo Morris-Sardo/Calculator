@@ -16,7 +16,6 @@ public enum Symbol {
     this.string = string;
   }
 
-
   @Override
   public String toString() {
 

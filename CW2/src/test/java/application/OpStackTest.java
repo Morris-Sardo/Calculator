@@ -23,7 +23,7 @@ class OpStackTest {
   private Symbol symbol;
   private Random value;
 
-  // Inizialize all the objext into its body At all methods.
+  // Initialise all the object into its body At all methods.
   @BeforeEach
   void setUp() {
     opStack = new OpStack();
@@ -32,7 +32,7 @@ class OpStackTest {
 
   }
 
-  // test 1 test if constructor exist. to do so i will inizialize obj opstack.
+  // test 1 test if constructor exist. to do so i will initialise object OpStack.
   // This test is a fake test as java provide a default constructor anyway.
   @Test
   void Constructortest() {
@@ -43,10 +43,10 @@ class OpStackTest {
 
   // test 2 testing push method.
   // To do so i had to add push and top method in the OpStack class.
-  // I had to add trhows BadRype(about opStack.push(symbol)) and EmptyStack(about opStack.top()).
+  // I had to add throws BadRype(about opStack.push(symbol)) and EmptyStack(about opStack.top()).
   // All those this exception has been inherited from the methods of Stack class.
   // test 3 the index of the stack is releted to the last push( this test can confirm that the size
-  // work prorerly).
+  // work properly).
 
   @Test
   void PushSymboltest() throws BadType, EmptyStack { // refactor.
@@ -55,7 +55,7 @@ class OpStackTest {
     Symbol arr[] = {Symbol.LEFT_BRACKET, Symbol.DIVISION, Symbol.MINUS, Symbol.PLUS,
         Symbol.RIGHT_BRACKET, Symbol.TIME};
 
-    // array used to compaare symbol.
+    // array used to compare symbol.
     Symbol arr1[] = {Symbol.LEFT_BRACKET, Symbol.DIVISION, Symbol.MINUS, Symbol.PLUS,
         Symbol.RIGHT_BRACKET, Symbol.TIME};
 
@@ -63,7 +63,7 @@ class OpStackTest {
     int index1 = value.nextInt(arr1.length - 1); // random index.
 
     opStack.push(arr[index]); // push symbol into the the stack.
-    // entry = opStack.top(); // retrive symbol at the top of the stack.
+    // entry = opStack.top(); // retrieve symbol at the top of the stack.
 
     // the statement compare say if the two symbol are equal use assertEquals() otherwise
     // assertNotEqual().
@@ -75,8 +75,8 @@ class OpStackTest {
 
 
 
-    Symbol symbol1 = Symbol.INVALID; // obj crerated to do test 3.
-    OpStack opStackSize = new OpStack(); // obj create to do test 3.
+    Symbol symbol1 = Symbol.INVALID; // object created to do test 3.
+    OpStack opStackSize = new OpStack(); // object create to do test 3.
 
     assertNotEquals(opStack.size(), opStackSize.size());
 
@@ -106,34 +106,12 @@ class OpStackTest {
 
   }
 
-  // @Test
-  // Get rid off of this test.
-  // test 5 throw EmptyStack exception if pop()
-  // This method before test that exception is not throws if a symbol when item is right.
-  // then i added statement the confirm the the exception is been throw whe is not right.
-  // Refactor. Changed From entry to symbol.
-  // void popThrowsBadTypeExceptiontest() { //refactor
-  //
-  // // improvit makig all the test random
-  // symbol = Symbol.LEFT_BRACKET;
-  // opStack.push(symbol);
-  // assertDoesNotThrow(() -> opStack.top());
-  // opStack.push(symbol);
-  //
-  // //opStack.push("ciao");
-  //// BadType e = assertThrows(BadType.class, () -> opStack.toString()); //modification.
-  //// assertEquals("It is not a string", e.getMessage());
-  //
-  // }
-
   @Test
   // test 6 throw EmptyStack exception if pop()
   // this test it will throws an exception when the itme insert is not the right one.
   // Refactor. add BadType exception.
   void popThrowsEmptyStackExceptiontest() throws EmptyStack, BadType {
 
-
-    // try maki it generic.
     symbol = Symbol.LEFT_BRACKET;
     opStack.push(symbol);
     assertDoesNotThrow(() -> opStack.top());
