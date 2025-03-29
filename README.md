@@ -1,5 +1,3 @@
-# CS2800
-
 This repository has been created to store your CS2800 work.
 
 13/11/2023
