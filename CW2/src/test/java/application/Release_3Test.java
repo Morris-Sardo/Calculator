@@ -5,7 +5,7 @@ import java.util.Random;
 import org.junit.jupiter.api.Test;
 
 /**
- * This class test the system implemented so far.
+ * This class test the system implemented in Model development.
  * 
  * @author papap
  *

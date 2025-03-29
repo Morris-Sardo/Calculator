@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class is responsible to add, retrive specific values in specific point of a stack.
- * 
- * @author papap
+ * This class is responsible to add, retrieve specific values in specific point of a stack.
  *
+ * @author papap
+ * @version $Id: $Id
  */
 public class Stack {
 
@@ -24,22 +24,21 @@ public class Stack {
   // }
 
   /**
-   * This method add alement on the top of the stack.
-   * 
-   * @param entry can be float, Integero or mathematical symbol.
+   * This method add element on the top of the stack.
+   *
+   * @param entry can be float, Integer or mathematical symbol.
    */
-
   public void push(Entry entry) {
 
     this.entries.add(entry); // Add element at the top of stack.
-    this.size++; // Now size has beee increase.
+    this.size++; // Now size has been increase.
 
   }
 
   /**
-   * This method is responsible to keep track of dimention of the stack.
-   * 
-   * @return number of element store into tthe stack.
+   * This method is responsible to keep track of dimension of the stack.
+   *
+   * @return number of element store into the stack.
    */
   public int size() {
     return size;
@@ -47,9 +46,9 @@ public class Stack {
 
   /**
    * This method return the element top of stack.
-   * 
+   *
    * @return element at the top of stack.
-   * @throws EmptyStack accure when try obtain element with empty stack.
+   * @throws application.EmptyStack accure when try obtain element with empty stack.
    */
   public Entry top() throws EmptyStack {
     if (size == 0) { // Base case(Exception if stack is empty).
@@ -60,10 +59,10 @@ public class Stack {
   }
 
   /**
-   * This method obtain and remove elemenent at top of stack.
-   * 
+   * This method obtain and remove element at top of stack.
+   *
    * @return element at the top of the stack.
-   * @throws EmptyStack accure if stack has not enough element.
+   * @throws application.EmptyStack accure if stack has not enough element.
    */
   public Entry pop() throws EmptyStack {
     if (size == 0) { // Base case(Exception if stack less then 1 element).

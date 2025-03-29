@@ -97,7 +97,7 @@ class RevPolCalcTest {
   // added case"/" in switch state.
   // added if statement in case"/" to handle the InvalidExpression.
   // the exception is throw is secondOp == 0.
-  // fixed bugs. 
+  // fixed bugs.
   @Test
   void EvalutateExpressionDivisiontest() throws InvalidExpression {
 
