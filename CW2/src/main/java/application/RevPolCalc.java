@@ -33,7 +33,7 @@ public class RevPolCalc implements Calculator {
 
 
     try {
-      String[] tokens = expression.split("\\s+"); // string splitted between white space.
+      String[] tokens = expression.split("\\s+"); // string split between white space.
 
 
       for (String token : tokens) {
@@ -81,7 +81,7 @@ public class RevPolCalc implements Calculator {
 
 
       return (float) (Math.round(number.pop() * 100.0) / 100.0);
-    } catch (Exception e) { // use to handle emptystack exception.
+    } catch (Exception e) { // use to handle empty stack exception.
       throw new InvalidExpression("Invalid expression");
     }
   }

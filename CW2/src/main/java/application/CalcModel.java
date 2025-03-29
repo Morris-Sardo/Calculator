@@ -2,6 +2,9 @@ package application;
 
 /**
  * Evaluates an expression - the evaluation can be Standard or reverse polish.
+ * 
+ * @author papap
+ *
  */
 public class CalcModel {
 

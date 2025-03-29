@@ -1,8 +1,11 @@
 package application;
 
+
 /**
- * The controller that sits between the calculator model that does actual evaluation and the view
- * that is the part the user interfaces with.
+ * This class is observer between the GUI interface and the model.
+ * 
+ * @author papap
+ *
  */
 public class CalcController {
 

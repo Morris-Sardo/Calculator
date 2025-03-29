@@ -15,8 +15,10 @@ import javafx.stage.Stage;
 
 /**
  * This class provides a resizeable JavaFx GUI for the calculator MVC.
+ * 
+ * @author papap
+ *
  */
-
 public class CalcView extends Application implements ViewInterface {
   @FXML
   private Button calcButton;

@@ -1,10 +1,12 @@
 package application;
 
-/**
- * This class throws exception if en envalid expression has been written..
- * 
- */
 
+/**
+ * This class throws exception if invalid expression has been written..
+ * 
+ * @author papap
+ *
+ */
 public class InvalidExpression extends Exception {
 
   public InvalidExpression(String string) {

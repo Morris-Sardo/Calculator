@@ -1,7 +1,7 @@
 package application;
 
 /**
- * This class create a stack using Enty Symbol. The functionality of the methods are to call the
+ * This class create a stack using Entry Symbol. The functionality of the methods are to call the
  * methods of Stack class.
  * 
  * @author papap
@@ -13,7 +13,7 @@ public class OpStack {
   private Entry entry; // This to use to obtain a a symbol as entry symbol.
 
   /**
-   * This constructor inizialize a stack obj such that all the method int it,they can be called.
+   * This constructor initialise a stack object such that all the method int it,they can be called.
    */
   public OpStack() {
     this.opStack = new Stack();
@@ -21,7 +21,7 @@ public class OpStack {
   }
 
   /**
-   * This method retreave the capability of push one from Stack class.
+   * This method retrieve the capability of push one from Stack class.
    * 
    * @param symbol is a key variable from Enum class.
    */
@@ -35,7 +35,7 @@ public class OpStack {
    * This method use simply the top Stack method.
    * 
    * @return the element of the top of the stack.
-   * @throws EmptyStack is been thorws if stack is empty.
+   * @throws EmptyStack is been throws if stack is empty.
    * @throws BadType
    * 
    */
@@ -56,7 +56,7 @@ public class OpStack {
   }
 
   /**
-   * This method return a symbol value using calling pop method from Stack classs.
+   * This method return a symbol value using calling pop method from Stack class.
    * 
    * @return Entry symbol value.
    * @throws EmptyStack exception if try retrieve symbol with empty stack.
