@@ -1,7 +1,6 @@
 package application;
 
 
-
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,7 +45,7 @@ class NumStackTest {
   // Create object stack such that the method push in NumStak class will call push method
   // into Stack class.
   // I had to add BadType exception as I am using Entry class.
-  // Refactor. Eliminated Entry object which retrieve top entry on the stack. Test pass.
+
   @Test
   void Pushtest() throws EmptyStack, BadType {
 
@@ -94,6 +93,5 @@ class NumStackTest {
 
 
   }
-
 
 }
