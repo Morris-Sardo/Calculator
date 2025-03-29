@@ -1,6 +1,5 @@
-# Team Project
-Created during the 2023-2024 CS2800 module 'Sotware Engineering' at Royal Holloway University of London.
-The specification for the project was provided externally though our customer.
+# Descripion
+Calculator able to compute basic operation in Reverse Polish Notation and Standard Notation.
 
 ## Setup project
  - Install java.
