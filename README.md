@@ -11,9 +11,7 @@ The works has been so far is:
     -Create test folder as the project provide to has it was not in.
     -Fix the  package's name variable's name more formal.
     -Tested my prevously code done in coursekwork 1 when placed in provided initial project.(it has been done just  
-     to be sure the my previous code could still working).  
-
-This repository has been created to store your CS2800 work.
+     to be sure the my previous code could still working). 
 
 13/11/2023
 -I have added test for push() pop() top() and size() one for class Stack and OpStack  classes.
