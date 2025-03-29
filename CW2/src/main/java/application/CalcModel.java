@@ -2,9 +2,9 @@ package application;
 
 /**
  * Evaluates an expression - the evaluation can be Standard or reverse polish.
- * 
- * @author papap
  *
+ * @author papap
+ * @version $Id: $Id
  */
 public class CalcModel {
 
@@ -22,11 +22,11 @@ public class CalcModel {
 
   /**
    * This method evaluate a Standard form or Reverse Polish form.
-   * 
+   *
    * @param expression use as user input.
    * @param infix used to decide which kind expression evaluate.
    * @return result of calculation.
-   * @throws InvalidExpression if the expression is not right format.
+   * @throws application.InvalidExpression if the expression is not right format.
    */
   public float evaluate(String expression, Boolean infix) throws InvalidExpression {
 

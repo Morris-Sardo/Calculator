@@ -3,9 +3,9 @@ package application;
 /**
  * This class create a stack using Entry Symbol. The functionality of the methods are to call the
  * methods of Stack class.
- * 
- * @author papap
  *
+ * @author papap
+ * @version $Id: $Id
  */
 public class OpStack {
 
@@ -22,7 +22,7 @@ public class OpStack {
 
   /**
    * This method retrieve the capability of push one from Stack class.
-   * 
+   *
    * @param symbol is a key variable from Enum class.
    */
   public void push(Symbol symbol) {
@@ -33,13 +33,11 @@ public class OpStack {
 
   /**
    * This method use simply the top Stack method.
-   * 
+   *
    * @return the element of the top of the stack.
-   * @throws EmptyStack is been throws if stack is empty.
-   * @throws BadType
-   * 
+   * @throws application.EmptyStack is been throws if stack is empty.
+   * @throws application.BadType is the throw exception.
    */
-
   public Symbol top() throws EmptyStack, BadType {
 
     return opStack.top().getSymbol();
@@ -47,7 +45,7 @@ public class OpStack {
 
   /**
    * This method return the size of the stack.
-   * 
+   *
    * @return size of stack.
    */
   public int size() {
@@ -57,13 +55,11 @@ public class OpStack {
 
   /**
    * This method return a symbol value using calling pop method from Stack class.
-   * 
+   *
    * @return Entry symbol value.
-   * @throws EmptyStack exception if try retrieve symbol with empty stack.
-   * @throws BadType is been throw if a bad type is insert
+   * @throws application.EmptyStack exception if try retrieve symbol with empty stack.
+   * @throws application.BadType is been throw if a bad type is insert
    */
-
-
   public Symbol pop() throws EmptyStack, BadType {
 
 

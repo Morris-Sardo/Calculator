@@ -4,9 +4,9 @@ package application;
 
 /**
  * This class accepts a string expression and it return the result of the calculation.
- * 
- * @author papap
  *
+ * @author papap
+ * @version $Id: $Id
  */
 public class RevPolCalc implements Calculator {
 
@@ -15,17 +15,18 @@ public class RevPolCalc implements Calculator {
 
   // Added
   // Modification of constructor. The constructor wont take anymore the expression
+  /**
+   * <p>Constructor for RevPolCalc.</p>
+   */
   public RevPolCalc() {
     this.number = new NumStack();
 
   }
 
   /**
-   * This method get equation is input and return the result of it.
-   * 
-   * @param expression is equation to evaluate.
-   * @return the valuer of expression after evaluated.
-   * @throws InvalidExpression if the expression is not right format.
+   * {@inheritDoc}
+   *
+   * <p>This method get equation is input and return the result of it.
    */
   @Override
   public float evaluate(String expression) throws InvalidExpression {

@@ -15,9 +15,9 @@ import javafx.stage.Stage;
 
 /**
  * This class provides a resizeable JavaFx GUI for the calculator MVC.
- * 
- * @author papap
  *
+ * @author papap
+ * @version $Id: $Id
  */
 public class CalcView extends Application implements ViewInterface {
   @FXML
@@ -39,26 +39,31 @@ public class CalcView extends Application implements ViewInterface {
   // accessing user data in the UI
   // These methods build the Observer/Observable pattern
 
+  /** {@inheritDoc} */
   public void addCalculateObserver(Runnable f) {
     calcButton.setOnAction(event -> f.run());
   }
 
+  /** {@inheritDoc} */
   @Override
   public void addTypeObserver(Consumer<OpType> c) {
     infixCalculatorButton.setOnAction(event -> c.accept(OpType.STANDARD));
     revPolishCalculatorButton.setOnAction(event -> c.accept(OpType.REV_POLISH));
   }
 
+  /** {@inheritDoc} */
   @Override
   public String getExpression() {
     return inputField.getText();
   }
 
+  /** {@inheritDoc} */
   @Override
   public void setAnswer(String answer) {
     totalField.setText(answer);
   }
 
+  /** {@inheritDoc} */
   @Override
   public void startView() {
     calcButton.setDisable(false);
@@ -66,6 +71,7 @@ public class CalcView extends Application implements ViewInterface {
     infixCalculatorButton.setDisable(false);
   }
 
+  /** {@inheritDoc} */
   @Override
   public void start(Stage primaryStage) throws IOException {
     GridPane page = (GridPane) FXMLLoader.load(CalcView.class.getResource("View.fxml"));
@@ -91,7 +97,7 @@ public class CalcView extends Application implements ViewInterface {
   /**
    * This is a Singleton View constructed by the JavaaFX Thread and made available through this
    * method.
-   * 
+   *
    * @return the single object representing this view
    */
   public static synchronized CalcView getInstance() {

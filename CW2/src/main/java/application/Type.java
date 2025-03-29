@@ -2,9 +2,9 @@ package application;
 
 /**
  * This class has been used for different kind of type you can have in your calculator.
- * 
- * @author papap
  *
+ * @author papap
+ * @version $Id: $Id
  */
 public enum Type {
   FLOAT("It is float number"), STRING("It is a Strings"), SYMBOL(
@@ -17,6 +17,7 @@ public enum Type {
 
   }
 
+  /** {@inheritDoc} */
   @Override
   public String toString() {        //Keep override the string.
     return string;

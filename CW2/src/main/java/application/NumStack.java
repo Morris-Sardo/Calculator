@@ -6,9 +6,8 @@ package application;
  * methods of Stack class.
  *
  * @author papap
- *
+ * @version $Id: $Id
  */
-
 public class NumStack {
 
   private Stack numStack; // use to call to store numbers into stack.
@@ -25,10 +24,9 @@ public class NumStack {
 
   /**
    * This method responsible to add and entry float into stack, calling pop method of Stack class.
-   * 
+   *
    * @param number is a parameter to add all the number into calculator.
    */
-
   public void push(float number) {
     entry = new Entry(number);
     numStack.push(entry);
@@ -37,12 +35,11 @@ public class NumStack {
 
   /**
    * This method is use to return the element on the top of the stack.
-   * 
+   *
    * @return element at the top of the stack.
-   * @throws EmptyStack is exception throw every time you try retrieve a number with empty stack.
-   * @throws BadType exception has been throws if entry is not the right one.
+   * @throws application.EmptyStack is exception throw every time you try retrieve a number with
+   *         empty stack.
    */
-
   public float top() throws EmptyStack {
 
     try {
@@ -55,7 +52,7 @@ public class NumStack {
 
   /**
    * This method keep track of of the dimension of the stack.
-   * 
+   *
    * @return number of the element into the stack.
    */
   public int size() {
@@ -66,9 +63,9 @@ public class NumStack {
 
   /**
    * This method is use to return the element on the top stack and decrease it of one.
-   * 
+   *
    * @return element of the top of stack.
-   * @throws EmptyStack exception threw if try retrieve element with empty stack.
+   * @throws application.EmptyStack exception threw if try retrieve element with empty stack.
    */
   public float pop() throws EmptyStack {
     try {

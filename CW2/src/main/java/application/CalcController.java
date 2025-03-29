@@ -3,9 +3,9 @@ package application;
 
 /**
  * This class is observer between the GUI interface and the model.
- * 
- * @author papap
  *
+ * @author papap
+ * @version $Id: $Id
  */
 public class CalcController {
 
@@ -15,7 +15,6 @@ public class CalcController {
 
   /**
    * This method get the expression and set the answer.
-   * 
    */
   public void handleCalculation() {
     boolean t;
@@ -34,16 +33,18 @@ public class CalcController {
 
   /**
    * The method set the type of calculation.
-   * 
+   *
    * @param type is been use to decide if a standard of reverse one.
    */
   public void handleTypeChange(OpType type) {
     this.type = type;
+    
+    
   }
 
   /**
    * Constructor registers handleCalculation and handleTypeChange to observers in my view.
-   * 
+   *
    * @param myModel is calculate from calculate model.
    * @param myView is the GUI interface.
    */

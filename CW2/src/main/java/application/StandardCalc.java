@@ -7,24 +7,29 @@ import java.util.Map;
 
 /**
  * This class implement the calculation in form by using Standard form.
- * 
- * @author papap
  *
+ * @author papap
+ * @version $Id: $Id
  */
 public class StandardCalc implements Calculator {
 
   private RevPolCalc rpCalc; // used to calculate expression
 
+  /**
+   * <p>
+   * Constructor for StandardCalc.
+   * </p>
+   */
   public StandardCalc() {
     this.rpCalc = new RevPolCalc();
   }
 
   /**
-   * This method get equation is input and return the result of it.
+   * {@inheritDoc}
    * 
-   * @param expr is equation to evaluate.
-   * @return the value of expression after evaluated.
-   * @throws InvalidExpression if the expression is not right format.
+   * <p>
+   * This method get equation is input and return the result of it.
+   * </p>
    */
   @Override
   public float evaluate(String expr) throws InvalidExpression {
