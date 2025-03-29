@@ -1,3 +1,4 @@
+
 I HAVE ADDED THIS LINE JUSYT TO MAKE SOME COMMIT BEFORE START TO MANIPULATE THE ACTUAL PROJECT.
 
 
@@ -25,6 +26,7 @@ Bug fixed after eliminate size == 1.
 -Implementing push() , pop(), top() and size() methods in StrStac class. All method i try make them more general using random entry.
 -I have only ccomplited push() and size() task.
 
+
 15/11/2023
 -STACK
     -Adding test on top() method just to be sure that the method one has not any bugs.
@@ -35,6 +37,7 @@ Bug fixed after eliminate size == 1.
     -Fixed first merging conflit.
 
 -GUI
+    I DID NOT DO THIS YET.
     -create feature-GUI branch.
     -Working on GUI interface and testing it.
     -merge back in main.
@@ -48,6 +51,11 @@ RELEASE-1
     -Create CHANGEBLOG.md file reserved by bug fixed.
     -Used cherry-pick for merging commit from candidate release-1 branch to fauter-fixVarName branch anf tagged. After decide to merging  all branch. create my first tag.
     -Fixed couple of merge conflict.
+-FEATURE-CALCULATOR
+    -Create feaute-CALCULATOR.
+    -Update README.md file with my journey.
+    -Create StandarCalculator class.
+    -Create RevPolishCalc class.
 
 17/11/2023
 
@@ -67,6 +75,48 @@ FEATURE-GUI.
         -tag it
         
 
+18/11/2023
+    -Started Implementation StandardCalc class. During implenentation found bug in NumbStack, OpStack and StrStack. The bugs was the   method in these classes had Entry type. 
+    -Bug fixed and refactor done. Now NumStack, OpStack and StrStack they can work with StandardCalc class. 
+
+19/11/2023
+    -Carry on with StandsrdCalsc class.
+    -Decived to implement RevPolCalc class.
+
+20/11/2023
+    -RevPolCalc class as been written form the beginning as
+     wrong design. 
+    -Fixed smell code in top() and pop() method NumStack class. Added try{} catch{} to handle this kind of  exception. 
+
+21/11/2023
+    -Finish all required test in RevPolCalc.
+
+22/11/2023
+    -Start to implement StadardCalc class. 
+
+23/11/2023
+    -Finish StandardClac class. Passed all test. I have not use Opstack as UML required.
+
+26/11/2023
+    -Started with implementation of Calculator class.
+    -Change evalaute method in Calculator interaface class.
+    -Changed UML diagram. 
+
+27/11/2023
+    -Crete CalcModelTest.
+    -Fixed but in StandrdClac class. added statement that handle tan expression typed in reverse polish.
+    -Fixed all bugs in Calculaton test class after modification in StandardCalc.
+    -Create release-3 branch. testing all classes create so far.
+
+28/11/2023
+    -Fix problem with Eclipse. It suddently does not find anymore all the file. Savae every thing tothe gitlab and and re-clone again.
+    
+1/12/2023
+    -Fiexd checkstyle configuratuion problems. Download the eclipse -java-google-style.xml and added into src/main/resorces.
+     -Finishing last  system test into release-3 branch.
+     -test 20 in release_3Test class discovered small bug in RevPolish class. Bug was  the number were truncated. ther output was little impredictable. 
+     -System test done. All classes has been tested. System work.
+     
 
 You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
 

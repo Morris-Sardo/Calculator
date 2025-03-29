@@ -11,6 +11,8 @@ public class StrStack {
 
   private Stack numStack; // use to store entry string.
 
+  private Entry entry; // use to convert string string to Entry one.
+
   /**
    * This conctructor inizialize Srtack.
    */
@@ -20,14 +22,15 @@ public class StrStack {
 
   }
 
+ 
   /**
-   * This method get entry as parameter and store it into ste stack.
-   * 
-   * @param entry is a string.
+   * This method add a string into the Stack.
+   * @param string is value used to type in thre inzial expression.
    */
-
-  public void push(Entry entry) {
-
+  //Modification. Change Argument ..
+  public void push(String string) {
+    
+    entry = new Entry(string);
     numStack.push(entry);
 
 
@@ -38,21 +41,26 @@ public class StrStack {
    * 
    * @return entry in the top of the stack.
    * @throws EmptyStack throws exception if entry type is not a string.
+   * @throws BadType  is throws exception is there is not the right one.
    */
+  
+  //Modified..refactor. Change toye retrune from Entry to String one.
+  public String top() throws EmptyStack, BadType { 
 
-  public Entry top() throws EmptyStack {
-
-    return numStack.top();
+    return numStack.top().getString();
   }
 
   /**
    * This method retrieve the element of the trop of the stack.
    * 
    * @throws EmptyStack will throw an exception every time you pop but stack is empty.
+   * @throws BadType  is bees throw it when type is not the right one.
    */
-  public void pop() throws EmptyStack {
+  
+  //Modified..
+  public String pop() throws EmptyStack, BadType {
 
-    numStack.pop();
+    return numStack.pop().getString();
 
 
   }

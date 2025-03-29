@@ -42,6 +42,7 @@ class StackTest {
     int randLength = rand.nextInt(4);
     Entry string = new Entry(arrString[randLength]);
     stack.push(string);
+    //stack.push(string);
     Entry top = stack.top();
     assertEquals(string, top);
 

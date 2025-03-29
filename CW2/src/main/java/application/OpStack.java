@@ -35,12 +35,14 @@ public class OpStack {
    * This method use simply the top Stack method.
    * 
    * @return the element of the top of the stack.
-   * @throws EmptyStack
+   * @throws EmptyStack is been thorws if stack is empty.
+   * @throws BadType
    * 
    */
-  public Entry top() throws EmptyStack {
 
-    return opStack.top();
+  public Symbol top() throws EmptyStack, BadType {
+
+    return opStack.top().getSymbol();
   }
 
   /**
@@ -58,12 +60,14 @@ public class OpStack {
    * 
    * @return Entry symbol value.
    * @throws EmptyStack exception if try retrieve symbol with empty stack.
+   * @throws BadType is been throw if a bad type is insert
    */
 
-  public Entry pop() throws EmptyStack {
+
+  public Symbol pop() throws EmptyStack, BadType {
 
 
-    return opStack.pop();
+    return opStack.pop().getSymbol();
 
   }
 
