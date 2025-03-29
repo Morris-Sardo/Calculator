@@ -7,14 +7,22 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.Random;
 import org.junit.jupiter.api.Test;
 
+/**
+ * The meaning of this class is test that the the functionality of the method if the class inherit
+ * the functionality of the Stacks class method.
+ * 
+ * @author papap
+ *
+ */
 class StrStackTest {
 
   private StrStack numStack;
-  private Entry entry;
-  private Random value;
+  // private Entry entry;
+  private Random value; // it use to store random number.
 
 
-  // tes 1 create StrStack class.
+
+  // test 1 create StrStack class.
   @BeforeEach
   void setup() {
     numStack = new StrStack();
@@ -23,26 +31,27 @@ class StrStackTest {
   }
 
   // text 2 pup string into the stack.
-  // To Create metod push(). I have to build:
+  // To Create method push(). I have to build:
   // size() and top().
-  // size() to keep track the index encrease every time add a entry,
-  // plus the size wwill be useful to as index when I will verify that
+  // size() to keep track the index increase every time add a entry,
+  // plus the size will be useful to as index when I will verify that
   // the entry just pushed is has the top of the stack. I will build top()
   // for the purpose as well.
   // After create top() method TTD was failing as the throw exception were unhadled.
-
+  // Fixed bug. change argument from Entry type to String.
+  // Refactor. Added BadType declaration plus and the retrieve string form Entry to String one.
+  // Test pass now.
   @Test
   void PuhStringtest() throws BadType, EmptyStack {
 
     value = new Random();
     String arr[] = {"+", "?", "/", "*", "!", "ciao", ""};
     int index = value.nextInt(arr.length - 1);
-    entry = new Entry(arr[index]);
-    numStack.push(entry);
+    numStack.push(arr[index]);
 
-    String retriveString = numStack.top().getString();
+    String retriveString = numStack.top().toString();
 
-    assertEquals(entry.getString(), retriveString);
+    assertEquals(arr[index].toString(), retriveString);
 
     assertEquals(1, numStack.size());
 
@@ -51,17 +60,18 @@ class StrStackTest {
   // test 3 create size method.
   // The method has been created during test2.
   // test 4 I have create a loop to confirm the the size increase properly.
-  // test 5 I Have create another loop to confirm the size decree are proprerly.
+  // test 5 I Have create another loop to confirm the size decree are properly.
   // To do so I must implement pop method.
+  // Refactor test. Added BadType declaration, the array element are not converted anymore to Entry.
+  // Test pass.
   @Test
-  void SizeMethodIncreaseProperlytest() throws EmptyStack {
+  void SizeMethodIncreaseProperlytest() throws EmptyStack, BadType {
 
 
     String arr[] = {"+", "?", "/", "*", "!", "ciao", ""};
     for (int i = 0; i < arr.length; i++) {
 
-      entry = new Entry(arr[i]);
-      numStack.push(entry);
+      numStack.push(arr[i]);
     }
 
     assertEquals(numStack.size(), (arr.length));
@@ -69,50 +79,50 @@ class StrStackTest {
     int counter = arr.length;
     for (int i = counter - 1; i >= 0; i--) {
       assertEquals(numStack.size(), i + 1);
-      entry = new Entry(arr[i]);
       numStack.pop();
 
     }
   }
-  
-  
-  //test 6 top() method.
-  //To pass the test i add option throw axception.
+
+
+  // test 6 top() method.
+  // To pass the test i add option throw exception.
   @Test
   void TopThrowExceptionWhenStackIsEmptytest() throws EmptyStack {
-    
-    
+
+
     EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.top());
     assertEquals("Stack is Empty", e.getMessage());
 
-    
-    
+
+
   }
-  
-  //test 7 top() verified the top element is the last push int.
+
+  // test 7 top() verified the top element is the last push int.
+  // Refactor. from push and entry string into stack now I straight push in as String.
+  // Test pass now.
   @Test
   void TopTheLastIsTheActuallyTopOnetest() throws BadType, EmptyStack {
-    
-    entry = new Entry("Ciao");
-    numStack.push(entry);
-    assertEquals(entry.getString(),numStack.top().getString());
-    
+
+    numStack.push("Ciao");
+    assertEquals("Ciao", numStack.top().toString());
+
   }
-  
-  //test 8 pop()
-  //this test when the exception is throws if the stack is empty.
-  
+
+  // test 8 pop()
+  // this test when the exception is throws if the stack is empty.
+  // Refactor the same change as previous test.
+  // test as well.
   @Test
   void PopThrowExceptiontest() throws EmptyStack {
-    
-    entry = new Entry("Ciao");
-    numStack.push(entry);
-    
-    assertDoesNotThrow(() -> numStack.pop()); //Exception is not throws..
-   
-    EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.pop());  // the extception is throws
+
+    numStack.push("Ciao");
+
+    assertDoesNotThrow(() -> numStack.pop());
+
+    EmptyStack e = assertThrows(EmptyStack.class, () -> numStack.pop());
     assertEquals("Stack is Empty", e.getMessage());
   }
-  
+
 }
 

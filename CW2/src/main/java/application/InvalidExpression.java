@@ -1,9 +1,16 @@
 package application;
 
-/**
- * An expression was passed to a method that could not be evaluated.
- */
 
+/**
+ * This class throws exception if invalid expression has been written..
+ * 
+ * @author papap
+ *
+ */
 public class InvalidExpression extends Exception {
+
+  public InvalidExpression(String string) {
+    super(string);
+  }
 
 }

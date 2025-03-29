@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,8 +15,10 @@ import javafx.stage.Stage;
 
 /**
  * This class provides a resizeable JavaFx GUI for the calculator MVC.
+ * 
+ * @author papap
+ *
  */
-
 public class CalcView extends Application implements ViewInterface {
   @FXML
   private Button calcButton;
@@ -36,8 +39,6 @@ public class CalcView extends Application implements ViewInterface {
   // accessing user data in the UI
   // These methods build the Observer/Observable pattern
 
-
-  @Override
   public void addCalculateObserver(Runnable f) {
     calcButton.setOnAction(event -> f.run());
   }

@@ -2,29 +2,31 @@ package application;
 
 
 /**
- * This class implement stack using only Entry number. The class in each method it call
- * 
- * 
+ * This class create a stack using Entry number. The functionality of the methods are to call the
+ * methods of Stack class.
+ *
  * @author papap
  *
  */
 
 public class NumStack {
 
-  private Stack numStack; //  use to call to store numbres into stack.
-  private Entry entry;
+  private Stack numStack; // use to call to store numbers into stack.
+
+  private Entry entry; // it to add number in Stack.
+
 
   /**
-   * Yhis constructor use to initialize the object stack.
+   * This constructor use to initialise the object stack.
    */
   public NumStack() {
     this.numStack = new Stack();
   }
 
   /**
-   * This metod is responsible to add and entry float into stack, calling pop method of Stack class.
+   * This method responsible to add and entry float into stack, calling pop method of Stack class.
    * 
-   * @param number is a paramenter to add all the number into calulator.
+   * @param number is a parameter to add all the number into calculator.
    */
 
   public void push(float number) {
@@ -37,15 +39,22 @@ public class NumStack {
    * This method is use to return the element on the top of the stack.
    * 
    * @return element at the top of the stack.
-   * @throws EmptyStack is exception throw everytime you try retreave a number with empty stack.
+   * @throws EmptyStack is exception throw every time you try retrieve a number with empty stack.
+   * @throws BadType exception has been throws if entry is not the right one.
    */
-  public Entry top() throws EmptyStack {
 
-    return numStack.top();
+  public float top() throws EmptyStack {
+
+    try {
+      return numStack.top().getFloat();
+    } catch (BadType e) {
+      e.printStackTrace();
+      return -1;
+    }
   }
 
   /**
-   * This method keep track of of the dimention of the stack.
+   * This method keep track of of the dimension of the stack.
    * 
    * @return number of the element into the stack.
    */
@@ -54,14 +63,21 @@ public class NumStack {
     return numStack.size();
   }
 
+
   /**
-   * This method retun the element on the top of stack calling the pop method int.
+   * This method is use to return the element on the top stack and decrease it of one.
    * 
-   * @return obtain and return element on the stack.
-   * @throws EmptyStack throw exception if element is in the first r second porsiozion
+   * @return element of the top of stack.
+   * @throws EmptyStack exception threw if try retrieve element with empty stack.
    */
-  public Entry pop() throws EmptyStack {
-    return numStack.pop();
+  public float pop() throws EmptyStack {
+    try {
+      return numStack.pop().getFloat();
+    } catch (BadType e) {
+      e.printStackTrace();
+      return -1;
+    }
+
   }
 
 

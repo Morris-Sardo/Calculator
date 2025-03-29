@@ -1,3 +1,4 @@
+
 I HAVE ADDED THIS LINE JUSYT TO MAKE SOME COMMIT BEFORE START TO MANIPULATE THE ACTUAL PROJECT.
 
 
@@ -36,5 +37,5 @@ Bug fixed after eliminate size == 1.
 
 
 
-You may edit it as you like, but please do not remove the default topics or the project members list. These need to stay as currently defined in order for your lecturer to be able to find and mark your work.
+
 

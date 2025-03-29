@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * This class test all method, construtor, fielad and base cases. all of entry class.
+ * This class test all method, constructor, field and base cases. all of entry class.
  * 
  * @author papap
  *
@@ -21,7 +21,7 @@ class EntryTest {
 
 
   @Test
-  // test1 costructor String
+  // test1 constructor String
   // create constructor.
   // create getString method that return string.
   // modified parameter that get random string.
@@ -108,10 +108,10 @@ class EntryTest {
   @Test
   // test 8 test hashcode if two entry are the same..
   // created methods hashcode.
-  // 1)I have inizialise the prime number.
+  // 1)I have initialise the prime number.
   // 2)Result is the result of operation between float number and a and prime number.
-  // This metohd is good in terms of peformance.
-  // Fisrt hashcode is to compare float.
+  // This method is good in terms of performance.
+  // First hashcode is to compare float.
   void hashCodeFloattest() {
     Entry entry = new Entry(1.3f);
     Entry entry1 = new Entry(1.3f);
@@ -123,7 +123,7 @@ class EntryTest {
 
   @Test
   // test 9 test hashcode if two entry are the same..
-  // I had to add stetement else if(type == Type.STRING).
+  // I had to add statement else if(type == Type.STRING).
   // add statement if(type == Type.Float).
   void hashCodeStringtest() {
     Entry entry = new Entry("ciao");
@@ -149,10 +149,10 @@ class EntryTest {
 
   @Test
   // test 11 test equal equal method.
-  // The method retrun tue if two object are equal.
-  // I had creaate a boolean method which take Object has argument.
-  // I have casted imput object has Entry
-  // finally cvompared two same object.
+  // The method return true if two object are equal.
+  // I had create a boolean method which take Object has argument.
+  // I have casted input object has Entry
+  // finally compared two same object.
   void equalSameObjecttest() {
     Entry entry = new Entry("hello");
     assertTrue(entry.equal(entry));
@@ -160,7 +160,7 @@ class EntryTest {
 
   @Test
   // test 12 test equal equal method.
-  // The method flase if object is null.
+  // The method false if object is null.
   void equalNullFalse() {
     Entry entry = new Entry(1.3f);
     assertFalse(entry.equal(null));
@@ -168,7 +168,7 @@ class EntryTest {
 
 
   @Test
-  // test 13 test that two object are different type retrun false.
+  // test 13 test that two object are different type return false.
   // I add statement if(o.getClass() != this.getClass())
   void equalDifferentTypetest() {
     Entry entry = new Entry("ciao");

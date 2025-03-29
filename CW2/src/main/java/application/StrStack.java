@@ -1,8 +1,8 @@
 package application;
 
 /**
- * The meaning of this class is add or retrive String form stack. All the method will call the
- * method of the stack to work.
+ * This class create a stack using Entry number. The functionality of the methods are to call the
+ * methods of Stack class.
  * 
  * @author papap
  *
@@ -10,11 +10,11 @@ package application;
 public class StrStack {
 
   private Stack numStack; // use to store entry string.
+
   private Entry entry; // use to convert string string to Entry one.
-  private String string; // varible use as to enntry string.
 
   /**
-   * This conctructor inizialize Srtack.
+   * This constructor initialise StrStack.
    */
   public StrStack() {
 
@@ -22,45 +22,51 @@ public class StrStack {
 
   }
 
+ 
   /**
-   * This method get entry as parameter and store it into ste stack.
-   * 
-   * @param entry is a string.
+   * This method add a string into the Stack.
+   * @param string is value used to type in the initial expression.
    */
-
-  public void push(Entry entry) {
-
+  //Modification. Change Argument ..
+  public void push(String string) {
+    
+    entry = new Entry(string);
     numStack.push(entry);
 
 
   }
 
   /**
-   * This method retrive the element on the top of the stack.
+   * This method retrieve the element on the top of the stack.
    * 
    * @return entry in the top of the stack.
    * @throws EmptyStack throws exception if entry type is not a string.
+   * @throws BadType  is throws exception is there is not the right one.
    */
+  
+  //Modified..refactor. Change type return from Entry to String one.
+  public String top() throws EmptyStack, BadType { 
 
-  public Entry top() throws EmptyStack {
-
-    return numStack.top();
+    return numStack.top().getString();
   }
 
   /**
-   * This method retrieve the element of the trop of the stack.
+   * This method retrieve the element of the top of the stack.
    * 
    * @throws EmptyStack will throw an exception every time you pop but stack is empty.
+   * @throws BadType  is bees throw it when type is not the right one.
    */
-  public void pop() throws EmptyStack {
+  
+  //Modified..
+  public String pop() throws EmptyStack, BadType {
 
-    numStack.pop();
+    return numStack.pop().getString();
 
 
   }
 
   /**
-   * The meaning of thi method is retreave the size of the stack.
+   * The meaning of the method is retrieve the size of the stack.
    * 
    * @return the size of the stack at the actual time.
    */

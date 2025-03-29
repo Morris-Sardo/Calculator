@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * This class test all enum keys, attributes and methods.
+ * 
  * @author papap
  *
  */

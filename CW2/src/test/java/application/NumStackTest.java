@@ -1,5 +1,6 @@
 package application;
 
+
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,15 +12,15 @@ import org.junit.jupiter.api.Test;
 
 /**
  * The meaning of this class is create methods in numStack class and all the methodos in the
- * NumStack class all its method will work using the the mothod of the Stack class. allexception
+ * NumStack class all its method will work using the the mothod of the Stack class and all exception
  * implemented into Stack class. In other world the the meaning is to implement numStack class as it
- * is a Stack class wiith the only capability to get only float number entry.
+ * is a Stack class with the only capability to get only float number entry.
  * 
  * @author papap
  *
  */
 class NumStackTest {
-  
+
   private NumStack numStack;
   Random testValue;
 
@@ -29,7 +30,8 @@ class NumStackTest {
     testValue = new Random();
   }
 
-  //test 1 test contructor. This test a fake test because it will return not null as java it always create a defaoult constructor. 
+  // test 1 test constructor. This test a fake test because it will return not null as java it always
+  // create a default constructor.
   @Test
   void NumStackConstructortest() {
 
@@ -39,25 +41,25 @@ class NumStackTest {
   // test 1 check if push method exist.
   // test 2 sure the entry is right type. To implement test:
   // I create top method with in Entry type, and add all the declaration for all exception.
-  // into pushTest() and puch(). Create entry object that get a float attribute.
+  // into pushTest() and push(). Create entry object that get a float attribute.
   // Create object stack such that the method push in NumStak class will call push method
   // into Stack class.
   // I had to add BadType exception as I am using Entry class.
-  
+
   @Test
   void Pushtest() throws EmptyStack, BadType {
 
     float randFloat = testValue.nextFloat() * (float) 100.0;
     numStack.push(randFloat);
-    Entry entry = numStack.top();
-    assertEquals(randFloat, entry.getFloat());
+    assertEquals(randFloat, numStack.top());
 
   }
 
   // test 3 check it if the exception throw the right text exception.
+  // Refactor. Added BadType Exception. Test pass.
   @Test
-  void topThrowsEmptyExceptionWhenEmpty() throws EmptyStack {
-    
+  void topThrowsEmptyExceptionWhenEmpty() throws EmptyStack, BadType {
+
     float randFloat = testValue.nextFloat() * (float) 100.0;
     numStack.push(randFloat);
     assertDoesNotThrow(() -> numStack.top());
@@ -72,9 +74,10 @@ class NumStackTest {
   // will increase.
   // Next, I have created pop method. To do so i had to add also all the exception(confirming the
   // also
-  // pop method in numStack retreave the functionality of the pop method in Stack class.
-  // Finally i ad to add Badtype exception as popEntryt i have use getFloat() that has BadTyoe as
+  // pop method in numStack retrieve the functionality of the pop method in Stack class.
+  // Finally i ad to add BadType exception as popEntryt i have use getFloat() that has BadTyoe as
   // exception.
+  // Refactor. Eliminated Entry object used to retrieve the using pop method.
   @Test
   void Poptest() throws EmptyStack, BadType {
 
@@ -86,8 +89,7 @@ class NumStackTest {
     numStack.push(randFloat1);
     assertNotEquals(1, numStack.size());
 
-    Entry popEntry = numStack.pop();
-    assertEquals(randFloat1, popEntry.getFloat());
+    assertEquals(randFloat1, numStack.pop());
 
 
   }
